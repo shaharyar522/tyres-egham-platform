@@ -1,0 +1,3932 @@
+{
+    "brand_slug": "bridgestone",
+    "models": [
+        {
+            "model_slug": "alenza-001",
+            "model_name": "Alenza 001",
+            "price_from": 151,
+            "variants": [
+                {
+                    "reference_id": 105165,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 275/35R21 103Y",
+                    "size_load_speed": "275/35R21 103Y"
+                },
+                {
+                    "reference_id": 105248,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 245/40R21 100Y",
+                    "size_load_speed": "245/40R21 100Y"
+                },
+                {
+                    "reference_id": 106153,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 285/45R20 108W",
+                    "size_load_speed": "285/45R20 108W"
+                },
+                {
+                    "reference_id": 107039,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 245/50R19 105W",
+                    "size_load_speed": "245/50R19 105W"
+                },
+                {
+                    "reference_id": 107246,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 285/40R21 109Y",
+                    "size_load_speed": "285/40R21 109Y"
+                },
+                {
+                    "reference_id": 107251,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 255/55R19 107W",
+                    "size_load_speed": "255/55R19 107W"
+                },
+                {
+                    "reference_id": 110281,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 225/60R18 100H",
+                    "size_load_speed": "225/60R18 100H"
+                },
+                {
+                    "reference_id": 110452,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 235/55R18 100V",
+                    "size_load_speed": "235/55R18 100V"
+                },
+                {
+                    "reference_id": 110756,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 255/50R20 109H",
+                    "size_load_speed": "255/50R20 109H"
+                },
+                {
+                    "reference_id": 114064,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 255/55R18 109W",
+                    "size_load_speed": "255/55R18 109W"
+                },
+                {
+                    "reference_id": 114067,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 305/40R20 112Y",
+                    "size_load_speed": "305/40R20 112Y"
+                },
+                {
+                    "reference_id": 114944,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 235/55R18 100V",
+                    "size_load_speed": "235/55R18 100V"
+                },
+                {
+                    "reference_id": 115677,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 235/50R19 99V",
+                    "size_load_speed": "235/50R19 99V"
+                },
+                {
+                    "reference_id": 116242,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 255/55R19 111H",
+                    "size_load_speed": "255/55R19 111H"
+                },
+                {
+                    "reference_id": 120740,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 245/50R19 105W",
+                    "size_load_speed": "245/50R19 105W"
+                },
+                {
+                    "reference_id": 121275,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 235/45R20 96W",
+                    "size_load_speed": "235/45R20 96W"
+                },
+                {
+                    "reference_id": 131412,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 275/40R20 106W",
+                    "size_load_speed": "275/40R20 106W"
+                },
+                {
+                    "reference_id": 131414,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 245/45R20 103W",
+                    "size_load_speed": "245/45R20 103W"
+                },
+                {
+                    "reference_id": 131577,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 285/40R21 109H",
+                    "size_load_speed": "285/40R21 109H"
+                },
+                {
+                    "reference_id": 131635,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 245/50R19 105W",
+                    "size_load_speed": "245/50R19 105W"
+                },
+                {
+                    "reference_id": 135569,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 275/40R22 107Y",
+                    "size_load_speed": "275/40R22 107Y"
+                },
+                {
+                    "reference_id": 136350,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 235/50R20 100V",
+                    "size_load_speed": "235/50R20 100V"
+                },
+                {
+                    "reference_id": 139365,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 245/45R20 103W",
+                    "size_load_speed": "245/45R20 103W"
+                },
+                {
+                    "reference_id": 139366,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 275/40R20 106W",
+                    "size_load_speed": "275/40R20 106W"
+                },
+                {
+                    "reference_id": 140582,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 255/50R21 109Y",
+                    "size_load_speed": "255/50R21 109Y"
+                },
+                {
+                    "reference_id": 141280,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 245/50R19 105W",
+                    "size_load_speed": "245/50R19 105W"
+                },
+                {
+                    "reference_id": 141332,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 225/60R18 104W",
+                    "size_load_speed": "225/60R18 104W"
+                },
+                {
+                    "reference_id": 141596,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 265/45R21 108H",
+                    "size_load_speed": "265/45R21 108H"
+                },
+                {
+                    "reference_id": 141872,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 235/50R19 99V",
+                    "size_load_speed": "235/50R19 99V"
+                },
+                {
+                    "reference_id": 143575,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 275/45R20 110Y",
+                    "size_load_speed": "275/45R20 110Y"
+                },
+                {
+                    "reference_id": 143800,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 235/50R20 104V",
+                    "size_load_speed": "235/50R20 104V"
+                },
+                {
+                    "reference_id": 144863,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 255/50R21 109Y",
+                    "size_load_speed": "255/50R21 109Y"
+                },
+                {
+                    "reference_id": 145450,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 225/60R18 104W",
+                    "size_load_speed": "225/60R18 104W"
+                },
+                {
+                    "reference_id": 146671,
+                    "reference_slug": "bridgestone-alenza-001",
+                    "label": "Bridgestone Alenza 001 225/65R17 102H",
+                    "size_load_speed": "225/65R17 102H"
+                }
+            ]
+        },
+        {
+            "model_slug": "dueler-at-002",
+            "model_name": "Dueler A/T 002",
+            "price_from": 148,
+            "variants": [
+                {
+                    "reference_id": 143790,
+                    "reference_slug": "bridgestone-dueler-at-002",
+                    "label": "Bridgestone Dueler A/T 002 225/65R17 102H",
+                    "size_load_speed": "225/65R17 102H"
+                },
+                {
+                    "reference_id": 144018,
+                    "reference_slug": "bridgestone-dueler-at-002",
+                    "label": "Bridgestone Dueler A/T 002 265/70R15 112T",
+                    "size_load_speed": "265/70R15 112T"
+                },
+                {
+                    "reference_id": 144065,
+                    "reference_slug": "bridgestone-dueler-at-002",
+                    "label": "Bridgestone Dueler A/T 002 205/80R16 104T",
+                    "size_load_speed": "205/80R16 104T"
+                },
+                {
+                    "reference_id": 144087,
+                    "reference_slug": "bridgestone-dueler-at-002",
+                    "label": "Bridgestone Dueler A/T 002 215/65R16 98H",
+                    "size_load_speed": "215/65R16 98H"
+                },
+                {
+                    "reference_id": 146407,
+                    "reference_slug": "bridgestone-dueler-at-002",
+                    "label": "Bridgestone Dueler A/T 002 245/65R17 111T",
+                    "size_load_speed": "245/65R17 111T"
+                },
+                {
+                    "reference_id": 154202,
+                    "reference_slug": "bridgestone-dueler-at-002",
+                    "label": "Bridgestone Dueler A/T 002 255/70R18 116S",
+                    "size_load_speed": "255/70R18 116S"
+                },
+                {
+                    "reference_id": 155025,
+                    "reference_slug": "bridgestone-dueler-at-002",
+                    "label": "Bridgestone Dueler A/T 002 255/70R18 116S",
+                    "size_load_speed": "255/70R18 116S"
+                }
+            ]
+        },
+        {
+            "model_slug": "dueler-at-693-iii",
+            "model_name": "Dueler A/T 693 III",
+            "price_from": 220,
+            "variants": [
+                {
+                    "reference_id": 138368,
+                    "reference_slug": "bridgestone-dueler-at-693-iii",
+                    "label": "Bridgestone Dueler A/T 693 III 265/55R19 109V",
+                    "size_load_speed": "265/55R19 109V"
+                }
+            ]
+        },
+        {
+            "model_slug": "dueler-at002",
+            "model_name": "Dueler A/T002",
+            "price_from": 147,
+            "variants": [
+                {
+                    "reference_id": 142664,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 255/70R16 111T",
+                    "size_load_speed": "255/70R16 111T"
+                },
+                {
+                    "reference_id": 143789,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 255/65R17 110T",
+                    "size_load_speed": "255/65R17 110T"
+                },
+                {
+                    "reference_id": 143954,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 195/80R15 96T",
+                    "size_load_speed": "195/80R15 96T"
+                },
+                {
+                    "reference_id": 144073,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 235/60R18 107H",
+                    "size_load_speed": "235/60R18 107H"
+                },
+                {
+                    "reference_id": 144138,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 235/75R15 109T",
+                    "size_load_speed": "235/75R15 109T"
+                },
+                {
+                    "reference_id": 144141,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 205/70R15 96T",
+                    "size_load_speed": "205/70R15 96T"
+                },
+                {
+                    "reference_id": 144455,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 265/65R17 112T",
+                    "size_load_speed": "265/65R17 112T"
+                },
+                {
+                    "reference_id": 144467,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 255/60R18 112T",
+                    "size_load_speed": "255/60R18 112T"
+                },
+                {
+                    "reference_id": 144926,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 265/70R17 116S",
+                    "size_load_speed": "265/70R17 116S"
+                },
+                {
+                    "reference_id": 146672,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 255/70R15 112/110T",
+                    "size_load_speed": "255/70R15 112/110T"
+                },
+                {
+                    "reference_id": 152593,
+                    "reference_slug": "bridgestone-dueler-at002",
+                    "label": "Bridgestone Dueler A/T002 245/70R16 111T",
+                    "size_load_speed": "245/70R16 111T"
+                }
+            ]
+        },
+        {
+            "model_slug": "dueler-hl-alenza",
+            "model_name": "Dueler H/L Alenza",
+            "price_from": 148,
+            "variants": []
+        },
+        {
+            "model_slug": "dueler-hp-sport",
+            "model_name": "Dueler H/P Sport",
+            "price_from": 144,
+            "variants": [
+                {
+                    "reference_id": 1531,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/50R19 107W",
+                    "size_load_speed": "255/50R19 107W"
+                },
+                {
+                    "reference_id": 1532,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 285/45R19 111W",
+                    "size_load_speed": "285/45R19 111W"
+                },
+                {
+                    "reference_id": 1661,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 275/40R20 106W",
+                    "size_load_speed": "275/40R20 106W"
+                },
+                {
+                    "reference_id": 2189,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/55R19 101W",
+                    "size_load_speed": "235/55R19 101W"
+                },
+                {
+                    "reference_id": 2208,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/60R18 103W",
+                    "size_load_speed": "235/60R18 103W"
+                },
+                {
+                    "reference_id": 2292,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 275/40R20 106Y",
+                    "size_load_speed": "275/40R20 106Y"
+                },
+                {
+                    "reference_id": 2395,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 315/35R20 110Y",
+                    "size_load_speed": "315/35R20 110Y"
+                },
+                {
+                    "reference_id": 2850,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/55R19 101V",
+                    "size_load_speed": "235/55R19 101V"
+                },
+                {
+                    "reference_id": 2864,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/55R18 109Y",
+                    "size_load_speed": "255/55R18 109Y"
+                },
+                {
+                    "reference_id": 3015,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 225/50R17 94H",
+                    "size_load_speed": "225/50R17 94H"
+                },
+                {
+                    "reference_id": 3016,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 225/50R17 94V",
+                    "size_load_speed": "225/50R17 94V"
+                },
+                {
+                    "reference_id": 3078,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/45R20 101W",
+                    "size_load_speed": "255/45R20 101W"
+                },
+                {
+                    "reference_id": 5297,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 205/55R17 91V",
+                    "size_load_speed": "205/55R17 91V"
+                },
+                {
+                    "reference_id": 9436,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/50R19 103W",
+                    "size_load_speed": "255/50R19 103W"
+                },
+                {
+                    "reference_id": 60607,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/50R18 97V",
+                    "size_load_speed": "235/50R18 97V"
+                },
+                {
+                    "reference_id": 68209,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/55R17 99V",
+                    "size_load_speed": "235/55R17 99V"
+                },
+                {
+                    "reference_id": 73272,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 285/45R20 112Y",
+                    "size_load_speed": "285/45R20 112Y"
+                },
+                {
+                    "reference_id": 79292,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/45R20 101W",
+                    "size_load_speed": "255/45R20 101W"
+                },
+                {
+                    "reference_id": 84512,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 215/60R17 96V",
+                    "size_load_speed": "215/60R17 96V"
+                },
+                {
+                    "reference_id": 85276,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/55R19 101V",
+                    "size_load_speed": "235/55R19 101V"
+                },
+                {
+                    "reference_id": 89262,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/50R19 99V",
+                    "size_load_speed": "235/50R19 99V"
+                },
+                {
+                    "reference_id": 91887,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 225/45R19 92W",
+                    "size_load_speed": "225/45R19 92W"
+                },
+                {
+                    "reference_id": 102126,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/60R18 112H",
+                    "size_load_speed": "255/60R18 112H"
+                },
+                {
+                    "reference_id": 103413,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                },
+                {
+                    "reference_id": 107000,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/55R19 111H",
+                    "size_load_speed": "255/55R19 111H"
+                },
+                {
+                    "reference_id": 107046,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/55R19 111Y",
+                    "size_load_speed": "255/55R19 111Y"
+                },
+                {
+                    "reference_id": 107053,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 255/50R20 109H",
+                    "size_load_speed": "255/50R20 109H"
+                },
+                {
+                    "reference_id": 111069,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/45R19 95V",
+                    "size_load_speed": "235/45R19 95V"
+                },
+                {
+                    "reference_id": 112919,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 275/45R20 110Y",
+                    "size_load_speed": "275/45R20 110Y"
+                },
+                {
+                    "reference_id": 115705,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/60R18 103V",
+                    "size_load_speed": "235/60R18 103V"
+                },
+                {
+                    "reference_id": 115891,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 315/35R21 111Y",
+                    "size_load_speed": "315/35R21 111Y"
+                },
+                {
+                    "reference_id": 120586,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/55R19 101V",
+                    "size_load_speed": "235/55R19 101V"
+                },
+                {
+                    "reference_id": 120974,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                },
+                {
+                    "reference_id": 124924,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/45R19 99V",
+                    "size_load_speed": "235/45R19 99V"
+                },
+                {
+                    "reference_id": 135888,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 285/40R21 109Y",
+                    "size_load_speed": "285/40R21 109Y"
+                },
+                {
+                    "reference_id": 138557,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 235/65R17 104V",
+                    "size_load_speed": "235/65R17 104V"
+                },
+                {
+                    "reference_id": 148645,
+                    "reference_slug": "bridgestone-dueler-hp-sport",
+                    "label": "Bridgestone Dueler H/P Sport 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                }
+            ]
+        },
+        {
+            "model_slug": "dueler-ht-684-ii",
+            "model_name": "Dueler H/T 684 II",
+            "price_from": 191,
+            "variants": [
+                {
+                    "reference_id": 5327,
+                    "reference_slug": "bridgestone-dueler-ht-684-ii",
+                    "label": "Bridgestone Dueler H/T 684 II 265/65R17 112T",
+                    "size_load_speed": "265/65R17 112T"
+                },
+                {
+                    "reference_id": 31583,
+                    "reference_slug": "bridgestone-dueler-ht-684-ii",
+                    "label": "Bridgestone Dueler H/T 684 II 265/60R18 110H",
+                    "size_load_speed": "265/60R18 110H"
+                },
+                {
+                    "reference_id": 91535,
+                    "reference_slug": "bridgestone-dueler-ht-684-ii",
+                    "label": "Bridgestone Dueler H/T 684 II 245/65R17 111S",
+                    "size_load_speed": "245/65R17 111S"
+                },
+                {
+                    "reference_id": 149441,
+                    "reference_slug": "bridgestone-dueler-ht-684-ii",
+                    "label": "Bridgestone Dueler H/T 684 II 265/60R18 110H",
+                    "size_load_speed": "265/60R18 110H"
+                }
+            ]
+        },
+        {
+            "model_slug": "dueler-ht-685",
+            "model_name": "Dueler H/T 685",
+            "price_from": 222,
+            "variants": [
+                {
+                    "reference_id": 107355,
+                    "reference_slug": "bridgestone-dueler-ht-685",
+                    "label": "Bridgestone Dueler H/T 685 255/70R18 113T",
+                    "size_load_speed": "255/70R18 113T"
+                }
+            ]
+        },
+        {
+            "model_slug": "dueler-ht-687",
+            "model_name": "Dueler H/T 687",
+            "price_from": 156,
+            "variants": [
+                {
+                    "reference_id": 7558,
+                    "reference_slug": "bridgestone-dueler-ht-687",
+                    "label": "Bridgestone Dueler H/T 687 225/65R17 102H",
+                    "size_load_speed": "225/65R17 102H"
+                },
+                {
+                    "reference_id": 89089,
+                    "reference_slug": "bridgestone-dueler-ht-687",
+                    "label": "Bridgestone Dueler H/T 687 235/60R16 100H",
+                    "size_load_speed": "235/60R16 100H"
+                },
+                {
+                    "reference_id": 103235,
+                    "reference_slug": "bridgestone-dueler-ht-687",
+                    "label": "Bridgestone Dueler H/T 687 235/55R18 100H",
+                    "size_load_speed": "235/55R18 100H"
+                }
+            ]
+        },
+        {
+            "model_slug": "duravis-all-season",
+            "model_name": "Duravis All Season",
+            "price_from": 180,
+            "variants": [
+                {
+                    "reference_id": 121709,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 195/70R15 104/102R",
+                    "size_load_speed": "195/70R15 104/102R"
+                },
+                {
+                    "reference_id": 135505,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 205/75R16 110/108R",
+                    "size_load_speed": "205/75R16 110/108R"
+                },
+                {
+                    "reference_id": 135507,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 205/65R16 107/105T",
+                    "size_load_speed": "205/65R16 107/105T"
+                },
+                {
+                    "reference_id": 135508,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 215/65R15 104/102T",
+                    "size_load_speed": "215/65R15 104/102T"
+                },
+                {
+                    "reference_id": 135512,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 235/65R16 115/113R",
+                    "size_load_speed": "235/65R16 115/113R"
+                },
+                {
+                    "reference_id": 144071,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 235/65R16 115/113R",
+                    "size_load_speed": "235/65R16 115/113R"
+                },
+                {
+                    "reference_id": 146662,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 195/75R16 107/105R",
+                    "size_load_speed": "195/75R16 107/105R"
+                },
+                {
+                    "reference_id": 146675,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 225/65R16 112/110R",
+                    "size_load_speed": "225/65R16 112/110R"
+                },
+                {
+                    "reference_id": 147050,
+                    "reference_slug": "bridgestone-duravis-all-season",
+                    "label": "Bridgestone Duravis All Season 205/75R16 113/111R",
+                    "size_load_speed": "205/75R16 113/111R"
+                }
+            ]
+        },
+        {
+            "model_slug": "duravis-all-season-evo-enliten",
+            "model_name": "Duravis All Season Evo Enliten",
+            "price_from": 154,
+            "variants": [
+                {
+                    "reference_id": 148033,
+                    "reference_slug": "bridgestone-duravis-all-season-evo-enliten",
+                    "label": "Bridgestone Duravis All Season Evo Enliten 235/65R16 115/113R",
+                    "size_load_speed": "235/65R16 115/113R"
+                },
+                {
+                    "reference_id": 148182,
+                    "reference_slug": "bridgestone-duravis-all-season-evo-enliten",
+                    "label": "Bridgestone Duravis All Season Evo Enliten 235/65R16 121/119R",
+                    "size_load_speed": "235/65R16 121/119R"
+                },
+                {
+                    "reference_id": 148639,
+                    "reference_slug": "bridgestone-duravis-all-season-evo-enliten",
+                    "label": "Bridgestone Duravis All Season Evo Enliten 205/65R16 107/105T",
+                    "size_load_speed": "205/65R16 107/105T"
+                },
+                {
+                    "reference_id": 149448,
+                    "reference_slug": "bridgestone-duravis-all-season-evo-enliten",
+                    "label": "Bridgestone Duravis All Season Evo Enliten 215/65R15 104/102T",
+                    "size_load_speed": "215/65R15 104/102T"
+                },
+                {
+                    "reference_id": 152258,
+                    "reference_slug": "bridgestone-duravis-all-season-evo-enliten",
+                    "label": "Bridgestone Duravis All Season Evo Enliten 205/75R16 110/108R",
+                    "size_load_speed": "205/75R16 110/108R"
+                },
+                {
+                    "reference_id": 152479,
+                    "reference_slug": "bridgestone-duravis-all-season-evo-enliten",
+                    "label": "Bridgestone Duravis All Season Evo Enliten 195/70R15 104/102R",
+                    "size_load_speed": "195/70R15 104/102R"
+                },
+                {
+                    "reference_id": 152924,
+                    "reference_slug": "bridgestone-duravis-all-season-evo-enliten",
+                    "label": "Bridgestone Duravis All Season Evo Enliten 195/75R16 107/105R",
+                    "size_load_speed": "195/75R16 107/105R"
+                }
+            ]
+        },
+        {
+            "model_slug": "duravis-r660",
+            "model_name": "Duravis R660",
+            "price_from": 145,
+            "variants": [
+                {
+                    "reference_id": 103369,
+                    "reference_slug": "bridgestone-duravis-r660",
+                    "label": "Bridgestone Duravis R660 195/65R16 104/102T",
+                    "size_load_speed": "195/65R16 104/102T"
+                },
+                {
+                    "reference_id": 115343,
+                    "reference_slug": "bridgestone-duravis-r660",
+                    "label": "Bridgestone Duravis R660 225/65R16 112/110T",
+                    "size_load_speed": "225/65R16 112/110T"
+                },
+                {
+                    "reference_id": 138399,
+                    "reference_slug": "bridgestone-duravis-r660",
+                    "label": "Bridgestone Duravis R660 215/70R15 109/107S",
+                    "size_load_speed": "215/70R15 109/107S"
+                },
+                {
+                    "reference_id": 140898,
+                    "reference_slug": "bridgestone-duravis-r660",
+                    "label": "Bridgestone Duravis R660 205/65R16 107/105T",
+                    "size_load_speed": "205/65R16 107/105T"
+                },
+                {
+                    "reference_id": 141550,
+                    "reference_slug": "bridgestone-duravis-r660",
+                    "label": "Bridgestone Duravis R660 205/75R16 110/108R",
+                    "size_load_speed": "205/75R16 110/108R"
+                },
+                {
+                    "reference_id": 141784,
+                    "reference_slug": "bridgestone-duravis-r660",
+                    "label": "Bridgestone Duravis R660 235/65R16 115/113R",
+                    "size_load_speed": "235/65R16 115/113R"
+                }
+            ]
+        },
+        {
+            "model_slug": "duravis-van",
+            "model_name": "Duravis Van",
+            "price_from": 125,
+            "variants": [
+                {
+                    "reference_id": 141769,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 235/65R16 115/113R",
+                    "size_load_speed": "235/65R16 115/113R"
+                },
+                {
+                    "reference_id": 142526,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 205/75R16 110/108R",
+                    "size_load_speed": "205/75R16 110/108R"
+                },
+                {
+                    "reference_id": 142697,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 215/75R16 113/111R",
+                    "size_load_speed": "215/75R16 113/111R"
+                },
+                {
+                    "reference_id": 142732,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 195/65R16 104/102T",
+                    "size_load_speed": "195/65R16 104/102T"
+                },
+                {
+                    "reference_id": 143043,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 195/75R16 107/105T",
+                    "size_load_speed": "195/75R16 107/105T"
+                },
+                {
+                    "reference_id": 143044,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 215/70R15 109/107S",
+                    "size_load_speed": "215/70R15 109/107S"
+                },
+                {
+                    "reference_id": 143045,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 225/65R16 112/110T",
+                    "size_load_speed": "225/65R16 112/110T"
+                },
+                {
+                    "reference_id": 143046,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 205/65R16 107/105T",
+                    "size_load_speed": "205/65R16 107/105T"
+                },
+                {
+                    "reference_id": 143796,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 215/65R16 106/104T",
+                    "size_load_speed": "215/65R16 106/104T"
+                },
+                {
+                    "reference_id": 143797,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 225/70R15 112/110S",
+                    "size_load_speed": "225/70R15 112/110S"
+                },
+                {
+                    "reference_id": 143798,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 195/70R15 104/102S",
+                    "size_load_speed": "195/70R15 104/102S"
+                },
+                {
+                    "reference_id": 144041,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 215/75R16 116/114R",
+                    "size_load_speed": "215/75R16 116/114R"
+                },
+                {
+                    "reference_id": 144976,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 215/65R16 109/107T",
+                    "size_load_speed": "215/65R16 109/107T"
+                },
+                {
+                    "reference_id": 146258,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 225/75R16 121/120R",
+                    "size_load_speed": "225/75R16 121/120R"
+                },
+                {
+                    "reference_id": 146669,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 215/60R17 109/107T",
+                    "size_load_speed": "215/60R17 109/107T"
+                },
+                {
+                    "reference_id": 147433,
+                    "reference_slug": "bridgestone-duravis-van",
+                    "label": "Bridgestone Duravis Van 215/65R15 104/102T",
+                    "size_load_speed": "215/65R15 104/102T"
+                }
+            ]
+        },
+        {
+            "model_slug": "ecopia-ep001s",
+            "model_name": "Ecopia EP001S",
+            "price_from": 117,
+            "variants": [
+                {
+                    "reference_id": 111136,
+                    "reference_slug": "bridgestone-ecopia-ep001s",
+                    "label": "Bridgestone Ecopia EP001S 185/65R15 88H",
+                    "size_load_speed": "185/65R15 88H"
+                },
+                {
+                    "reference_id": 112353,
+                    "reference_slug": "bridgestone-ecopia-ep001s",
+                    "label": "Bridgestone Ecopia EP001S 185/65R15 92V",
+                    "size_load_speed": "185/65R15 92V"
+                },
+                {
+                    "reference_id": 151522,
+                    "reference_slug": "bridgestone-ecopia-ep001s",
+                    "label": "Bridgestone Ecopia EP001S 185/65R15 92V",
+                    "size_load_speed": "185/65R15 92V"
+                }
+            ]
+        },
+        {
+            "model_slug": "ecopia-ep150",
+            "model_name": "Ecopia EP150",
+            "price_from": 155,
+            "variants": [
+                {
+                    "reference_id": 4641,
+                    "reference_slug": "bridgestone-ecopia-ep150",
+                    "label": "Bridgestone Ecopia EP150 205/55R16 91V",
+                    "size_load_speed": "205/55R16 91V"
+                },
+                {
+                    "reference_id": 71026,
+                    "reference_slug": "bridgestone-ecopia-ep150",
+                    "label": "Bridgestone Ecopia EP150 185/55R15 82H",
+                    "size_load_speed": "185/55R15 82H"
+                },
+                {
+                    "reference_id": 79324,
+                    "reference_slug": "bridgestone-ecopia-ep150",
+                    "label": "Bridgestone Ecopia EP150 195/55R16 87V",
+                    "size_load_speed": "195/55R16 87V"
+                },
+                {
+                    "reference_id": 82964,
+                    "reference_slug": "bridgestone-ecopia-ep150",
+                    "label": "Bridgestone Ecopia EP150 185/55R16 87H",
+                    "size_load_speed": "185/55R16 87H"
+                },
+                {
+                    "reference_id": 113195,
+                    "reference_slug": "bridgestone-ecopia-ep150",
+                    "label": "Bridgestone Ecopia EP150 185/55R16 83V",
+                    "size_load_speed": "185/55R16 83V"
+                }
+            ]
+        },
+        {
+            "model_slug": "ecopia-ep200",
+            "model_name": "Ecopia EP200",
+            "price_from": 152,
+            "variants": []
+        },
+        {
+            "model_slug": "ecopia-ep500",
+            "model_name": "Ecopia EP500",
+            "price_from": 156,
+            "variants": [
+                {
+                    "reference_id": 10748,
+                    "reference_slug": "bridgestone-ecopia-ep500",
+                    "label": "Bridgestone Ecopia EP500 155/60R20 80Q",
+                    "size_load_speed": "155/60R20 80Q"
+                },
+                {
+                    "reference_id": 81171,
+                    "reference_slug": "bridgestone-ecopia-ep500",
+                    "label": "Bridgestone Ecopia EP500 175/60R19 86Q",
+                    "size_load_speed": "175/60R19 86Q"
+                },
+                {
+                    "reference_id": 92236,
+                    "reference_slug": "bridgestone-ecopia-ep500",
+                    "label": "Bridgestone Ecopia EP500 155/70R19 84Q",
+                    "size_load_speed": "155/70R19 84Q"
+                },
+                {
+                    "reference_id": 93396,
+                    "reference_slug": "bridgestone-ecopia-ep500",
+                    "label": "Bridgestone Ecopia EP500 175/55R20 89Q",
+                    "size_load_speed": "175/55R20 89Q"
+                },
+                {
+                    "reference_id": 111676,
+                    "reference_slug": "bridgestone-ecopia-ep500",
+                    "label": "Bridgestone Ecopia EP500 175/55R20 89T",
+                    "size_load_speed": "175/55R20 89T"
+                },
+                {
+                    "reference_id": 112994,
+                    "reference_slug": "bridgestone-ecopia-ep500",
+                    "label": "Bridgestone Ecopia EP500 195/50R20 93T",
+                    "size_load_speed": "195/50R20 93T"
+                }
+            ]
+        },
+        {
+            "model_slug": "ecopia-ep600",
+            "model_name": "Ecopia EP600",
+            "price_from": 176,
+            "variants": [
+                {
+                    "reference_id": 93507,
+                    "reference_slug": "bridgestone-ecopia-ep600",
+                    "label": "Bridgestone Ecopia EP600 155/70R19 84Q",
+                    "size_load_speed": "155/70R19 84Q"
+                }
+            ]
+        },
+        {
+            "model_slug": "potenza-re050",
+            "model_name": "Potenza RE050",
+            "price_from": 245,
+            "variants": [
+                {
+                    "reference_id": 7524,
+                    "reference_slug": "bridgestone-potenza-re050",
+                    "label": "Bridgestone Potenza RE050 245/35R20 95Y",
+                    "size_load_speed": "245/35R20 95Y"
+                },
+                {
+                    "reference_id": 24215,
+                    "reference_slug": "bridgestone-potenza-re050",
+                    "label": "Bridgestone Potenza RE050 275/40R18 99Y",
+                    "size_load_speed": "275/40R18 99Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "potenza-re050a",
+            "model_name": "Potenza RE050A",
+            "price_from": 260,
+            "variants": [
+                {
+                    "reference_id": 1142,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 255/30R19 91Y",
+                    "size_load_speed": "255/30R19 91Y"
+                },
+                {
+                    "reference_id": 1409,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 265/35R19 94Y",
+                    "size_load_speed": "265/35R19 94Y"
+                },
+                {
+                    "reference_id": 2405,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 285/35R20 100Y",
+                    "size_load_speed": "285/35R20 100Y"
+                },
+                {
+                    "reference_id": 2535,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 305/30R19 102Y",
+                    "size_load_speed": "305/30R19 102Y"
+                },
+                {
+                    "reference_id": 6167,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 275/30R20 97Y",
+                    "size_load_speed": "275/30R20 97Y"
+                },
+                {
+                    "reference_id": 9132,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 285/40R19 103Y",
+                    "size_load_speed": "285/40R19 103Y"
+                },
+                {
+                    "reference_id": 70217,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 225/45R17 91Y",
+                    "size_load_speed": "225/45R17 91Y"
+                },
+                {
+                    "reference_id": 90455,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 245/40R19 98Y",
+                    "size_load_speed": "245/40R19 98Y"
+                },
+                {
+                    "reference_id": 102440,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 215/40R17 87V",
+                    "size_load_speed": "215/40R17 87V"
+                },
+                {
+                    "reference_id": 107242,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 285/35R19 99Y",
+                    "size_load_speed": "285/35R19 99Y"
+                },
+                {
+                    "reference_id": 108265,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 255/40R17 94Y",
+                    "size_load_speed": "255/40R17 94Y"
+                },
+                {
+                    "reference_id": 108288,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 108564,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 205/45R17 88V",
+                    "size_load_speed": "205/45R17 88V"
+                },
+                {
+                    "reference_id": 109429,
+                    "reference_slug": "bridgestone-potenza-re050a",
+                    "label": "Bridgestone Potenza RE050A 235/40R18 95Y",
+                    "size_load_speed": "235/40R18 95Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "potenza-re050a-i",
+            "model_name": "Potenza RE050A I",
+            "price_from": 162,
+            "variants": [
+                {
+                    "reference_id": 108259,
+                    "reference_slug": "bridgestone-potenza-re050a-i",
+                    "label": "Bridgestone Potenza RE050A I 205/50R17 89V",
+                    "size_load_speed": "205/50R17 89V"
+                },
+                {
+                    "reference_id": 108263,
+                    "reference_slug": "bridgestone-potenza-re050a-i",
+                    "label": "Bridgestone Potenza RE050A I 255/35R18 94Y",
+                    "size_load_speed": "255/35R18 94Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "potenza-s005",
+            "model_name": "Potenza S005",
+            "price_from": 163,
+            "variants": [
+                {
+                    "reference_id": 115207,
+                    "reference_slug": "bridgestone-potenza-s005",
+                    "label": "Bridgestone Potenza S005 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 120124,
+                    "reference_slug": "bridgestone-potenza-s005",
+                    "label": "Bridgestone Potenza S005 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 141613,
+                    "reference_slug": "bridgestone-potenza-s005",
+                    "label": "Bridgestone Potenza S005 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 151747,
+                    "reference_slug": "bridgestone-potenza-s005",
+                    "label": "Bridgestone Potenza S005 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "potenza-s007",
+            "model_name": "Potenza S007",
+            "price_from": 216,
+            "variants": [
+                {
+                    "reference_id": 88733,
+                    "reference_slug": "bridgestone-potenza-s007",
+                    "label": "Bridgestone Potenza S007 295/35R20 105Y",
+                    "size_load_speed": "295/35R20 105Y"
+                },
+                {
+                    "reference_id": 102366,
+                    "reference_slug": "bridgestone-potenza-s007",
+                    "label": "Bridgestone Potenza S007 255/40R20 101Y",
+                    "size_load_speed": "255/40R20 101Y"
+                },
+                {
+                    "reference_id": 102557,
+                    "reference_slug": "bridgestone-potenza-s007",
+                    "label": "Bridgestone Potenza S007 305/30R20 103Y",
+                    "size_load_speed": "305/30R20 103Y"
+                },
+                {
+                    "reference_id": 111286,
+                    "reference_slug": "bridgestone-potenza-s007",
+                    "label": "Bridgestone Potenza S007 245/35R20 95Y",
+                    "size_load_speed": "245/35R20 95Y"
+                },
+                {
+                    "reference_id": 113902,
+                    "reference_slug": "bridgestone-potenza-s007",
+                    "label": "Bridgestone Potenza S007 275/30R20 97Y",
+                    "size_load_speed": "275/30R20 97Y"
+                },
+                {
+                    "reference_id": 113909,
+                    "reference_slug": "bridgestone-potenza-s007",
+                    "label": "Bridgestone Potenza S007 245/35R20 95Y",
+                    "size_load_speed": "245/35R20 95Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "potenza-sport",
+            "model_name": "Potenza Sport",
+            "price_from": 148,
+            "variants": [
+                {
+                    "reference_id": 120566,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/50R18 101Y",
+                    "size_load_speed": "235/50R18 101Y"
+                },
+                {
+                    "reference_id": 120568,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/40R18 99Y",
+                    "size_load_speed": "255/40R18 99Y"
+                },
+                {
+                    "reference_id": 120569,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/50R19 107Y",
+                    "size_load_speed": "255/50R19 107Y"
+                },
+                {
+                    "reference_id": 121647,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 305/30R19 102Y",
+                    "size_load_speed": "305/30R19 102Y"
+                },
+                {
+                    "reference_id": 121760,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/35R18 97Y",
+                    "size_load_speed": "265/35R18 97Y"
+                },
+                {
+                    "reference_id": 121840,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 122380,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/50R17 98Y",
+                    "size_load_speed": "225/50R17 98Y"
+                },
+                {
+                    "reference_id": 122404,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/35R20 97Y",
+                    "size_load_speed": "255/35R20 97Y"
+                },
+                {
+                    "reference_id": 122405,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/35R19 93Y",
+                    "size_load_speed": "245/35R19 93Y"
+                },
+                {
+                    "reference_id": 122410,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/40R18 95Y",
+                    "size_load_speed": "235/40R18 95Y"
+                },
+                {
+                    "reference_id": 122411,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/35R18 94Y",
+                    "size_load_speed": "255/35R18 94Y"
+                },
+                {
+                    "reference_id": 122467,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 215/45R17 91Y",
+                    "size_load_speed": "215/45R17 91Y"
+                },
+                {
+                    "reference_id": 122564,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/35R18 87Y",
+                    "size_load_speed": "225/35R18 87Y"
+                },
+                {
+                    "reference_id": 122568,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/45R19 96Y",
+                    "size_load_speed": "225/45R19 96Y"
+                },
+                {
+                    "reference_id": 122572,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/50R18 99Y",
+                    "size_load_speed": "225/50R18 99Y"
+                },
+                {
+                    "reference_id": 122577,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/55R19 105Y",
+                    "size_load_speed": "235/55R19 105Y"
+                },
+                {
+                    "reference_id": 122578,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/35R18 92Y",
+                    "size_load_speed": "245/35R18 92Y"
+                },
+                {
+                    "reference_id": 122580,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/40R17 91Y",
+                    "size_load_speed": "245/40R17 91Y"
+                },
+                {
+                    "reference_id": 122589,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/45R19 102Y",
+                    "size_load_speed": "245/45R19 102Y"
+                },
+                {
+                    "reference_id": 122593,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/35R19 93Y",
+                    "size_load_speed": "245/35R19 93Y"
+                },
+                {
+                    "reference_id": 122844,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/30R19 91Y",
+                    "size_load_speed": "255/30R19 91Y"
+                },
+                {
+                    "reference_id": 122848,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/45R20 105Y",
+                    "size_load_speed": "255/45R20 105Y"
+                },
+                {
+                    "reference_id": 122849,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/30R19 93Y",
+                    "size_load_speed": "265/30R19 93Y"
+                },
+                {
+                    "reference_id": 122850,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/35R19 98Y",
+                    "size_load_speed": "265/35R19 98Y"
+                },
+                {
+                    "reference_id": 122851,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/35R20 99Y",
+                    "size_load_speed": "265/35R20 99Y"
+                },
+                {
+                    "reference_id": 122852,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/30R19 96Y",
+                    "size_load_speed": "275/30R19 96Y"
+                },
+                {
+                    "reference_id": 122853,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/30R20 97Y",
+                    "size_load_speed": "275/30R20 97Y"
+                },
+                {
+                    "reference_id": 122862,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 285/30R19 98Y",
+                    "size_load_speed": "285/30R19 98Y"
+                },
+                {
+                    "reference_id": 122868,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 305/30R20 103Y",
+                    "size_load_speed": "305/30R20 103Y"
+                },
+                {
+                    "reference_id": 124418,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/35R20 102Y",
+                    "size_load_speed": "275/35R20 102Y"
+                },
+                {
+                    "reference_id": 124960,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/40R19 93Y",
+                    "size_load_speed": "225/40R19 93Y"
+                },
+                {
+                    "reference_id": 131631,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 205/45R17 88Y",
+                    "size_load_speed": "205/45R17 88Y"
+                },
+                {
+                    "reference_id": 131632,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/45R18 95Y",
+                    "size_load_speed": "225/45R18 95Y"
+                },
+                {
+                    "reference_id": 131637,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/45R17 94Y",
+                    "size_load_speed": "225/45R17 94Y"
+                },
+                {
+                    "reference_id": 131640,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/45R18 98Y",
+                    "size_load_speed": "235/45R18 98Y"
+                },
+                {
+                    "reference_id": 131643,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 285/35R19 103Y",
+                    "size_load_speed": "285/35R19 103Y"
+                },
+                {
+                    "reference_id": 131719,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/40R19 69Y",
+                    "size_load_speed": "235/40R19 69Y"
+                },
+                {
+                    "reference_id": 135542,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/40R18 101Y",
+                    "size_load_speed": "265/40R18 101Y"
+                },
+                {
+                    "reference_id": 136144,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 215/45R18 93Y",
+                    "size_load_speed": "215/45R18 93Y"
+                },
+                {
+                    "reference_id": 136362,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/35R20 92Y",
+                    "size_load_speed": "235/35R20 92Y"
+                },
+                {
+                    "reference_id": 137209,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/40R18 103Y",
+                    "size_load_speed": "275/40R18 103Y"
+                },
+                {
+                    "reference_id": 137210,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/50R20 113W",
+                    "size_load_speed": "275/50R20 113W"
+                },
+                {
+                    "reference_id": 137756,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/35R19 88Y",
+                    "size_load_speed": "225/35R19 88Y"
+                },
+                {
+                    "reference_id": 138367,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/35R19 100Y",
+                    "size_load_speed": "275/35R19 100Y"
+                },
+                {
+                    "reference_id": 138369,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 285/30R21 100Y",
+                    "size_load_speed": "285/30R21 100Y"
+                },
+                {
+                    "reference_id": 138382,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/30R20 92Y",
+                    "size_load_speed": "255/30R20 92Y"
+                },
+                {
+                    "reference_id": 139342,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/45R18 100Y",
+                    "size_load_speed": "245/45R18 100Y"
+                },
+                {
+                    "reference_id": 139463,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 285/35R20 104Y",
+                    "size_load_speed": "285/35R20 104Y"
+                },
+                {
+                    "reference_id": 139464,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 215/40R17 93Y",
+                    "size_load_speed": "215/40R17 93Y"
+                },
+                {
+                    "reference_id": 139466,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/30R20 94Y",
+                    "size_load_speed": "265/30R20 94Y"
+                },
+                {
+                    "reference_id": 139891,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/45R20 103Y",
+                    "size_load_speed": "245/45R20 103Y"
+                },
+                {
+                    "reference_id": 139892,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 285/40R21 109Y",
+                    "size_load_speed": "285/40R21 109Y"
+                },
+                {
+                    "reference_id": 139894,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/30R19 93Y",
+                    "size_load_speed": "265/30R19 93Y"
+                },
+                {
+                    "reference_id": 140145,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/40R20 101Y",
+                    "size_load_speed": "255/40R20 101Y"
+                },
+                {
+                    "reference_id": 140805,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/45R20 108Y",
+                    "size_load_speed": "265/45R20 108Y"
+                },
+                {
+                    "reference_id": 140902,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/50R19 110Y",
+                    "size_load_speed": "265/50R19 110Y"
+                },
+                {
+                    "reference_id": 141275,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 295/30R19 100Y",
+                    "size_load_speed": "295/30R19 100Y"
+                },
+                {
+                    "reference_id": 141483,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 285/30R20 99Y",
+                    "size_load_speed": "285/30R20 99Y"
+                },
+                {
+                    "reference_id": 141484,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 285/45R19 111Y",
+                    "size_load_speed": "285/45R19 111Y"
+                },
+                {
+                    "reference_id": 141944,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/40R19 105Y",
+                    "size_load_speed": "275/40R19 105Y"
+                },
+                {
+                    "reference_id": 142694,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 295/35R20 105Y",
+                    "size_load_speed": "295/35R20 105Y"
+                },
+                {
+                    "reference_id": 143313,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 295/35R21 107Y",
+                    "size_load_speed": "295/35R21 107Y"
+                },
+                {
+                    "reference_id": 143819,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 205/45R17 88H",
+                    "size_load_speed": "205/45R17 88H"
+                },
+                {
+                    "reference_id": 143820,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 205/40R18 86H",
+                    "size_load_speed": "205/40R18 86H"
+                },
+                {
+                    "reference_id": 143821,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/30R20 90Y",
+                    "size_load_speed": "245/30R20 90Y"
+                },
+                {
+                    "reference_id": 143906,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/40R20 96Y",
+                    "size_load_speed": "235/40R20 96Y"
+                },
+                {
+                    "reference_id": 145449,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 275/45R20 110Y",
+                    "size_load_speed": "275/45R20 110Y"
+                },
+                {
+                    "reference_id": 146667,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 146714,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 215/40R18 89Y",
+                    "size_load_speed": "215/40R18 89Y"
+                },
+                {
+                    "reference_id": 146725,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 146733,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/35R19 93Y",
+                    "size_load_speed": "245/35R19 93Y"
+                },
+                {
+                    "reference_id": 146736,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/35R20 95Y",
+                    "size_load_speed": "245/35R20 95Y"
+                },
+                {
+                    "reference_id": 146738,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/35R19 96Y",
+                    "size_load_speed": "255/35R19 96Y"
+                },
+                {
+                    "reference_id": 146739,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/40R19 100Y",
+                    "size_load_speed": "255/40R19 100Y"
+                },
+                {
+                    "reference_id": 146750,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/45R20 108Y",
+                    "size_load_speed": "265/45R20 108Y"
+                },
+                {
+                    "reference_id": 146755,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 295/40R20 110Y",
+                    "size_load_speed": "295/40R20 110Y"
+                },
+                {
+                    "reference_id": 147051,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/35R20 92Y",
+                    "size_load_speed": "235/35R20 92Y"
+                },
+                {
+                    "reference_id": 147052,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/40R18 97Y",
+                    "size_load_speed": "245/40R18 97Y"
+                },
+                {
+                    "reference_id": 151736,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 152376,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/45R18 100Y",
+                    "size_load_speed": "245/45R18 100Y"
+                },
+                {
+                    "reference_id": 152417,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 255/40R20 101Y",
+                    "size_load_speed": "255/40R20 101Y"
+                },
+                {
+                    "reference_id": 152921,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 245/40R19 98Y",
+                    "size_load_speed": "245/40R19 98Y"
+                },
+                {
+                    "reference_id": 154794,
+                    "reference_slug": "bridgestone-potenza-sport",
+                    "label": "Bridgestone Potenza Sport 265/40R20 104Y",
+                    "size_load_speed": "265/40R20 104Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "potenza-sport-evo",
+            "model_name": "Potenza Sport Evo",
+            "price_from": 120,
+            "variants": [
+                {
+                    "reference_id": 153856,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 285/35R19 103Y",
+                    "size_load_speed": "285/35R19 103Y"
+                },
+                {
+                    "reference_id": 153918,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 245/40R17 91Y",
+                    "size_load_speed": "245/40R17 91Y"
+                },
+                {
+                    "reference_id": 153919,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/45R18 95Y",
+                    "size_load_speed": "225/45R18 95Y"
+                },
+                {
+                    "reference_id": 153920,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 255/35R18 94Y",
+                    "size_load_speed": "255/35R18 94Y"
+                },
+                {
+                    "reference_id": 153922,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 265/35R18 97Y",
+                    "size_load_speed": "265/35R18 97Y"
+                },
+                {
+                    "reference_id": 153923,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 275/35R19 100Y",
+                    "size_load_speed": "275/35R19 100Y"
+                },
+                {
+                    "reference_id": 153925,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 275/40R19 105Y",
+                    "size_load_speed": "275/40R19 105Y"
+                },
+                {
+                    "reference_id": 154062,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/35R19 88Y",
+                    "size_load_speed": "225/35R19 88Y"
+                },
+                {
+                    "reference_id": 154063,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 235/40R18 95Y",
+                    "size_load_speed": "235/40R18 95Y"
+                },
+                {
+                    "reference_id": 154064,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 255/35R19 96Y",
+                    "size_load_speed": "255/35R19 96Y"
+                },
+                {
+                    "reference_id": 154065,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 205/45R17 88Y",
+                    "size_load_speed": "205/45R17 88Y"
+                },
+                {
+                    "reference_id": 154080,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 245/45R20 103Y",
+                    "size_load_speed": "245/45R20 103Y"
+                },
+                {
+                    "reference_id": 154081,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 255/45R20 105Y",
+                    "size_load_speed": "255/45R20 105Y"
+                },
+                {
+                    "reference_id": 154082,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/45R19 96Y",
+                    "size_load_speed": "225/45R19 96Y"
+                },
+                {
+                    "reference_id": 154083,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 265/45R20 108Y",
+                    "size_load_speed": "265/45R20 108Y"
+                },
+                {
+                    "reference_id": 154085,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 245/35R20 95Y",
+                    "size_load_speed": "245/35R20 95Y"
+                },
+                {
+                    "reference_id": 154128,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 235/50R18 101Y",
+                    "size_load_speed": "235/50R18 101Y"
+                },
+                {
+                    "reference_id": 154129,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 235/40R19 96Y",
+                    "size_load_speed": "235/40R19 96Y"
+                },
+                {
+                    "reference_id": 154131,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 255/30R19 91Y",
+                    "size_load_speed": "255/30R19 91Y"
+                },
+                {
+                    "reference_id": 154133,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 255/35R20 97Y",
+                    "size_load_speed": "255/35R20 97Y"
+                },
+                {
+                    "reference_id": 154134,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 265/35R19 98Y",
+                    "size_load_speed": "265/35R19 98Y"
+                },
+                {
+                    "reference_id": 154135,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 215/40R17 87Y",
+                    "size_load_speed": "215/40R17 87Y"
+                },
+                {
+                    "reference_id": 154136,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 215/45R17 91Y",
+                    "size_load_speed": "215/45R17 91Y"
+                },
+                {
+                    "reference_id": 154137,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/50R17 98Y",
+                    "size_load_speed": "225/50R17 98Y"
+                },
+                {
+                    "reference_id": 154138,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 215/45R18 93Y",
+                    "size_load_speed": "215/45R18 93Y"
+                },
+                {
+                    "reference_id": 154139,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/45R17 94Y",
+                    "size_load_speed": "225/45R17 94Y"
+                },
+                {
+                    "reference_id": 154140,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/50R18 99Y",
+                    "size_load_speed": "225/50R18 99Y"
+                },
+                {
+                    "reference_id": 154142,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/35R18 87Y",
+                    "size_load_speed": "225/35R18 87Y"
+                },
+                {
+                    "reference_id": 154176,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 235/45R18 98Y",
+                    "size_load_speed": "235/45R18 98Y"
+                },
+                {
+                    "reference_id": 154177,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 245/35R18 92Y",
+                    "size_load_speed": "245/35R18 92Y"
+                },
+                {
+                    "reference_id": 154178,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 255/40R18 99Y",
+                    "size_load_speed": "255/40R18 99Y"
+                },
+                {
+                    "reference_id": 154179,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 265/40R18 101Y",
+                    "size_load_speed": "265/40R18 101Y"
+                },
+                {
+                    "reference_id": 154180,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 275/40R18 103Y",
+                    "size_load_speed": "275/40R18 103Y"
+                },
+                {
+                    "reference_id": 154181,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/40R19 93Y",
+                    "size_load_speed": "225/40R19 93Y"
+                },
+                {
+                    "reference_id": 154183,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 154969,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 275/35R20 102Y",
+                    "size_load_speed": "275/35R20 102Y"
+                },
+                {
+                    "reference_id": 154976,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 285/35R22 106Y",
+                    "size_load_speed": "285/35R22 106Y"
+                },
+                {
+                    "reference_id": 154978,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 155001,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 235/35R20 92Y",
+                    "size_load_speed": "235/35R20 92Y"
+                },
+                {
+                    "reference_id": 155005,
+                    "reference_slug": "bridgestone-potenza-sport-evo",
+                    "label": "Bridgestone Potenza Sport Evo 245/40R19 98Y",
+                    "size_load_speed": "245/40R19 98Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-6",
+            "model_name": "Turanza 6",
+            "price_from": 109,
+            "variants": [
+                {
+                    "reference_id": 141340,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/50R19 99V",
+                    "size_load_speed": "235/50R19 99V"
+                },
+                {
+                    "reference_id": 141343,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/45R19 102Y",
+                    "size_load_speed": "245/45R19 102Y"
+                },
+                {
+                    "reference_id": 141365,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/50R17 89V",
+                    "size_load_speed": "205/50R17 89V"
+                },
+                {
+                    "reference_id": 141366,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/55R17 95V",
+                    "size_load_speed": "205/55R17 95V"
+                },
+                {
+                    "reference_id": 141367,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/45R20 105W",
+                    "size_load_speed": "255/45R20 105W"
+                },
+                {
+                    "reference_id": 141368,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/55R17 103Y",
+                    "size_load_speed": "235/55R17 103Y"
+                },
+                {
+                    "reference_id": 141369,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/45R19 96W",
+                    "size_load_speed": "225/45R19 96W"
+                },
+                {
+                    "reference_id": 141370,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/65R17 108V",
+                    "size_load_speed": "235/65R17 108V"
+                },
+                {
+                    "reference_id": 141371,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/60R18 112V",
+                    "size_load_speed": "255/60R18 112V"
+                },
+                {
+                    "reference_id": 141372,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 265/65R17 112H",
+                    "size_load_speed": "265/65R17 112H"
+                },
+                {
+                    "reference_id": 141373,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/40R19 98Y",
+                    "size_load_speed": "245/40R19 98Y"
+                },
+                {
+                    "reference_id": 141380,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 275/45R20 110Y",
+                    "size_load_speed": "275/45R20 110Y"
+                },
+                {
+                    "reference_id": 141382,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/40R21 102Y",
+                    "size_load_speed": "255/40R21 102Y"
+                },
+                {
+                    "reference_id": 141383,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 275/40R19 105Y",
+                    "size_load_speed": "275/40R19 105Y"
+                },
+                {
+                    "reference_id": 141774,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/50R19 107Y",
+                    "size_load_speed": "255/50R19 107Y"
+                },
+                {
+                    "reference_id": 141788,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/45R17 87W",
+                    "size_load_speed": "215/45R17 87W"
+                },
+                {
+                    "reference_id": 141792,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 265/50R19 110Y",
+                    "size_load_speed": "265/50R19 110Y"
+                },
+                {
+                    "reference_id": 142064,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/55R19 105Y",
+                    "size_load_speed": "235/55R19 105Y"
+                },
+                {
+                    "reference_id": 142065,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/35R18 94Y",
+                    "size_load_speed": "255/35R18 94Y"
+                },
+                {
+                    "reference_id": 142074,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/45R17 91Y",
+                    "size_load_speed": "215/45R17 91Y"
+                },
+                {
+                    "reference_id": 142077,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/40R17 95Y",
+                    "size_load_speed": "245/40R17 95Y"
+                },
+                {
+                    "reference_id": 142078,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 265/35R18 97Y",
+                    "size_load_speed": "265/35R18 97Y"
+                },
+                {
+                    "reference_id": 142533,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 142773,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/45R17 91Y",
+                    "size_load_speed": "225/45R17 91Y"
+                },
+                {
+                    "reference_id": 142774,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/55R18 98V",
+                    "size_load_speed": "225/55R18 98V"
+                },
+                {
+                    "reference_id": 142775,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 142776,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/45R17 91W",
+                    "size_load_speed": "225/45R17 91W"
+                },
+                {
+                    "reference_id": 142777,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/55R18 99V",
+                    "size_load_speed": "215/55R18 99V"
+                },
+                {
+                    "reference_id": 142878,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/65R17 111H",
+                    "size_load_speed": "245/65R17 111H"
+                },
+                {
+                    "reference_id": 142879,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/60R18 107W",
+                    "size_load_speed": "235/60R18 107W"
+                },
+                {
+                    "reference_id": 143042,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/65R17 102H",
+                    "size_load_speed": "225/65R17 102H"
+                },
+                {
+                    "reference_id": 143047,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/50R17 93W",
+                    "size_load_speed": "205/50R17 93W"
+                },
+                {
+                    "reference_id": 143048,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/40R18 95Y",
+                    "size_load_speed": "235/40R18 95Y"
+                },
+                {
+                    "reference_id": 143049,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/40R19 100Y",
+                    "size_load_speed": "255/40R19 100Y"
+                },
+                {
+                    "reference_id": 143050,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/55R19 111V",
+                    "size_load_speed": "255/55R19 111V"
+                },
+                {
+                    "reference_id": 143955,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                },
+                {
+                    "reference_id": 143958,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/55R18 98V",
+                    "size_load_speed": "225/55R18 98V"
+                },
+                {
+                    "reference_id": 144042,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/55R17 99W",
+                    "size_load_speed": "235/55R17 99W"
+                },
+                {
+                    "reference_id": 144824,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/60R16 104H",
+                    "size_load_speed": "235/60R16 104H"
+                },
+                {
+                    "reference_id": 145261,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/40R19 93Y",
+                    "size_load_speed": "225/40R19 93Y"
+                },
+                {
+                    "reference_id": 145372,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/40R21 100Y",
+                    "size_load_speed": "245/40R21 100Y"
+                },
+                {
+                    "reference_id": 145452,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/45R18 98Y",
+                    "size_load_speed": "235/45R18 98Y"
+                },
+                {
+                    "reference_id": 145453,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/50R17 98Y",
+                    "size_load_speed": "225/50R17 98Y"
+                },
+                {
+                    "reference_id": 145454,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/60R18 100V",
+                    "size_load_speed": "225/60R18 100V"
+                },
+                {
+                    "reference_id": 145455,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/55R18 100V",
+                    "size_load_speed": "235/55R18 100V"
+                },
+                {
+                    "reference_id": 145456,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/45R18 95Y",
+                    "size_load_speed": "225/45R18 95Y"
+                },
+                {
+                    "reference_id": 145457,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/55R17 98W",
+                    "size_load_speed": "215/55R17 98W"
+                },
+                {
+                    "reference_id": 145458,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/45R18 100Y",
+                    "size_load_speed": "245/45R18 100Y"
+                },
+                {
+                    "reference_id": 145459,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/45R17 97Y",
+                    "size_load_speed": "235/45R17 97Y"
+                },
+                {
+                    "reference_id": 145460,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/40R18 97Y",
+                    "size_load_speed": "245/40R18 97Y"
+                },
+                {
+                    "reference_id": 145461,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/55R19 99V",
+                    "size_load_speed": "225/55R19 99V"
+                },
+                {
+                    "reference_id": 145462,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/45R17 94Y",
+                    "size_load_speed": "225/45R17 94Y"
+                },
+                {
+                    "reference_id": 145466,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/45R17 88W",
+                    "size_load_speed": "205/45R17 88W"
+                },
+                {
+                    "reference_id": 145467,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/55R17 101W",
+                    "size_load_speed": "225/55R17 101W"
+                },
+                {
+                    "reference_id": 145468,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/45R18 103Y",
+                    "size_load_speed": "255/45R18 103Y"
+                },
+                {
+                    "reference_id": 145470,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/60R17 99V",
+                    "size_load_speed": "225/60R17 99V"
+                },
+                {
+                    "reference_id": 145472,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/50R17 95W",
+                    "size_load_speed": "215/50R17 95W"
+                },
+                {
+                    "reference_id": 145473,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/50R18 100Y",
+                    "size_load_speed": "245/50R18 100Y"
+                },
+                {
+                    "reference_id": 145474,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/35R19 96Y",
+                    "size_load_speed": "255/35R19 96Y"
+                },
+                {
+                    "reference_id": 145475,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/45R17 99Y",
+                    "size_load_speed": "245/45R17 99Y"
+                },
+                {
+                    "reference_id": 145476,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/60R17 100H",
+                    "size_load_speed": "215/60R17 100H"
+                },
+                {
+                    "reference_id": 145477,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/40R19 96Y",
+                    "size_load_speed": "235/40R19 96Y"
+                },
+                {
+                    "reference_id": 145502,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/55R16 91V",
+                    "size_load_speed": "205/55R16 91V"
+                },
+                {
+                    "reference_id": 146053,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 275/40R21 107Y",
+                    "size_load_speed": "275/40R21 107Y"
+                },
+                {
+                    "reference_id": 146673,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 195/45R16 84V",
+                    "size_load_speed": "195/45R16 84V"
+                },
+                {
+                    "reference_id": 146674,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 195/55R16 87V",
+                    "size_load_speed": "195/55R16 87V"
+                },
+                {
+                    "reference_id": 146683,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/60R16 99V",
+                    "size_load_speed": "215/60R16 99V"
+                },
+                {
+                    "reference_id": 146689,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 195/55R16 91H",
+                    "size_load_speed": "195/55R16 91H"
+                },
+                {
+                    "reference_id": 146690,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/55R16 91H",
+                    "size_load_speed": "205/55R16 91H"
+                },
+                {
+                    "reference_id": 146707,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/45R16 87W",
+                    "size_load_speed": "205/45R16 87W"
+                },
+                {
+                    "reference_id": 146708,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/50R16 87W",
+                    "size_load_speed": "205/50R16 87W"
+                },
+                {
+                    "reference_id": 146709,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/55R16 94V",
+                    "size_load_speed": "205/55R16 94V"
+                },
+                {
+                    "reference_id": 146710,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/55R16 91W",
+                    "size_load_speed": "205/55R16 91W"
+                },
+                {
+                    "reference_id": 146711,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/55R19 97V",
+                    "size_load_speed": "205/55R19 97V"
+                },
+                {
+                    "reference_id": 146712,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/60R16 92V",
+                    "size_load_speed": "205/60R16 92V"
+                },
+                {
+                    "reference_id": 146713,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/60R16 96V",
+                    "size_load_speed": "205/60R16 96V"
+                },
+                {
+                    "reference_id": 146715,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/45R16 90V",
+                    "size_load_speed": "215/45R16 90V"
+                },
+                {
+                    "reference_id": 146716,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/50R18 92W",
+                    "size_load_speed": "215/50R18 92W"
+                },
+                {
+                    "reference_id": 146717,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/55R16 93V",
+                    "size_load_speed": "215/55R16 93V"
+                },
+                {
+                    "reference_id": 146718,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/55R16 97W",
+                    "size_load_speed": "215/55R16 97W"
+                },
+                {
+                    "reference_id": 146719,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/65R16 102V",
+                    "size_load_speed": "215/65R16 102V"
+                },
+                {
+                    "reference_id": 146720,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/35R19 88Y",
+                    "size_load_speed": "225/35R19 88Y"
+                },
+                {
+                    "reference_id": 146721,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/45R17 94W",
+                    "size_load_speed": "225/45R17 94W"
+                },
+                {
+                    "reference_id": 146722,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/50R18 99W",
+                    "size_load_speed": "225/50R18 99W"
+                },
+                {
+                    "reference_id": 146728,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/45R19 99V",
+                    "size_load_speed": "235/45R19 99V"
+                },
+                {
+                    "reference_id": 146731,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/55R20 102V",
+                    "size_load_speed": "235/55R20 102V"
+                },
+                {
+                    "reference_id": 146734,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/35R19 93Y",
+                    "size_load_speed": "245/35R19 93Y"
+                },
+                {
+                    "reference_id": 146737,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/45R20 103Y",
+                    "size_load_speed": "245/45R20 103Y"
+                },
+                {
+                    "reference_id": 146742,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/45R20 101T",
+                    "size_load_speed": "255/45R20 101T"
+                },
+                {
+                    "reference_id": 146743,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/50R20 109Y",
+                    "size_load_speed": "255/50R20 109Y"
+                },
+                {
+                    "reference_id": 146744,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/55R20 110W",
+                    "size_load_speed": "255/55R20 110W"
+                },
+                {
+                    "reference_id": 146752,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 275/35R20 102Y",
+                    "size_load_speed": "275/35R20 102Y"
+                },
+                {
+                    "reference_id": 146753,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 275/35R22 104Y",
+                    "size_load_speed": "275/35R22 104Y"
+                },
+                {
+                    "reference_id": 147053,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/35R20 98Y",
+                    "size_load_speed": "245/35R20 98Y"
+                },
+                {
+                    "reference_id": 149190,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/50R20 100T",
+                    "size_load_speed": "235/50R20 100T"
+                },
+                {
+                    "reference_id": 149282,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/65R16 98H",
+                    "size_load_speed": "215/65R16 98H"
+                },
+                {
+                    "reference_id": 149444,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/40R21 102T",
+                    "size_load_speed": "255/40R21 102T"
+                },
+                {
+                    "reference_id": 151521,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 255/35R22 102Y",
+                    "size_load_speed": "255/35R22 102Y"
+                },
+                {
+                    "reference_id": 151574,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/45R20 95H",
+                    "size_load_speed": "215/45R20 95H"
+                },
+                {
+                    "reference_id": 151575,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 195/50R16 88V",
+                    "size_load_speed": "195/50R16 88V"
+                },
+                {
+                    "reference_id": 152261,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/65R16 95W",
+                    "size_load_speed": "205/65R16 95W"
+                },
+                {
+                    "reference_id": 152276,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/45R21 101T",
+                    "size_load_speed": "235/45R21 101T"
+                },
+                {
+                    "reference_id": 153910,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/40R17 87W",
+                    "size_load_speed": "215/40R17 87W"
+                },
+                {
+                    "reference_id": 153913,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                },
+                {
+                    "reference_id": 154011,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 205/55R17 95V",
+                    "size_load_speed": "205/55R17 95V"
+                },
+                {
+                    "reference_id": 154078,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 215/55R18 99V",
+                    "size_load_speed": "215/55R18 99V"
+                },
+                {
+                    "reference_id": 154079,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/60R18 104V",
+                    "size_load_speed": "225/60R18 104V"
+                },
+                {
+                    "reference_id": 154235,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 225/45R18 95Y",
+                    "size_load_speed": "225/45R18 95Y"
+                },
+                {
+                    "reference_id": 155021,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 235/50R20 104T",
+                    "size_load_speed": "235/50R20 104T"
+                },
+                {
+                    "reference_id": 155207,
+                    "reference_slug": "bridgestone-turanza-6",
+                    "label": "Bridgestone Turanza 6 245/40R19 94W",
+                    "size_load_speed": "245/40R19 94W"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-eco",
+            "model_name": "Turanza Eco",
+            "price_from": 143,
+            "variants": [
+                {
+                    "reference_id": 123556,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 235/55R19 101T",
+                    "size_load_speed": "235/55R19 101T"
+                },
+                {
+                    "reference_id": 124946,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 205/60R16 92H",
+                    "size_load_speed": "205/60R16 92H"
+                },
+                {
+                    "reference_id": 131583,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 235/60R18 103T",
+                    "size_load_speed": "235/60R18 103T"
+                },
+                {
+                    "reference_id": 131584,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 255/50R19 103T",
+                    "size_load_speed": "255/50R19 103T"
+                },
+                {
+                    "reference_id": 137206,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 195/55R16 91V",
+                    "size_load_speed": "195/55R16 91V"
+                },
+                {
+                    "reference_id": 137207,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 185/65R15 92H",
+                    "size_load_speed": "185/65R15 92H"
+                },
+                {
+                    "reference_id": 139468,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 225/65R17 102V",
+                    "size_load_speed": "225/65R17 102V"
+                },
+                {
+                    "reference_id": 142922,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 215/45R17 91V",
+                    "size_load_speed": "215/45R17 91V"
+                },
+                {
+                    "reference_id": 143219,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 215/50R18 96W",
+                    "size_load_speed": "215/50R18 96W"
+                },
+                {
+                    "reference_id": 144093,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 255/45R20 101T",
+                    "size_load_speed": "255/45R20 101T"
+                },
+                {
+                    "reference_id": 152404,
+                    "reference_slug": "bridgestone-turanza-eco",
+                    "label": "Bridgestone Turanza Eco 205/60R16 92V",
+                    "size_load_speed": "205/60R16 92V"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-er300",
+            "model_name": "Turanza ER300",
+            "price_from": 189,
+            "variants": [
+                {
+                    "reference_id": 3007,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 245/45R17 95W",
+                    "size_load_speed": "245/45R17 95W"
+                },
+                {
+                    "reference_id": 3458,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 225/55R17 97Y",
+                    "size_load_speed": "225/55R17 97Y"
+                },
+                {
+                    "reference_id": 5155,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 225/55R17 97Y",
+                    "size_load_speed": "225/55R17 97Y"
+                },
+                {
+                    "reference_id": 9388,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 275/35R19 96Y",
+                    "size_load_speed": "275/35R19 96Y"
+                },
+                {
+                    "reference_id": 9501,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 205/55R16 91V",
+                    "size_load_speed": "205/55R16 91V"
+                },
+                {
+                    "reference_id": 26234,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 225/45R17 91W",
+                    "size_load_speed": "225/45R17 91W"
+                },
+                {
+                    "reference_id": 60656,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 245/45R18 100Y",
+                    "size_load_speed": "245/45R18 100Y"
+                },
+                {
+                    "reference_id": 75106,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 275/40R18 99Y",
+                    "size_load_speed": "275/40R18 99Y"
+                },
+                {
+                    "reference_id": 108264,
+                    "reference_slug": "bridgestone-turanza-er300",
+                    "label": "Bridgestone Turanza ER300 245/45R18 96Y",
+                    "size_load_speed": "245/45R18 96Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-er300a",
+            "model_name": "Turanza ER300A",
+            "price_from": 150,
+            "variants": [
+                {
+                    "reference_id": 49881,
+                    "reference_slug": "bridgestone-turanza-er300a",
+                    "label": "Bridgestone Turanza ER300A 205/55R16 91W",
+                    "size_load_speed": "205/55R16 91W"
+                },
+                {
+                    "reference_id": 51510,
+                    "reference_slug": "bridgestone-turanza-er300a",
+                    "label": "Bridgestone Turanza ER300A 205/60R16 92W",
+                    "size_load_speed": "205/60R16 92W"
+                },
+                {
+                    "reference_id": 69481,
+                    "reference_slug": "bridgestone-turanza-er300a",
+                    "label": "Bridgestone Turanza ER300A 195/55R16 87W",
+                    "size_load_speed": "195/55R16 87W"
+                },
+                {
+                    "reference_id": 81298,
+                    "reference_slug": "bridgestone-turanza-er300a",
+                    "label": "Bridgestone Turanza ER300A 205/60R16 92W",
+                    "size_load_speed": "205/60R16 92W"
+                },
+                {
+                    "reference_id": 89632,
+                    "reference_slug": "bridgestone-turanza-er300a",
+                    "label": "Bridgestone Turanza ER300A 225/55R16 95W",
+                    "size_load_speed": "225/55R16 95W"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-er33",
+            "model_name": "Turanza ER33",
+            "price_from": 193,
+            "variants": [
+                {
+                    "reference_id": 46267,
+                    "reference_slug": "bridgestone-turanza-er33",
+                    "label": "Bridgestone Turanza ER33 255/35R18 90Y",
+                    "size_load_speed": "255/35R18 90Y"
+                },
+                {
+                    "reference_id": 72381,
+                    "reference_slug": "bridgestone-turanza-er33",
+                    "label": "Bridgestone Turanza ER33 235/45R18 94Y",
+                    "size_load_speed": "235/45R18 94Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-t001",
+            "model_name": "Turanza T001",
+            "price_from": 122,
+            "variants": [
+                {
+                    "reference_id": 69699,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/45R17 91V",
+                    "size_load_speed": "225/45R17 91V"
+                },
+                {
+                    "reference_id": 70276,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/50R17 94W",
+                    "size_load_speed": "225/50R17 94W"
+                },
+                {
+                    "reference_id": 70389,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 205/55R17 91W",
+                    "size_load_speed": "205/55R17 91W"
+                },
+                {
+                    "reference_id": 71108,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/45R16 90V",
+                    "size_load_speed": "215/45R16 90V"
+                },
+                {
+                    "reference_id": 71860,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/40R18 92W",
+                    "size_load_speed": "225/40R18 92W"
+                },
+                {
+                    "reference_id": 72217,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 205/55R16 91V",
+                    "size_load_speed": "205/55R16 91V"
+                },
+                {
+                    "reference_id": 80677,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/50R18 95W",
+                    "size_load_speed": "225/50R18 95W"
+                },
+                {
+                    "reference_id": 81187,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/45R17 91W",
+                    "size_load_speed": "225/45R17 91W"
+                },
+                {
+                    "reference_id": 87217,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 185/50R16 81H",
+                    "size_load_speed": "185/50R16 81H"
+                },
+                {
+                    "reference_id": 87287,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 205/55R17 91W",
+                    "size_load_speed": "205/55R17 91W"
+                },
+                {
+                    "reference_id": 89583,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/60R16 95V",
+                    "size_load_speed": "215/60R16 95V"
+                },
+                {
+                    "reference_id": 91753,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/55R17 94V",
+                    "size_load_speed": "215/55R17 94V"
+                },
+                {
+                    "reference_id": 93275,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 205/65R16 95W",
+                    "size_load_speed": "205/65R16 95W"
+                },
+                {
+                    "reference_id": 107061,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/55R17 97V",
+                    "size_load_speed": "225/55R17 97V"
+                },
+                {
+                    "reference_id": 109758,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/55R17 97W",
+                    "size_load_speed": "225/55R17 97W"
+                },
+                {
+                    "reference_id": 114364,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 245/40R18 93H",
+                    "size_load_speed": "245/40R18 93H"
+                },
+                {
+                    "reference_id": 115217,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 225/55R17 97W",
+                    "size_load_speed": "225/55R17 97W"
+                },
+                {
+                    "reference_id": 115597,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 195/60R16 89H",
+                    "size_load_speed": "195/60R16 89H"
+                },
+                {
+                    "reference_id": 115741,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/45R20 95T",
+                    "size_load_speed": "215/45R20 95T"
+                },
+                {
+                    "reference_id": 115742,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/50R19 93T",
+                    "size_load_speed": "215/50R19 93T"
+                },
+                {
+                    "reference_id": 115743,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/55R18 95T",
+                    "size_load_speed": "215/55R18 95T"
+                },
+                {
+                    "reference_id": 116001,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 205/55R17 95W",
+                    "size_load_speed": "205/55R17 95W"
+                },
+                {
+                    "reference_id": 120559,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/50R18 92W",
+                    "size_load_speed": "215/50R18 92W"
+                },
+                {
+                    "reference_id": 151986,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/50R18 92W",
+                    "size_load_speed": "215/50R18 92W"
+                },
+                {
+                    "reference_id": 154004,
+                    "reference_slug": "bridgestone-turanza-t001",
+                    "label": "Bridgestone Turanza T001 215/50R18 92W",
+                    "size_load_speed": "215/50R18 92W"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-t005",
+            "model_name": "Turanza T005",
+            "price_from": 90,
+            "variants": [
+                {
+                    "reference_id": 84680,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 101945,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 102579,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/65R15 91H",
+                    "size_load_speed": "195/65R15 91H"
+                },
+                {
+                    "reference_id": 102584,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/60R15 91V",
+                    "size_load_speed": "205/60R15 91V"
+                },
+                {
+                    "reference_id": 102585,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/55R16 93H",
+                    "size_load_speed": "215/55R16 93H"
+                },
+                {
+                    "reference_id": 102627,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/60R16 99H",
+                    "size_load_speed": "215/60R16 99H"
+                },
+                {
+                    "reference_id": 102628,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 185/60R15 84H",
+                    "size_load_speed": "185/60R15 84H"
+                },
+                {
+                    "reference_id": 102632,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/55R16 91V",
+                    "size_load_speed": "205/55R16 91V"
+                },
+                {
+                    "reference_id": 102650,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/65R15 95H",
+                    "size_load_speed": "195/65R15 95H"
+                },
+                {
+                    "reference_id": 102652,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 185/65R15 88H",
+                    "size_load_speed": "185/65R15 88H"
+                },
+                {
+                    "reference_id": 102654,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/60R15 88V",
+                    "size_load_speed": "195/60R15 88V"
+                },
+                {
+                    "reference_id": 102659,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/65R15 91V",
+                    "size_load_speed": "195/65R15 91V"
+                },
+                {
+                    "reference_id": 102662,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/50R15 82V",
+                    "size_load_speed": "195/50R15 82V"
+                },
+                {
+                    "reference_id": 102663,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/55R15 85V",
+                    "size_load_speed": "195/55R15 85V"
+                },
+                {
+                    "reference_id": 102664,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/55R16 91W",
+                    "size_load_speed": "205/55R16 91W"
+                },
+                {
+                    "reference_id": 102771,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/65R15 95T",
+                    "size_load_speed": "195/65R15 95T"
+                },
+                {
+                    "reference_id": 102775,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/65R15 94V",
+                    "size_load_speed": "205/65R15 94V"
+                },
+                {
+                    "reference_id": 102777,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/65R15 96H",
+                    "size_load_speed": "215/65R15 96H"
+                },
+                {
+                    "reference_id": 102787,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/55R16 93V",
+                    "size_load_speed": "215/55R16 93V"
+                },
+                {
+                    "reference_id": 103014,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/55R18 102Y",
+                    "size_load_speed": "225/55R18 102Y"
+                },
+                {
+                    "reference_id": 103015,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/45R19 102Y",
+                    "size_load_speed": "245/45R19 102Y"
+                },
+                {
+                    "reference_id": 103016,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/35R21 98Y",
+                    "size_load_speed": "255/35R21 98Y"
+                },
+                {
+                    "reference_id": 103303,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 185/65R15 88T",
+                    "size_load_speed": "185/65R15 88T"
+                },
+                {
+                    "reference_id": 103325,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 185/65R15 92T",
+                    "size_load_speed": "185/65R15 92T"
+                },
+                {
+                    "reference_id": 105191,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/40R19 93W",
+                    "size_load_speed": "225/40R19 93W"
+                },
+                {
+                    "reference_id": 105192,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R18 95Y",
+                    "size_load_speed": "225/45R18 95Y"
+                },
+                {
+                    "reference_id": 105194,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R18 91W",
+                    "size_load_speed": "225/45R18 91W"
+                },
+                {
+                    "reference_id": 105731,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/55R17 91W",
+                    "size_load_speed": "205/55R17 91W"
+                },
+                {
+                    "reference_id": 106620,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R19 92W",
+                    "size_load_speed": "225/45R19 92W"
+                },
+                {
+                    "reference_id": 107042,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/40R18 89Y",
+                    "size_load_speed": "215/40R18 89Y"
+                },
+                {
+                    "reference_id": 107066,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 195/55R16 91V",
+                    "size_load_speed": "195/55R16 91V"
+                },
+                {
+                    "reference_id": 107797,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R17 94Y",
+                    "size_load_speed": "225/50R17 94Y"
+                },
+                {
+                    "reference_id": 108562,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R17 98Y",
+                    "size_load_speed": "225/50R17 98Y"
+                },
+                {
+                    "reference_id": 108565,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/40R19 98Y",
+                    "size_load_speed": "245/40R19 98Y"
+                },
+                {
+                    "reference_id": 109422,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 155/60R15 74T",
+                    "size_load_speed": "155/60R15 74T"
+                },
+                {
+                    "reference_id": 110323,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 165/65R15 81T",
+                    "size_load_speed": "165/65R15 81T"
+                },
+                {
+                    "reference_id": 110411,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/35R19 96Y",
+                    "size_load_speed": "255/35R19 96Y"
+                },
+                {
+                    "reference_id": 110467,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 275/35R19 100Y",
+                    "size_load_speed": "275/35R19 100Y"
+                },
+                {
+                    "reference_id": 110482,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R17 94Y",
+                    "size_load_speed": "225/45R17 94Y"
+                },
+                {
+                    "reference_id": 110753,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/60R18 112V",
+                    "size_load_speed": "255/60R18 112V"
+                },
+                {
+                    "reference_id": 110894,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 110988,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R20 101Y",
+                    "size_load_speed": "255/40R20 101Y"
+                },
+                {
+                    "reference_id": 111759,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/45R17 97Y",
+                    "size_load_speed": "235/45R17 97Y"
+                },
+                {
+                    "reference_id": 111820,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 185/55R15 85V",
+                    "size_load_speed": "185/55R15 85V"
+                },
+                {
+                    "reference_id": 112652,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/50R18 100Y",
+                    "size_load_speed": "245/50R18 100Y"
+                },
+                {
+                    "reference_id": 113069,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R18 99W",
+                    "size_load_speed": "225/50R18 99W"
+                },
+                {
+                    "reference_id": 113913,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R18 95Y",
+                    "size_load_speed": "225/45R18 95Y"
+                },
+                {
+                    "reference_id": 113914,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R18 99Y",
+                    "size_load_speed": "255/40R18 99Y"
+                },
+                {
+                    "reference_id": 113921,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/50R17 95H",
+                    "size_load_speed": "215/50R17 95H"
+                },
+                {
+                    "reference_id": 114068,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/60R16 92H",
+                    "size_load_speed": "205/60R16 92H"
+                },
+                {
+                    "reference_id": 114070,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/55R18 95H",
+                    "size_load_speed": "215/55R18 95H"
+                },
+                {
+                    "reference_id": 114071,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/65R16 98H",
+                    "size_load_speed": "215/65R16 98H"
+                },
+                {
+                    "reference_id": 114081,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 175/65R15 84H",
+                    "size_load_speed": "175/65R15 84H"
+                },
+                {
+                    "reference_id": 114087,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/35R19 91Y",
+                    "size_load_speed": "235/35R19 91Y"
+                },
+                {
+                    "reference_id": 114100,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R18 95Y",
+                    "size_load_speed": "225/45R18 95Y"
+                },
+                {
+                    "reference_id": 114102,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/35R19 96Y",
+                    "size_load_speed": "255/35R19 96Y"
+                },
+                {
+                    "reference_id": 114840,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                },
+                {
+                    "reference_id": 115054,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/50R19 103Y",
+                    "size_load_speed": "235/50R19 103Y"
+                },
+                {
+                    "reference_id": 115895,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/55R17 94V",
+                    "size_load_speed": "215/55R17 94V"
+                },
+                {
+                    "reference_id": 116002,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/60R16 96W",
+                    "size_load_speed": "205/60R16 96W"
+                },
+                {
+                    "reference_id": 116003,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/35R20 90Y",
+                    "size_load_speed": "225/35R20 90Y"
+                },
+                {
+                    "reference_id": 116005,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R17 94Y",
+                    "size_load_speed": "225/45R17 94Y"
+                },
+                {
+                    "reference_id": 116006,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R17 98Y",
+                    "size_load_speed": "225/50R17 98Y"
+                },
+                {
+                    "reference_id": 116234,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/55R16 91V",
+                    "size_load_speed": "205/55R16 91V"
+                },
+                {
+                    "reference_id": 116287,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/45R18 103H",
+                    "size_load_speed": "255/45R18 103H"
+                },
+                {
+                    "reference_id": 119734,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/65R16 95W",
+                    "size_load_speed": "205/65R16 95W"
+                },
+                {
+                    "reference_id": 120282,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 120294,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/40R18 89Y",
+                    "size_load_speed": "215/40R18 89Y"
+                },
+                {
+                    "reference_id": 120882,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/45R18 100Y",
+                    "size_load_speed": "245/45R18 100Y"
+                },
+                {
+                    "reference_id": 120883,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/60R17 99Y",
+                    "size_load_speed": "225/60R17 99Y"
+                },
+                {
+                    "reference_id": 121196,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                },
+                {
+                    "reference_id": 121691,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/55R17 97W",
+                    "size_load_speed": "225/55R17 97W"
+                },
+                {
+                    "reference_id": 123678,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/40R18 92Y",
+                    "size_load_speed": "225/40R18 92Y"
+                },
+                {
+                    "reference_id": 123842,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/45R18 94W",
+                    "size_load_speed": "235/45R18 94W"
+                },
+                {
+                    "reference_id": 123875,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/55R17 103H",
+                    "size_load_speed": "235/55R17 103H"
+                },
+                {
+                    "reference_id": 123876,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/55R18 104T",
+                    "size_load_speed": "235/55R18 104T"
+                },
+                {
+                    "reference_id": 124921,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R20 101Y",
+                    "size_load_speed": "255/40R20 101Y"
+                },
+                {
+                    "reference_id": 124978,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/55R19 103H",
+                    "size_load_speed": "225/55R19 103H"
+                },
+                {
+                    "reference_id": 124979,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R20 101Y",
+                    "size_load_speed": "255/40R20 101Y"
+                },
+                {
+                    "reference_id": 131415,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/45R18 100Y",
+                    "size_load_speed": "245/45R18 100Y"
+                },
+                {
+                    "reference_id": 131496,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/50R19 99W",
+                    "size_load_speed": "235/50R19 99W"
+                },
+                {
+                    "reference_id": 131616,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/55R16 91W",
+                    "size_load_speed": "205/55R16 91W"
+                },
+                {
+                    "reference_id": 131711,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/55R17 95W",
+                    "size_load_speed": "205/55R17 95W"
+                },
+                {
+                    "reference_id": 132061,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/55R18 104T",
+                    "size_load_speed": "235/55R18 104T"
+                },
+                {
+                    "reference_id": 134993,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R18 99Y",
+                    "size_load_speed": "255/40R18 99Y"
+                },
+                {
+                    "reference_id": 135556,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/50R19 103T",
+                    "size_load_speed": "235/50R19 103T"
+                },
+                {
+                    "reference_id": 135806,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 185/65R15 88T",
+                    "size_load_speed": "185/65R15 88T"
+                },
+                {
+                    "reference_id": 136129,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 285/35R22 106Y",
+                    "size_load_speed": "285/35R22 106Y"
+                },
+                {
+                    "reference_id": 136376,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/35R21 101Y",
+                    "size_load_speed": "255/35R21 101Y"
+                },
+                {
+                    "reference_id": 136379,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/40R21 100Y",
+                    "size_load_speed": "245/40R21 100Y"
+                },
+                {
+                    "reference_id": 136416,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/40R19 94W",
+                    "size_load_speed": "245/40R19 94W"
+                },
+                {
+                    "reference_id": 137204,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R20 104Y",
+                    "size_load_speed": "255/40R20 104Y"
+                },
+                {
+                    "reference_id": 137205,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 265/40R21 105H",
+                    "size_load_speed": "265/40R21 105H"
+                },
+                {
+                    "reference_id": 137254,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R17 98Y",
+                    "size_load_speed": "225/50R17 98Y"
+                },
+                {
+                    "reference_id": 137285,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/40R19 93Y",
+                    "size_load_speed": "225/40R19 93Y"
+                },
+                {
+                    "reference_id": 137396,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/50R18 92W",
+                    "size_load_speed": "215/50R18 92W"
+                },
+                {
+                    "reference_id": 137446,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/45R20 99Y",
+                    "size_load_speed": "245/45R20 99Y"
+                },
+                {
+                    "reference_id": 137448,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/40R19 96Y",
+                    "size_load_speed": "235/40R19 96Y"
+                },
+                {
+                    "reference_id": 138396,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R18 95W",
+                    "size_load_speed": "225/50R18 95W"
+                },
+                {
+                    "reference_id": 139119,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/45R19 102Y",
+                    "size_load_speed": "245/45R19 102Y"
+                },
+                {
+                    "reference_id": 139367,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R20 101Y",
+                    "size_load_speed": "255/40R20 101Y"
+                },
+                {
+                    "reference_id": 139484,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/50R19 107Y",
+                    "size_load_speed": "255/50R19 107Y"
+                },
+                {
+                    "reference_id": 139747,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R17 91Y",
+                    "size_load_speed": "225/45R17 91Y"
+                },
+                {
+                    "reference_id": 139897,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/55R17 94V",
+                    "size_load_speed": "215/55R17 94V"
+                },
+                {
+                    "reference_id": 139951,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R18 91W",
+                    "size_load_speed": "225/45R18 91W"
+                },
+                {
+                    "reference_id": 140806,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/55R17 91W",
+                    "size_load_speed": "205/55R17 91W"
+                },
+                {
+                    "reference_id": 140808,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/60R16 95V",
+                    "size_load_speed": "215/60R16 95V"
+                },
+                {
+                    "reference_id": 140814,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/55R19 105Y",
+                    "size_load_speed": "235/55R19 105Y"
+                },
+                {
+                    "reference_id": 141620,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/45R17 91W",
+                    "size_load_speed": "215/45R17 91W"
+                },
+                {
+                    "reference_id": 142779,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/40R18 97Y",
+                    "size_load_speed": "245/40R18 97Y"
+                },
+                {
+                    "reference_id": 143026,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R18 99W",
+                    "size_load_speed": "225/50R18 99W"
+                },
+                {
+                    "reference_id": 143574,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/50R17 94Y",
+                    "size_load_speed": "225/50R17 94Y"
+                },
+                {
+                    "reference_id": 144163,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/45R19 102H",
+                    "size_load_speed": "245/45R19 102H"
+                },
+                {
+                    "reference_id": 144985,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R17 91W",
+                    "size_load_speed": "225/45R17 91W"
+                },
+                {
+                    "reference_id": 145451,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/60R16 95V",
+                    "size_load_speed": "215/60R16 95V"
+                },
+                {
+                    "reference_id": 145463,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/65R16 98H",
+                    "size_load_speed": "215/65R16 98H"
+                },
+                {
+                    "reference_id": 145469,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R18 91V",
+                    "size_load_speed": "225/45R18 91V"
+                },
+                {
+                    "reference_id": 145488,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 235/55R18 100V",
+                    "size_load_speed": "235/55R18 100V"
+                },
+                {
+                    "reference_id": 145751,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/50R20 109W",
+                    "size_load_speed": "255/50R20 109W"
+                },
+                {
+                    "reference_id": 145753,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 285/40R21 109W",
+                    "size_load_speed": "285/40R21 109W"
+                },
+                {
+                    "reference_id": 151680,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/60R17 96H",
+                    "size_load_speed": "215/60R17 96H"
+                },
+                {
+                    "reference_id": 152463,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 255/40R18 99Y",
+                    "size_load_speed": "255/40R18 99Y"
+                },
+                {
+                    "reference_id": 152480,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 205/65R16 95W",
+                    "size_load_speed": "205/65R16 95W"
+                },
+                {
+                    "reference_id": 153911,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 225/45R18 91Y",
+                    "size_load_speed": "225/45R18 91Y"
+                },
+                {
+                    "reference_id": 153931,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 215/40R18 89Y",
+                    "size_load_speed": "215/40R18 89Y"
+                },
+                {
+                    "reference_id": 154070,
+                    "reference_slug": "bridgestone-turanza-t005",
+                    "label": "Bridgestone Turanza T005 245/45R18 100Y",
+                    "size_load_speed": "245/45R18 100Y"
+                }
+            ]
+        },
+        {
+            "model_slug": "turanza-t005a",
+            "model_name": "Turanza T005A",
+            "price_from": 161,
+            "variants": [
+                {
+                    "reference_id": 113164,
+                    "reference_slug": "bridgestone-turanza-t005a",
+                    "label": "Bridgestone Turanza T005A 245/50R19 101W",
+                    "size_load_speed": "245/50R19 101W"
+                },
+                {
+                    "reference_id": 143806,
+                    "reference_slug": "bridgestone-turanza-t005a",
+                    "label": "Bridgestone Turanza T005A 215/45R18 89W",
+                    "size_load_speed": "215/45R18 89W"
+                },
+                {
+                    "reference_id": 152478,
+                    "reference_slug": "bridgestone-turanza-t005a",
+                    "label": "Bridgestone Turanza T005A 245/50R19 101W",
+                    "size_load_speed": "245/50R19 101W"
+                },
+                {
+                    "reference_id": 152646,
+                    "reference_slug": "bridgestone-turanza-t005a",
+                    "label": "Bridgestone Turanza T005A 225/50R18 95V",
+                    "size_load_speed": "225/50R18 95V"
+                }
+            ]
+        },
+        {
+            "model_slug": "weather-control-a005",
+            "model_name": "Weather Control A005",
+            "price_from": 162,
+            "variants": [
+                {
+                    "reference_id": 120278,
+                    "reference_slug": "bridgestone-weather-control-a005",
+                    "label": "Bridgestone Weather Control A005 215/50R19 93T",
+                    "size_load_speed": "215/50R19 93T"
+                },
+                {
+                    "reference_id": 136214,
+                    "reference_slug": "bridgestone-weather-control-a005",
+                    "label": "Bridgestone Weather Control A005 255/50R19 103T",
+                    "size_load_speed": "255/50R19 103T"
+                },
+                {
+                    "reference_id": 141472,
+                    "reference_slug": "bridgestone-weather-control-a005",
+                    "label": "Bridgestone Weather Control A005 225/60R18 104V",
+                    "size_load_speed": "225/60R18 104V"
+                },
+                {
+                    "reference_id": 146509,
+                    "reference_slug": "bridgestone-weather-control-a005",
+                    "label": "Bridgestone Weather Control A005 215/55R17 98H",
+                    "size_load_speed": "215/55R17 98H"
+                }
+            ]
+        },
+        {
+            "model_slug": "weather-control-a005-evo",
+            "model_name": "Weather Control A005 EVO",
+            "price_from": 107,
+            "variants": [
+                {
+                    "reference_id": 115604,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 195/65R15 95V",
+                    "size_load_speed": "195/65R15 95V"
+                },
+                {
+                    "reference_id": 115679,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 195/50R15 82V",
+                    "size_load_speed": "195/50R15 82V"
+                },
+                {
+                    "reference_id": 115683,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 225/45R18 95V",
+                    "size_load_speed": "225/45R18 95V"
+                },
+                {
+                    "reference_id": 115702,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 185/55R15 86H",
+                    "size_load_speed": "185/55R15 86H"
+                },
+                {
+                    "reference_id": 115801,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 175/65R15 88H",
+                    "size_load_speed": "175/65R15 88H"
+                },
+                {
+                    "reference_id": 115802,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 185/60R15 88V",
+                    "size_load_speed": "185/60R15 88V"
+                },
+                {
+                    "reference_id": 115803,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 185/65R15 92V",
+                    "size_load_speed": "185/65R15 92V"
+                },
+                {
+                    "reference_id": 115805,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 195/65R15 91H",
+                    "size_load_speed": "195/65R15 91H"
+                },
+                {
+                    "reference_id": 115815,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 195/55R15 89V",
+                    "size_load_speed": "195/55R15 89V"
+                },
+                {
+                    "reference_id": 115817,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 195/60R15 92V",
+                    "size_load_speed": "195/60R15 92V"
+                },
+                {
+                    "reference_id": 115822,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 205/65R15 99V",
+                    "size_load_speed": "205/65R15 99V"
+                },
+                {
+                    "reference_id": 115847,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 255/35R18 94Y",
+                    "size_load_speed": "255/35R18 94Y"
+                },
+                {
+                    "reference_id": 115856,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 215/70R16 100H",
+                    "size_load_speed": "215/70R16 100H"
+                },
+                {
+                    "reference_id": 115857,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 225/45R17 94W",
+                    "size_load_speed": "225/45R17 94W"
+                },
+                {
+                    "reference_id": 141465,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 195/60R16 93H",
+                    "size_load_speed": "195/60R16 93H"
+                },
+                {
+                    "reference_id": 141467,
+                    "reference_slug": "bridgestone-weather-control-a005-evo",
+                    "label": "Bridgestone Weather Control A005 EVO 275/45R20 110W",
+                    "size_load_speed": "275/45R20 110W"
+                }
+            ]
+        }
+    ]
+}

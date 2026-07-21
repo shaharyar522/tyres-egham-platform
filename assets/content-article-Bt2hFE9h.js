@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-ByY1xr43.js";import{Mn as t,On as n}from"./index-DdTEyrWf.js";var r=e();function i(){let e=t().slug;return e?(0,r.jsx)(n,{to:`/blog/${e}`,replace:!0}):(0,r.jsx)(n,{to:`/blog`,replace:!0})}export{i as default};

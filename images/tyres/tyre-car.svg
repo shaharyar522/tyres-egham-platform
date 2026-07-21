@@ -1,0 +1,23 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 320) rotate(90) scale(270)">
+      <stop stop-color="#4B5563"/>
+      <stop offset="1" stop-color="#111827"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="#F8FAFC"/>
+  <circle cx="320" cy="320" r="250" fill="url(#g1)"/>
+  <circle cx="320" cy="320" r="178" fill="#0F172A" stroke="#334155" stroke-width="20"/>
+  <circle cx="320" cy="320" r="92" fill="#E2E8F0" stroke="#94A3B8" stroke-width="14"/>
+  <circle cx="320" cy="320" r="34" fill="#CBD5E1"/>
+  <g stroke="#E5E7EB" stroke-width="9" stroke-linecap="round">
+    <path d="M320 96V150"/><path d="M320 490V544"/>
+    <path d="M544 320H490"/><path d="M150 320H96"/>
+    <path d="M469 171L430 210"/><path d="M210 430L171 469"/>
+    <path d="M469 469L430 430"/><path d="M210 210L171 171"/>
+  </g>
+  <g stroke="#0B1220" stroke-width="18" stroke-linecap="round">
+    <path d="M197 120L228 170"/><path d="M122 197L170 228"/><path d="M443 120L412 170"/><path d="M518 197L470 228"/>
+    <path d="M197 520L228 470"/><path d="M122 443L170 412"/><path d="M443 520L412 470"/><path d="M518 443L470 412"/>
+  </g>
+</svg>

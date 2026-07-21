@@ -1,0 +1,522 @@
+import type { TyreSku } from "@/types";
+
+const tierPriceForBrand = (brandId: number): number => {
+  const premium = [1, 2, 3, 4, 5, 6, 7, 8];
+  const mid = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+  if (premium.includes(brandId)) return 165 + Math.floor(Math.random() * 65);
+  if (mid.includes(brandId)) return 95 + Math.floor(Math.random() * 50);
+  return 55 + Math.floor(Math.random() * 35);
+};
+
+export const SKUS: TyreSku[] = [
+  {
+    id: 145603, slug: "michelin-pilot-sport-5-225-45-r17",
+    brandId: 1, modelName: "Pilot Sport 5",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "MIC-PS5-22545-94Y", ean: "3528700000001",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [{ code: "MO", manufacturer: "Mercedes-Benz", description: "OE for select Mercedes-Benz models" }],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 189, quantityTiers: [
+      { qty: 1, pricePerTyre: 189 },
+      { qty: 2, pricePerTyre: 184, saveLabel: "Save \u00a310" },
+      { qty: 4, pricePerTyre: 176, saveLabel: "Save \u00a352" },
+    ],
+    starRating: 4.8, reviewCount: 312, stock: 24, category: "high-performance",
+    badges: ["best_buy", "recommended"], hasActiveOffer: true, voucherCode: "MICH26FA",
+    isAvailableWithin24h: true,
+  },
+  {
+    id: 145604, slug: "continental-premiumcontact-7-225-45-r17",
+    brandId: 2, modelName: "PremiumContact 7",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "W",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: true, isVan: false, is4x4: false,
+    manufacturerSku: "CON-PC7-22545-94W", ean: "4019238900001",
+    euLabel: { fuelEfficiency: "A", wetGrip: "A", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [{ code: "*", manufacturer: "BMW", description: "OE for select BMW models" }],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 178, quantityTiers: [
+      { qty: 1, pricePerTyre: 178 },
+      { qty: 2, pricePerTyre: 174, saveLabel: "Save \u00a38" },
+      { qty: 4, pricePerTyre: 168, saveLabel: "Save \u00a340" },
+    ],
+    starRating: 4.9, reviewCount: 487, stock: 16, category: "car",
+    badges: ["best_buy", "recommended"], hasActiveOffer: true, voucherCode: "COMAY26",
+  },
+  {
+    id: 145605, slug: "bridgestone-turanza-6-225-45-r17",
+    brandId: 3, modelName: "Turanza 6",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: true, isVan: false, is4x4: false,
+    manufacturerSku: "BRI-TUR6-22545-94Y", ean: "3286340000001",
+    euLabel: { fuelEfficiency: "A", wetGrip: "A", externalNoise: 69, noiseClass: "A" },
+    oeApprovals: [],
+    videoUrl: null,
+    pricePerTyre: 172, quantityTiers: [
+      { qty: 1, pricePerTyre: 172 },
+      { qty: 2, pricePerTyre: 168, saveLabel: "Save \u00a38" },
+      { qty: 4, pricePerTyre: 164, saveLabel: "Save \u00a332" },
+    ],
+    starRating: 4.7, reviewCount: 243, stock: 12, category: "car",
+    badges: ["recommended"], hasActiveOffer: false,
+    isAvailableWithin24h: true,
+  },
+  {
+    id: 145606, slug: "pirelli-cinturato-p7-225-45-r17",
+    brandId: 4, modelName: "Cinturato P7",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "W",
+    isExtraLoad: false, isRunFlat: true, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "PIR-CP7-22545-94W", ean: "8019227000001",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [{ code: "AO", manufacturer: "Audi", description: "OE for select Audi models" }],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 185, quantityTiers: [
+      { qty: 1, pricePerTyre: 185 },
+      { qty: 2, pricePerTyre: 180, saveLabel: "Save \u00a310" },
+      { qty: 4, pricePerTyre: 172, saveLabel: "Save \u00a352" },
+    ],
+    starRating: 4.6, reviewCount: 198, stock: 8, category: "run-flat",
+    badges: ["specialist"], hasActiveOffer: true, voucherCode: "PIRELLI4",
+  },
+  {
+    id: 145607, slug: "goodyear-eagle-f1-asymmetric-6-225-45-r17",
+    brandId: 5, modelName: "Eagle F1 Asymmetric 6",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "GDY-EF1-22545-94Y", ean: "5452000000001",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 169, quantityTiers: [
+      { qty: 1, pricePerTyre: 169 },
+      { qty: 2, pricePerTyre: 165, saveLabel: "Save \u00a38" },
+      { qty: 4, pricePerTyre: 159, saveLabel: "Save \u00a340" },
+    ],
+    starRating: 4.7, reviewCount: 276, stock: 14, category: "high-performance",
+    badges: ["recommended"], hasActiveOffer: true, voucherCode: "GOOD26",
+    isAvailableWithin24h: true,
+  },
+  {
+    id: 145608, slug: "dunlop-sport-maxx-rt2-225-45-r17",
+    brandId: 6, modelName: "Sport Maxx RT2",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "DUN-SMRT2-22545-94Y", ean: "5452000000002",
+    euLabel: { fuelEfficiency: "C", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [],
+    videoUrl: null,
+    pricePerTyre: 158, quantityTiers: [
+      { qty: 1, pricePerTyre: 158 },
+      { qty: 4, pricePerTyre: 152, saveLabel: "Save \u00a324" },
+    ],
+    starRating: 4.5, reviewCount: 142, stock: 18, category: "high-performance",
+    badges: [], hasActiveOffer: false,
+    isAvailableWithin24h: true,
+  },
+  {
+    id: 145609, slug: "hankook-ventus-prime4-225-45-r17",
+    brandId: 9, modelName: "Ventus Prime 4",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "W",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: true, isVan: false, is4x4: false,
+    manufacturerSku: "HAN-VP4-22545-94W", ean: "8808563000001",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [],
+    videoUrl: null,
+    pricePerTyre: 119, quantityTiers: [
+      { qty: 1, pricePerTyre: 119 },
+      { qty: 2, pricePerTyre: 115, saveLabel: "Save \u00a38" },
+      { qty: 4, pricePerTyre: 109, saveLabel: "Save \u00a340" },
+    ],
+    starRating: 4.6, reviewCount: 312, stock: 22, category: "car",
+    badges: ["best_buy"], hasActiveOffer: true, voucherCode: "HANK2DEAL",
+  },
+  {
+    id: 145610, slug: "falken-ziex-ze320-225-45-r17",
+    brandId: 10, modelName: "Ziex ZE320",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "W",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "FAL-ZE320-22545-94W", ean: "4250427400001",
+    euLabel: { fuelEfficiency: "C", wetGrip: "B", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [],
+    videoUrl: null,
+    pricePerTyre: 99, quantityTiers: [
+      { qty: 1, pricePerTyre: 99 },
+      { qty: 4, pricePerTyre: 92, saveLabel: "Save \u00a328" },
+    ],
+    starRating: 4.4, reviewCount: 187, stock: 30, category: "car",
+    badges: [], hasActiveOffer: true, voucherCode: "FALK4SAVE",
+  },
+  {
+    id: 145611, slug: "kumho-ecsta-ps71-225-45-r17",
+    brandId: 11, modelName: "Ecsta PS71",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "KUM-PS71-22545-94Y", ean: "8808956000001",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [],
+    videoUrl: null,
+    pricePerTyre: 105, quantityTiers: [{ qty: 1, pricePerTyre: 105 }, { qty: 4, pricePerTyre: 99, saveLabel: "Save \u00a324" }],
+    starRating: 4.5, reviewCount: 124, stock: 16, category: "car",
+    badges: [], hasActiveOffer: false,
+  },
+  {
+    id: 145612, slug: "matador-mp47-225-45-r17",
+    brandId: 20, modelName: "Hectorra 3",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "W",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "MAT-HEC3-22545-94W", ean: "4019238900100",
+    euLabel: { fuelEfficiency: "C", wetGrip: "B", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 79, quantityTiers: [{ qty: 1, pricePerTyre: 79 }, { qty: 4, pricePerTyre: 73, saveLabel: "Save \u00a324" }],
+    starRating: 4.2, reviewCount: 92, stock: 26, category: "car",
+    badges: [], hasActiveOffer: false,
+  },
+  {
+    id: 145613, slug: "autogrip-grip2000-225-45-r17",
+    brandId: 26, modelName: "Grip2000",
+    width: 225, profile: 45, rim: 17, loadIndex: 94, speedRating: "W",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "AGR-G2K-22545-94W", ean: "6932877000001",
+    euLabel: { fuelEfficiency: "E", wetGrip: "C", externalNoise: 72, noiseClass: "C" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 59, quantityTiers: [{ qty: 1, pricePerTyre: 59 }, { qty: 4, pricePerTyre: 55, saveLabel: "Save \u00a316" }],
+    starRating: 3.8, reviewCount: 41, stock: 40, category: "car",
+    badges: [], hasActiveOffer: false,
+  },
+
+  {
+    id: 145701, slug: "michelin-pilot-sport-5-205-55-r16",
+    brandId: 1, modelName: "Pilot Sport 5",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "V",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "MIC-PS5-20555-91V", ean: "3528700000050",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 142, quantityTiers: [
+      { qty: 1, pricePerTyre: 142 },
+      { qty: 2, pricePerTyre: 138, saveLabel: "Save \u00a38" },
+      { qty: 4, pricePerTyre: 132, saveLabel: "Save \u00a340" },
+    ],
+    starRating: 4.8, reviewCount: 312, stock: 32, category: "car",
+    badges: ["best_buy", "recommended"], hasActiveOffer: true, voucherCode: "MICH26FA",
+  },
+  {
+    id: 145702, slug: "continental-premiumcontact-7-205-55-r16",
+    brandId: 2, modelName: "PremiumContact 7",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "V",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: true, isVan: false, is4x4: false,
+    manufacturerSku: "CON-PC7-20555-91V", ean: "4019238900050",
+    euLabel: { fuelEfficiency: "A", wetGrip: "A", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 134, quantityTiers: [
+      { qty: 1, pricePerTyre: 134 },
+      { qty: 4, pricePerTyre: 124, saveLabel: "Save \u00a340" },
+    ],
+    starRating: 4.9, reviewCount: 487, stock: 24, category: "car",
+    badges: ["recommended"], hasActiveOffer: true, voucherCode: "COMAY26",
+  },
+  {
+    id: 145703, slug: "goodyear-efficientgrip-205-55-r16",
+    brandId: 5, modelName: "EfficientGrip Performance 2",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "V",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "GDY-EGP2-20555-91V", ean: "5452000000050",
+    euLabel: { fuelEfficiency: "A", wetGrip: "B", externalNoise: 69, noiseClass: "A" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 124, quantityTiers: [{ qty: 1, pricePerTyre: 124 }, { qty: 4, pricePerTyre: 116, saveLabel: "Save \u00a332" }],
+    starRating: 4.6, reviewCount: 187, stock: 18, category: "car",
+    badges: ["best_buy"], hasActiveOffer: true, voucherCode: "GOOD26",
+  },
+  {
+    id: 145704, slug: "hankook-ventus-prime4-205-55-r16",
+    brandId: 9, modelName: "Ventus Prime 4",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "V",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: true, isVan: false, is4x4: false,
+    manufacturerSku: "HAN-VP4-20555-91V", ean: "8808563000050",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 92, quantityTiers: [{ qty: 1, pricePerTyre: 92 }, { qty: 4, pricePerTyre: 84, saveLabel: "Save \u00a332" }],
+    starRating: 4.5, reviewCount: 213, stock: 26, category: "car",
+    badges: ["recommended"], hasActiveOffer: true, voucherCode: "HANK2DEAL",
+  },
+  {
+    id: 145705, slug: "matador-mp47-205-55-r16",
+    brandId: 20, modelName: "Hectorra 3",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "V",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "MAT-HEC3-20555-91V", ean: "4019238900150",
+    euLabel: { fuelEfficiency: "C", wetGrip: "B", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 65, quantityTiers: [{ qty: 1, pricePerTyre: 65 }, { qty: 4, pricePerTyre: 60, saveLabel: "Save \u00a320" }],
+    starRating: 4.1, reviewCount: 67, stock: 30, category: "car",
+    badges: [], hasActiveOffer: false,
+  },
+  {
+    id: 145706, slug: "linglong-greenmax-205-55-r16",
+    brandId: 27, modelName: "GreenMax HP010",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "V",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "LIN-GM-20555-91V", ean: "6959613000050",
+    euLabel: { fuelEfficiency: "C", wetGrip: "C", externalNoise: 72, noiseClass: "C" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 52, quantityTiers: [{ qty: 1, pricePerTyre: 52 }, { qty: 4, pricePerTyre: 48, saveLabel: "Save \u00a316" }],
+    starRating: 3.9, reviewCount: 38, stock: 50, category: "car",
+    badges: [], hasActiveOffer: false,
+  },
+
+  {
+    id: 145801, slug: "bridgestone-dueler-htl-235-65-r17",
+    brandId: 3, modelName: "Dueler H/L Alenza",
+    width: 235, profile: 65, rim: 17, loadIndex: 108, speedRating: "V",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: true,
+    manufacturerSku: "BRI-DHL-23565-108V", ean: "3286340000200",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 189, quantityTiers: [{ qty: 1, pricePerTyre: 189 }, { qty: 4, pricePerTyre: 178, saveLabel: "Save \u00a344" }],
+    starRating: 4.7, reviewCount: 156, stock: 12, category: "4x4",
+    badges: ["specialist"], hasActiveOffer: false,
+  },
+  {
+    id: 145802, slug: "michelin-latitude-tour-hp-235-65-r17",
+    brandId: 1, modelName: "Latitude Tour HP",
+    width: 235, profile: 65, rim: 17, loadIndex: 108, speedRating: "V",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: true,
+    manufacturerSku: "MIC-LTHP-23565-108V", ean: "3528700000200",
+    euLabel: { fuelEfficiency: "C", wetGrip: "B", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 199, quantityTiers: [{ qty: 1, pricePerTyre: 199 }, { qty: 4, pricePerTyre: 188, saveLabel: "Save \u00a344" }],
+    starRating: 4.6, reviewCount: 124, stock: 8, category: "4x4",
+    badges: ["specialist"], hasActiveOffer: true, voucherCode: "MICH26FA",
+  },
+  {
+    id: 145803, slug: "bfgoodrich-all-terrain-235-65-r17",
+    brandId: 16, modelName: "All-Terrain T/A KO2",
+    width: 235, profile: 65, rim: 17, loadIndex: 108, speedRating: "T",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: true,
+    manufacturerSku: "BFG-ATK2-23565-108T", ean: "3528700000300",
+    euLabel: { fuelEfficiency: "E", wetGrip: "C", externalNoise: 75, noiseClass: "C" },
+    oeApprovals: [], videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 215, quantityTiers: [{ qty: 1, pricePerTyre: 215 }, { qty: 4, pricePerTyre: 205, saveLabel: "Save \u00a340" }],
+    starRating: 4.8, reviewCount: 287, stock: 14, category: "4x4",
+    badges: ["specialist", "best_buy"], hasActiveOffer: false,
+  },
+
+  {
+    id: 145901, slug: "michelin-agilis-3-225-65-r16c",
+    brandId: 1, modelName: "Agilis 3",
+    width: 225, profile: 65, rim: 16, loadIndex: 112, speedRating: "R",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: true, is4x4: false,
+    manufacturerSku: "MIC-AG3-22565C-112R", ean: "3528700000400",
+    euLabel: { fuelEfficiency: "B", wetGrip: "B", externalNoise: 72, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 145, quantityTiers: [{ qty: 1, pricePerTyre: 145 }, { qty: 4, pricePerTyre: 138, saveLabel: "Save \u00a328" }],
+    starRating: 4.7, reviewCount: 98, stock: 20, category: "van",
+    badges: ["specialist", "recommended"], hasActiveOffer: true, voucherCode: "MICH26FA",
+  },
+  {
+    id: 145902, slug: "continental-vancontact-100-225-65-r16c",
+    brandId: 2, modelName: "VanContact 100",
+    width: 225, profile: 65, rim: 16, loadIndex: 112, speedRating: "R",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: true, is4x4: false,
+    manufacturerSku: "CON-VC100-22565C-112R", ean: "4019238900400",
+    euLabel: { fuelEfficiency: "B", wetGrip: "B", externalNoise: 72, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 138, quantityTiers: [{ qty: 1, pricePerTyre: 138 }, { qty: 4, pricePerTyre: 130, saveLabel: "Save \u00a332" }],
+    starRating: 4.6, reviewCount: 112, stock: 16, category: "van",
+    badges: ["specialist"], hasActiveOffer: true, voucherCode: "COMAY26",
+  },
+
+  {
+    id: 146001, slug: "vredestein-quatrac-pro-205-55-r16",
+    brandId: 8, modelName: "Quatrac Pro",
+    width: 205, profile: 55, rim: 16, loadIndex: 94, speedRating: "V",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: true,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "VRE-QPRO-20555-94V", ean: "8714692000001",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 70, noiseClass: "A" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 132, quantityTiers: [{ qty: 1, pricePerTyre: 132 }, { qty: 4, pricePerTyre: 124, saveLabel: "Save \u00a332" }],
+    starRating: 4.7, reviewCount: 156, stock: 18, category: "all-season",
+    badges: ["specialist", "recommended"], hasActiveOffer: false,
+  },
+  {
+    id: 146002, slug: "michelin-crossclimate-2-205-55-r16",
+    brandId: 1, modelName: "CrossClimate 2",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "V",
+    isExtraLoad: false, isRunFlat: false, isWinter: false, isAllSeason: true,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "MIC-CC2-20555-91V", ean: "3528700000500",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 69, noiseClass: "A" },
+    oeApprovals: [], videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 138, quantityTiers: [{ qty: 1, pricePerTyre: 138 }, { qty: 4, pricePerTyre: 128, saveLabel: "Save \u00a340" }],
+    starRating: 4.9, reviewCount: 412, stock: 22, category: "all-season",
+    badges: ["specialist", "best_buy", "recommended"], hasActiveOffer: true, voucherCode: "MICH26FA",
+  },
+
+  {
+    id: 146101, slug: "continental-wintercontact-ts870-205-55-r16",
+    brandId: 2, modelName: "WinterContact TS870",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "H",
+    isExtraLoad: false, isRunFlat: false, isWinter: true, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "CON-TS870-20555-91H", ean: "4019238900500",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 128, quantityTiers: [{ qty: 1, pricePerTyre: 128 }, { qty: 4, pricePerTyre: 119, saveLabel: "Save \u00a336" }],
+    starRating: 4.7, reviewCount: 198, stock: 14, category: "winter",
+    badges: ["specialist"], hasActiveOffer: true, voucherCode: "COMAY26",
+  },
+  {
+    id: 146102, slug: "bridgestone-blizzak-lm005-205-55-r16",
+    brandId: 3, modelName: "Blizzak LM005",
+    width: 205, profile: 55, rim: 16, loadIndex: 91, speedRating: "H",
+    isExtraLoad: false, isRunFlat: false, isWinter: true, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "BRI-LM005-20555-91H", ean: "3286340000500",
+    euLabel: { fuelEfficiency: "C", wetGrip: "B", externalNoise: 72, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 132, quantityTiers: [{ qty: 1, pricePerTyre: 132 }, { qty: 4, pricePerTyre: 122, saveLabel: "Save \u00a340" }],
+    starRating: 4.6, reviewCount: 142, stock: 10, category: "winter",
+    badges: ["specialist"], hasActiveOffer: false,
+  },
+
+  {
+    id: 146201, slug: "pirelli-pzero-elect-235-45-r19",
+    brandId: 4, modelName: "P Zero Elect",
+    width: 235, profile: 45, rim: 19, loadIndex: 99, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: true, isVan: false, is4x4: false,
+    manufacturerSku: "PIR-PZE-23545-99Y", ean: "8019227000200",
+    euLabel: { fuelEfficiency: "B", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [{ code: "T0", manufacturer: "Tesla", description: "OE for Tesla EV models" }],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 269, quantityTiers: [{ qty: 1, pricePerTyre: 269 }, { qty: 4, pricePerTyre: 252, saveLabel: "Save \u00a368" }],
+    starRating: 4.8, reviewCount: 87, stock: 6, category: "ev",
+    badges: ["specialist", "recommended"], hasActiveOffer: true, voucherCode: "PIRELLI4",
+  },
+  {
+    id: 146202, slug: "bridgestone-turanza-eco-235-45-r19",
+    brandId: 3, modelName: "Turanza Eco",
+    width: 235, profile: 45, rim: 19, loadIndex: 99, speedRating: "V",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: true, isVan: false, is4x4: false,
+    manufacturerSku: "BRI-TECO-23545-99V", ean: "3286340000600",
+    euLabel: { fuelEfficiency: "A", wetGrip: "A", externalNoise: 69, noiseClass: "A" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 245, quantityTiers: [{ qty: 1, pricePerTyre: 245 }, { qty: 4, pricePerTyre: 232, saveLabel: "Save \u00a352" }],
+    starRating: 4.7, reviewCount: 64, stock: 8, category: "ev",
+    badges: ["specialist", "recommended"], hasActiveOffer: false,
+  },
+
+  {
+    id: 146301, slug: "michelin-pilot-sport-4s-245-35-r19",
+    brandId: 1, modelName: "Pilot Sport 4S",
+    width: 245, profile: 35, rim: 19, loadIndex: 93, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "MIC-PS4S-24535-93Y", ean: "3528700000700",
+    euLabel: { fuelEfficiency: "C", wetGrip: "A", externalNoise: 71, noiseClass: "B" },
+    oeApprovals: [{ code: "MO1", manufacturer: "Mercedes-AMG", description: "OE for Mercedes-AMG models" }],
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    pricePerTyre: 248, quantityTiers: [{ qty: 1, pricePerTyre: 248 }, { qty: 4, pricePerTyre: 234, saveLabel: "Save \u00a356" }],
+    starRating: 4.9, reviewCount: 543, stock: 9, category: "high-performance",
+    badges: ["best_buy", "recommended"], hasActiveOffer: true, voucherCode: "MICH26FA",
+  },
+  {
+    id: 146302, slug: "yokohama-advan-sport-v107-245-35-r19",
+    brandId: 7, modelName: "ADVAN Sport V107",
+    width: 245, profile: 35, rim: 19, loadIndex: 93, speedRating: "Y",
+    isExtraLoad: true, isRunFlat: false, isWinter: false, isAllSeason: false,
+    isEvRated: false, isVan: false, is4x4: false,
+    manufacturerSku: "YOK-V107-24535-93Y", ean: "4968814000700",
+    euLabel: { fuelEfficiency: "C", wetGrip: "A", externalNoise: 72, noiseClass: "B" },
+    oeApprovals: [], videoUrl: null,
+    pricePerTyre: 219, quantityTiers: [{ qty: 1, pricePerTyre: 219 }, { qty: 4, pricePerTyre: 208, saveLabel: "Save \u00a344" }],
+    starRating: 4.6, reviewCount: 78, stock: 6, category: "high-performance",
+    badges: ["specialist"], hasActiveOffer: false,
+  },
+];
+
+void tierPriceForBrand;
+
+export const getSkuById = (id: number) => SKUS.find((s) => s.id === id);
+export const getSkuBySlug = (slug: string) => SKUS.find((s) => s.slug === slug);
+
+export interface SearchFilters {
+  width?: number;
+  profile?: number;
+  rim?: number;
+  speedRating?: string;
+  category?: string;
+  brandId?: number;
+  brandTier?: ("premium" | "mid_range" | "budget")[];
+  specialist?: {
+    extraLoad?: boolean;
+    fourByFour?: boolean;
+    van?: boolean;
+    runFlat?: boolean;
+    winter?: boolean;
+    allSeason?: boolean;
+    ev?: boolean;
+  };
+  priceMin?: number;
+  priceMax?: number;
+  offersOnly?: boolean;
+}
+
+export type SortOption =
+  | "default"
+  | "price_asc"
+  | "price_desc"
+  | "budget_brands"
+  | "mid_range_brands"
+  | "premium_brands"
+  | "fuel_efficiency"
+  | "wet_grip"
+  | "external_noise";
+
+export const SORT_OPTIONS: Array<{ value: SortOption; label: string }> = [
+  { value: "default", label: "Default Sort Order" },
+  { value: "price_asc", label: "Price - Low to High" },
+  { value: "price_desc", label: "Price - High to Low" },
+  { value: "budget_brands", label: "Budget Brands" },
+  { value: "mid_range_brands", label: "Budget Brands" },
+  { value: "premium_brands", label: "Premium Brands" },
+  { value: "fuel_efficiency", label: "Fuel Efficiency" },
+  { value: "wet_grip", label: "Wet Grip" },
+  { value: "external_noise", label: "External Noise" },
+];
+
+export const POPULAR_SIZES = [
+  { width: 205, profile: 55, rim: 16 },
+  { width: 225, profile: 45, rim: 17 },
+  { width: 235, profile: 45, rim: 18 },
+  { width: 245, profile: 35, rim: 19 },
+  { width: 235, profile: 65, rim: 17 },
+  { width: 225, profile: 65, rim: 16 },
+];

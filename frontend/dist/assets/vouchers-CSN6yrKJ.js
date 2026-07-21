@@ -1,0 +1,1 @@
+function e(e,t){return e.find(e=>e.brandSlug===t&&(!e.validTo||new Date(e.validTo)>=new Date))}function t(e,t){return e.find(e=>e.code.toLowerCase()===t.toLowerCase().trim())}export{e as n,t};

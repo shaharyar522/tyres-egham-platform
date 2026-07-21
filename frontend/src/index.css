@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Surfaces — aligned with thetyresegham.co.uk */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    /* Brand */
+    --brand: 0 0% 11%;
+    --brand-foreground: 0 0% 100%;
+    --brand-dark: 0 0% 7%;
+
+    /* Primary action — #a00303 (live site theme) */
+    --primary: 0 96% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary — dark charcoal for nav / contrast blocks */
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted — #f8f8f8 */
+    --muted: 0 0% 97.3%;
+    --muted-foreground: 220 4% 35%;
+
+    /* Accent */
+    --accent: 0 0% 97.3%;
+    --accent-foreground: 0 0% 13%;
+
+    /* Status */
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 13%;
+    --info: 204 98% 38%;
+    --info-foreground: 0 0% 100%;
+
+    /* Form chrome */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 100% 49%;
+
+    /* Radius — reference uses 5px on buttons/images */
+    --radius: 0.3125rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    color: hsl(0 0% 13%);
+    letter-spacing: 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Print stylesheet for booking confirmations and invoices */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+}
+
+/* Admin rich text editor (Tiptap) */
+.rich-text-editor-content .ProseMirror {
+  min-height: inherit;
+}
+
+.rich-text-editor-content .ProseMirror:focus {
+  outline: none;
+}
+
+.rich-text-editor-content .ProseMirror p.is-editor-empty:first-child::before {
+  color: hsl(var(--muted-foreground));
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.rich-text-editor-content .ProseMirror table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.rich-text-editor-content .ProseMirror th,
+.rich-text-editor-content .ProseMirror td {
+  border: 1px solid hsl(var(--border));
+  padding: 0.35rem 0.5rem;
+  vertical-align: top;
+}
+
+.rich-text-editor-content .ProseMirror th {
+  background: hsl(var(--muted));
+  font-weight: 600;
+}
+
+.rich-text-editor-content .ProseMirror img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rich-text-editor-content .ProseMirror blockquote {
+  border-left: 3px solid hsl(var(--primary));
+  padding-left: 1rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.rich-text-editor-content .ProseMirror pre {
+  background: hsl(var(--muted));
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+}
