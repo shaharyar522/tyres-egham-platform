@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { useApiBootstrapQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
 import { getCheckoutVisibleServices } from "@/lib/service-pricing";
+import { useSite } from "@/lib/site";
 
 interface SitemapSection {
   title: string;
@@ -51,8 +53,16 @@ const STATIC_SECTIONS: SitemapSection[] = [
 ];
 
 export default function SitemapPage() {
+  const site = useSite();
   const bootstrapQuery = useApiBootstrapQuery();
   const services = getCheckoutVisibleServices(bootstrapQuery.data?.services ?? []);
+
+  usePageMeta({
+    title: `Sitemap | ${site.businessName}`,
+    description: `Browse all pages on ${site.businessName}.`,
+    canonicalPath: "/sitemap",
+  });
+
 
   const sections: SitemapSection[] = [
     STATIC_SECTIONS[0],
@@ -83,8 +93,11 @@ export default function SitemapPage() {
         <div className="container">
           <h1 className="font-display text-3xl font-extrabold sm:text-4xl">Sitemap</h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-            Main routes in this build. Tyre detail URLs follow <code className="rounded bg-muted px-1 py-0.5 text-xs">/tyresearch/details/:id/:slug</code>
-            {" "}from search results or brand pages.
+            Browse the main pages on this site. Search engines can use the XML sitemap at{" "}
+            <a href="/sitemap.xml" className="font-medium text-primary hover:underline">
+              /sitemap.xml
+            </a>
+            .
           </p>
         </div>
       </section>

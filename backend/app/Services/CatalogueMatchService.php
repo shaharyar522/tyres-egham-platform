@@ -14,7 +14,7 @@ class CatalogueMatchService
 {
     public function searchManual(array $filters): array
     {
-        $query = TyreSku::query()->with(['brand', 'category'])->where('stock', '>', 0);
+        $query = TyreSku::query()->with(['brand', 'category'])->visible()->where('stock', '>', 0);
 
         foreach (['width', 'profile', 'rim'] as $field) {
             if (! empty($filters[$field])) {
@@ -73,6 +73,7 @@ class CatalogueMatchService
 
         $query = TyreSku::query()
             ->with(['brand', 'category'])
+            ->visible()
             ->where('stock', '>', 0)
             ->where('width', $position->width)
             ->where('profile', $position->profile)
@@ -199,6 +200,10 @@ class CatalogueMatchService
         }
 
         if ((bool) $sku->is_available_within_24h) {
+            $score += 10;
+        }
+
+        if ((bool) $sku->is_same_day_delivery) {
             $score += 10;
         }
 

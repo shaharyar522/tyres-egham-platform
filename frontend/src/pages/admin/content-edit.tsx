@@ -16,6 +16,7 @@ import {
 import { AdminFormSkeleton } from "@/components/admin/admin-skeletons";
 import { useConfirmDialog } from "@/hooks/use-confirm-dialog";
 import { ApiError } from "@/lib/api/client";
+import { resolvePublicAssetUrl } from "@/lib/public-asset-url";
 
 const emptyForm = {
   namespace: "blog",
@@ -205,8 +206,10 @@ export default function AdminContentEditPage() {
   };
 
   const isSaving = saveMutation.isPending || uploadMediaMutation.isPending;
-  const currentFeaturedUrl = article && !removeFeatured ? (article.featuredImageUrl ?? null) : null;
-  const currentOgUrl = article && !removeOg ? (article.ogImageUrl ?? null) : null;
+  const currentFeaturedUrl =
+    article && !removeFeatured ? (resolvePublicAssetUrl(article.featuredImageUrl) ?? article.featuredImageUrl ?? null) : null;
+  const currentOgUrl =
+    article && !removeOg ? (resolvePublicAssetUrl(article.ogImageUrl) ?? article.ogImageUrl ?? null) : null;
 
   if (!isNew && itemQuery.isLoading) {
     return <AdminFormSkeleton fields={8} />;

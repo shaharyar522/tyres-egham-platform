@@ -2,11 +2,21 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Car } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useApiBootstrapQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 
 export default function MakesDirectoryPage() {
+  const site = useSite();
   const bootstrapQuery = useApiBootstrapQuery();
   const makes = bootstrapQuery.data?.makes ?? [];
   const totalMakes = bootstrapQuery.data?.stats.makes;
+
+  usePageMeta({
+    title: `Popular vehicle makes | ${site.businessName}`,
+    description: `Find tyres by vehicle make with fitting at ${site.businessName} in Egham.`,
+    canonicalPath: "/makes",
+  });
+
 
   if (bootstrapQuery.isLoading) {
     return (

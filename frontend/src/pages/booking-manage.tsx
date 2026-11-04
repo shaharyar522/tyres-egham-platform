@@ -15,12 +15,14 @@ import {
 import { ApiError } from "@/lib/api/client";
 import { formatGBP } from "@/lib/utils";
 import { cn } from "@/lib/utils";
+import { useSite } from "@/lib/site";
 import { SlotPicker } from "@/components/domain/slot-picker";
 
 /** Customer self-service actions on Manage your booking — hidden in UI; set true to show again. */
 const SHOW_CUSTOMER_SELF_SERVICE_ACTIONS = false;
 
 export default function BookingManagePage() {
+  const site = useSite();
   const [params] = useSearchParams();
   const ref = params.get("ref") ?? "";
   const token = params.get("token") ?? "";
@@ -221,8 +223,8 @@ export default function BookingManagePage() {
               Book new tyres
             </Link>{" "}
             or call{" "}
-            <a href="tel:01784436000" className="font-semibold underline">
-              01784 436000
+            <a href={`tel:${site.phoneTel}`} className="font-semibold underline">
+              {site.phone}
             </a>
             .
           </CardContent>

@@ -16,6 +16,7 @@ import {
 import { AdminSiteSettingsSkeleton } from "@/components/admin/admin-skeletons";
 import { useConfirmDialog } from "@/hooks/use-confirm-dialog";
 import { ApiError } from "@/lib/api/client";
+import { resolvePublicAssetUrl } from "@/lib/public-asset-url";
 
 function LogoDimensionField({
   id,
@@ -159,12 +160,17 @@ export default function AdminSiteSettingsPage() {
     if (settings) {
       setForm({
         ...settings,
+        logoUrl: resolvePublicAssetUrl(settings.logoUrl) ?? settings.logoUrl,
+        faviconUrl: resolvePublicAssetUrl(settings.faviconUrl) ?? settings.faviconUrl,
+        ogImageUrl: resolvePublicAssetUrl(settings.ogImageUrl) ?? settings.ogImageUrl,
         headerLogoHeight: settings.headerLogoHeight ?? 56,
         headerLogoMaxWidth: settings.headerLogoMaxWidth ?? 220,
         headerLogoHeightMobile: settings.headerLogoHeightMobile ?? 40,
         headerLogoMaxWidthMobile: settings.headerLogoMaxWidthMobile ?? 152,
         footerLogoHeight: settings.footerLogoHeight ?? 52,
         footerLogoMaxWidth: settings.footerLogoMaxWidth ?? 200,
+        headCode: settings.headCode ?? "",
+        bodyCode: settings.bodyCode ?? "",
       });
       setRemoveLogo(false);
       setRemoveFavicon(false);
@@ -501,7 +507,10 @@ export default function AdminSiteSettingsPage() {
             </div>
             <div>
               <Label htmlFor="canonicalBaseUrl" className="mb-1.5 block">Canonical base URL</Label>
-              <Input id="canonicalBaseUrl" type="url" value={form.canonicalBaseUrl} onChange={(e) => set("canonicalBaseUrl", e.target.value)} placeholder="https://www.eghamtyres.co.uk" />
+              <Input id="canonicalBaseUrl" type="url" value={form.canonicalBaseUrl} onChange={(e) => set("canonicalBaseUrl", e.target.value)} placeholder="https://thetyresegham.co.uk" />
+              <p className="mt-1 text-xs text-muted-foreground">
+                Used for every page canonical (home, products, categories, services, blog, etc.). Example: https://thetyresegham.co.uk
+              </p>
             </div>
             <AssetField
               label="Open Graph image"
@@ -517,6 +526,54 @@ export default function AdminSiteSettingsPage() {
                 })
               }
             />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="space-y-4 p-5">
+            <div>
+              <p className="font-display font-bold">Custom code</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Paste tracking snippets such as Google Tag Manager, Google Analytics, Meta Pixel,
+                or Hotjar. These are injected after the page loads on the <strong>public site only</strong>
+                {" "}(not under /admin).
+              </p>
+              <p className="mt-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-950">
+                To verify: open the homepage (e.g. /), press F12 → <strong>Elements</strong> (not View Source),
+                and search for <code className="font-mono">data-site-custom-code</code> or your measurement ID.
+                View Source only shows the empty React shell, so custom code will not appear there.
+              </p>
+            </div>
+            <div>
+              <Label htmlFor="headCode" className="mb-1.5 block">Head code</Label>
+              <Textarea
+                id="headCode"
+                rows={8}
+                className="font-mono text-xs"
+                value={form.headCode}
+                onChange={(e) => set("headCode", e.target.value)}
+                placeholder={'<!-- Google Tag Manager -->\n<script>...</script>'}
+                spellCheck={false}
+              />
+              <p className="mt-1 text-xs text-muted-foreground">
+                Injected into the document head. Use for GTM/analytics script tags.
+              </p>
+            </div>
+            <div>
+              <Label htmlFor="bodyCode" className="mb-1.5 block">Body code</Label>
+              <Textarea
+                id="bodyCode"
+                rows={8}
+                className="font-mono text-xs"
+                value={form.bodyCode}
+                onChange={(e) => set("bodyCode", e.target.value)}
+                placeholder={'<!-- Google Tag Manager (noscript) -->\n<noscript>...</noscript>'}
+                spellCheck={false}
+              />
+              <p className="mt-1 text-xs text-muted-foreground">
+                Injected at the end of the document body. Use for noscript fallbacks or chat widgets.
+              </p>
+            </div>
           </CardContent>
         </Card>
 

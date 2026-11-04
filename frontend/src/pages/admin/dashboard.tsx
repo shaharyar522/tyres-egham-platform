@@ -20,7 +20,7 @@ export default function AdminDashboardPage() {
   return (
     <div>
       <h1 className="font-display text-2xl font-extrabold">Dashboard</h1>
-      <p className="mt-1 text-sm text-muted-foreground">Phase 1 admin — catalogue data is seeded; edit content and moderate reviews here.</p>
+      <p className="mt-1 text-sm text-muted-foreground">Manage catalogue, content, bookings and reviews from here.</p>
 
       {dashboard.isError && <p className="mt-6 text-sm text-destructive">Could not load dashboard.</p>}
 

@@ -67,6 +67,8 @@ export type AdminSiteSettings = {
   robots: string;
   canonicalBaseUrl: string;
   showPrototypeNotice: boolean;
+  headCode: string;
+  bodyCode: string;
 };
 
 export type AdminSiteSettingsSavePayload = AdminSiteSettings & {
@@ -347,6 +349,9 @@ export type AdminTyreSku = TyreSku & {
 export function useAdminTyresQuery(params: {
   search?: string;
   within24h?: string;
+  premium?: string;
+  sameDayDelivery?: string;
+  hidden?: string;
   page?: number;
   perPage?: number;
 }) {
@@ -355,6 +360,9 @@ export function useAdminTyresQuery(params: {
     perPage: params.perPage,
     search: params.search,
     within24h: params.within24h,
+    premium: params.premium,
+    sameDayDelivery: params.sameDayDelivery,
+    hidden: params.hidden,
   });
 
   return useQuery({
@@ -380,6 +388,7 @@ export function useAdminUpdateTyreMutation() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["admin", "tyres"] });
       qc.invalidateQueries({ queryKey: ["admin", "tyre"] });
+      qc.invalidateQueries({ queryKey: ["api", "tyres"] });
     },
   });
 }
@@ -426,12 +435,62 @@ export function useAdminUploadTyreImageMutation() {
   });
 }
 
+export function useAdminDeleteTyreMutation() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (id: number) => adminDelete(`/tyres/${id}`),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["admin", "tyres"] });
+      qc.invalidateQueries({ queryKey: ["api", "tyres"] });
+    },
+  });
+}
+
 export function useAdminBulkWithin24hMutation() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (payload: { ids: number[]; enabled: boolean }) =>
       adminPost<{ updated: number }>("/tyres/bulk-within-24h", payload),
-    onSuccess: () => qc.invalidateQueries({ queryKey: ["admin", "tyres"] }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["admin", "tyres"] });
+      qc.invalidateQueries({ queryKey: ["api", "tyres"] });
+    },
+  });
+}
+
+export function useAdminBulkHiddenMutation() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (payload: { ids: number[]; hidden: boolean }) =>
+      adminPost<{ updated: number }>("/tyres/bulk-hidden", payload),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["admin", "tyres"] });
+      qc.invalidateQueries({ queryKey: ["api", "tyres"] });
+    },
+  });
+}
+
+export function useAdminBulkPremiumMutation() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (payload: { ids: number[]; premium: boolean }) =>
+      adminPost<{ updated: number }>("/tyres/bulk-premium", payload),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["admin", "tyres"] });
+      qc.invalidateQueries({ queryKey: ["api", "tyres"] });
+    },
+  });
+}
+
+export function useAdminBulkSameDayMutation() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (payload: { ids: number[]; sameDayDelivery: boolean }) =>
+      adminPost<{ updated: number }>("/tyres/bulk-same-day-delivery", payload),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["admin", "tyres"] });
+      qc.invalidateQueries({ queryKey: ["api", "tyres"] });
+    },
   });
 }
 
@@ -599,6 +658,21 @@ export function useAdminSaveNotificationSettingsMutation() {
   });
 }
 
+export function useAdminTestMailMutation() {
+  return useMutation({
+    mutationFn: (email: string) =>
+      adminPost<{
+        sent: boolean;
+        message: string;
+        mailer?: string;
+        smtpHost?: string;
+        smtpPort?: number | string;
+        from?: string;
+        bookingReference?: string;
+      }>("/mail/test", { email }),
+  });
+}
+
 export function useAdminPaymentSettingsQuery() {
   return useQuery({
     queryKey: adminKeys.paymentSettings,
@@ -682,6 +756,8 @@ function buildSiteSettingsFormData(data: AdminSiteSettingsSavePayload): FormData
     ["footerLogoHeight", data.footerLogoHeight],
     ["footerLogoMaxWidth", data.footerLogoMaxWidth],
     ["showPrototypeNotice", data.showPrototypeNotice ? "1" : "0"],
+    ["headCode", data.headCode ?? ""],
+    ["bodyCode", data.bodyCode ?? ""],
   ];
   for (const [key, value] of textFields) {
     fd.append(key, String(value ?? ""));

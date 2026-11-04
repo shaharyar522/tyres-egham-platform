@@ -20,21 +20,28 @@ use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\StripeWebhookController;
 use App\Http\Controllers\Api\Admin\BookingPaymentController as AdminBookingPaymentController;
 use App\Http\Controllers\Api\Admin\NotificationSettingsController as AdminNotificationSettingsController;
+use App\Http\Controllers\Api\Admin\MailTestController as AdminMailTestController;
 use App\Http\Controllers\Api\Admin\PaymentSettingsController as AdminPaymentSettingsController;
 use App\Http\Controllers\Api\Admin\SiteSettingsController as AdminSiteSettingsController;
 use App\Http\Controllers\Api\BrandController;
 use App\Http\Controllers\Api\ContentArticleController;
 use App\Http\Controllers\Api\HealthController;
+use App\Http\Controllers\Api\MediaController;
 use App\Http\Controllers\Api\PageController;
 use App\Http\Controllers\Api\ReviewController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\TyreController;
 use App\Http\Controllers\Api\VehicleLookupController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/sitemap.xml', [SitemapController::class, 'xml']);
+Route::get('/robots.txt', [SitemapController::class, 'robots']);
+
 Route::get('/health', HealthController::class);
 Route::get('/bootstrap', BootstrapController::class);
+Route::get('/media/{path}', MediaController::class)->where('path', '.*');
 
 Route::get('/brands', [BrandController::class, 'index']);
 Route::get('/brands/{slug}', [BrandController::class, 'show']);
@@ -84,6 +91,7 @@ Route::prefix('/admin')->group(function () {
         Route::put('/payment-settings', [AdminPaymentSettingsController::class, 'update']);
         Route::get('/notification-settings', [AdminNotificationSettingsController::class, 'show']);
         Route::put('/notification-settings', [AdminNotificationSettingsController::class, 'update']);
+        Route::post('/mail/test', AdminMailTestController::class);
         Route::get('/site-settings', [AdminSiteSettingsController::class, 'show']);
         Route::post('/site-settings', [AdminSiteSettingsController::class, 'update']);
         Route::put('/site-settings', [AdminSiteSettingsController::class, 'update']);
@@ -92,6 +100,9 @@ Route::prefix('/admin')->group(function () {
         Route::get('/tyres', [AdminTyreSkuController::class, 'index']);
         Route::post('/tyres', [AdminTyreSkuController::class, 'store']);
         Route::post('/tyres/bulk-within-24h', [AdminTyreSkuController::class, 'bulkWithin24h']);
+        Route::post('/tyres/bulk-hidden', [AdminTyreSkuController::class, 'bulkHidden']);
+        Route::post('/tyres/bulk-premium', [AdminTyreSkuController::class, 'bulkPremium']);
+        Route::post('/tyres/bulk-same-day-delivery', [AdminTyreSkuController::class, 'bulkSameDayDelivery']);
         Route::get('/tyres/{tyreSku}', [AdminTyreSkuController::class, 'show']);
         Route::patch('/tyres/{tyreSku}', [AdminTyreSkuController::class, 'update']);
         Route::post('/tyres/{tyreSku}/image', [AdminTyreSkuController::class, 'updateImage']);

@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BaselineDataSeeder::class);
 
         User::updateOrCreate([
-            'email' => 'admin@eghamtyres.local',
+            'email' => 'admin@gmail.com',
         ], [
             'name' => 'Phase 1 Admin',
             'role' => 'admin',

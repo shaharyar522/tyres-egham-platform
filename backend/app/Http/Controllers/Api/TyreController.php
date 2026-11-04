@@ -56,8 +56,10 @@ class TyreController extends Controller
     {
         $sku = TyreSku::query()
             ->with(['brand', 'category'])
-            ->where('slug', $idOrSlug)
-            ->orWhere('id', $idOrSlug)
+            ->visible()
+            ->where(function ($query) use ($idOrSlug) {
+                $query->where('slug', $idOrSlug)->orWhere('id', $idOrSlug);
+            })
             ->firstOrFail();
 
         return response()->json([

@@ -1,6 +1,10 @@
 RewriteEngine On
 RewriteBase /
 
+# Dynamic SEO files via Laravel gateway
+RewriteRule ^sitemap\.xml$ /api/index.php [L,QSA]
+RewriteRule ^robots\.txt$ /api/index.php [L,QSA]
+
 # Route /api/* directly to Laravel gateway
 RewriteRule ^api/(.*)$ /api/index.php [L,QSA]
 

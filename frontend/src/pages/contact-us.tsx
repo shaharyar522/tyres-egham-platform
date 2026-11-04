@@ -14,6 +14,7 @@ import { HomeCtaBand, homeStyles } from "@/components/home/home-layout";
 import { Button } from "@/components/ui/button";
 import { googleMapsDirectionsUrl, whatsAppUrl } from "@/lib/google-maps";
 import { TYRES_EGHAM_IMAGES } from "@/lib/thetyresegham-assets";
+import { usePageMeta } from "@/lib/page-meta";
 import { useSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -59,6 +60,13 @@ function ContactDetailCard({
 
 export default function ContactUsPage() {
   const site = useSite();
+
+  usePageMeta({
+    title: `Contact us | ${site.businessName}`,
+    description: `Contact ${site.businessName} in Egham for tyre fitting, quotes and bookings. Call ${site.phone} or send a message online.`,
+    canonicalPath: "/contact-us",
+  });
+
   const directionsUrl = googleMapsDirectionsUrl(site.fullAddress, site.googleBusinessUrl);
   const waUrl = whatsAppUrl(site.phoneTel);
 

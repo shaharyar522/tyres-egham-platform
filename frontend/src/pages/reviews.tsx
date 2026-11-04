@@ -4,11 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { StarRating } from "@/components/domain/star-rating";
 import { useApiReviewsQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 
 export default function ReviewsPage() {
+  const site = useSite();
   const reviewsQuery = useApiReviewsQuery();
   const reviews = reviewsQuery.data?.reviews ?? [];
   const stats = reviewsQuery.data?.stats;
+
+  usePageMeta({
+    title: `Customer reviews | ${site.businessName}`,
+    description: `Read customer reviews for ${site.businessName} tyre fitting in Egham.`,
+    canonicalPath: "/reviews",
+  });
+
 
   if (reviewsQuery.isLoading) {
     return (

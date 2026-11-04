@@ -1,0 +1,21 @@
+# Secrets / environment
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+vendor/
+composer.phar
+
+# Archives and large generated files
+*.zip
+reports/tyre-images/
+
+# Logs / caches / editor
+*.log
+.phpunit.result.cache
+.phpunit.cache/
+.idea/
+.vscode/
+Thumbs.db

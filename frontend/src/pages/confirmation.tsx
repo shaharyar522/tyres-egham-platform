@@ -46,8 +46,8 @@ export default function ConfirmationPage() {
           {booking?.paymentStatus === "paid"
             ? `Payment received. ${stored?.emailSent ? `A confirmation email has been sent to ${email}.` : ""} Use the link below to manage your booking.`
             : stored?.emailSent
-              ? `A confirmation email has been sent to ${email}. Pay at the workshop on the day of fitting. Use the link below to manage your booking.`
-              : "Your booking is saved. Pay at the workshop on the day of fitting, or use the link below to manage it."}
+              ? `A confirmation email has been sent to ${email}. Use the link below to manage your booking.`
+              : "Your booking is saved. Use the link below to manage it."}
         </p>
         {stored?.emailSent === false && email && (
           <p className="mt-3 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">

@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { ChevronRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,10 +10,14 @@ import { VoucherBanner } from "@/components/domain/voucher-banner";
 import { useApiBootstrapQuery, useApiBrandQuery, useApiTyreSearchQuery } from "@/lib/api/queries";
 import { findVoucherForBrand } from "@/lib/vouchers";
 import { brandTierLabel } from "@/lib/brand-tiers";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 import { formatGBP } from "@/lib/utils";
 
 export default function BrandLandingPage() {
   const params = useParams();
+  const location = useLocation();
+  const site = useSite();
   const routeSlug = params.slug ?? "";
   const brandSlug = routeSlug.replace(/-tyres$/, "");
   const brandQuery = useApiBrandQuery(brandSlug);
@@ -23,11 +27,23 @@ export default function BrandLandingPage() {
   const brandSkus = brandSkusQuery.data?.results ?? [];
   const voucher = brand ? findVoucherForBrand(bootstrapQuery.data?.vouchers ?? [], brand.slug) : null;
 
+  usePageMeta(
+    brand
+      ? {
+          title: `${brand.name} tyres | ${site.businessName}`,
+          description:
+            brand.description ||
+            `Shop ${brand.name} tyres with fitting at ${site.businessName} in Egham.`,
+          canonicalPath: location.pathname,
+        }
+      : { canonicalPath: location.pathname },
+  );
+
   if (brandQuery.isLoading || bootstrapQuery.isLoading || brandSkusQuery.isLoading) {
     return (
       <div className="container py-20 text-center">
         <h1 className="font-display text-2xl font-bold">Loading brand</h1>
-        <p className="mt-2 text-muted-foreground">Fetching live brand catalogue data from the Phase 1 backend.</p>
+        <p className="mt-2 text-muted-foreground">Fetching brand catalogue.</p>
       </div>
     );
   }
@@ -125,7 +141,7 @@ export default function BrandLandingPage() {
           {skusByCategory.length === 0 ? (
             <Card>
               <CardContent className="p-6 text-center text-muted-foreground">
-                <p>We don't currently stock {brand.name} tyres in your size, but we can usually source any size within 24 hours - call us on 01784 436000.</p>
+                <p>We don't currently stock {brand.name} tyres in your size, but we can usually source any size within 24 hours - call us on {site.phone}.</p>
               </CardContent>
             </Card>
           ) : (

@@ -7,6 +7,7 @@ export type PageMeta = {
   keywords?: string;
   robots?: string;
   ogImage?: string | null;
+  /** Path beginning with `/`, optionally with a stable query string. */
   canonicalPath?: string;
 };
 
@@ -33,22 +34,91 @@ export function upsertLink(rel: string, href: string, type?: string) {
   if (type) el.type = type;
 }
 
-function applyPageMeta(meta: PageMeta, site: ReturnType<typeof useSite>) {
+/** Prefer admin canonical base, then frontendUrl, then current origin. */
+export function getCanonicalBase(site: { canonicalBaseUrl?: string | null; frontendUrl?: string | null }) {
+  const fromSettings = site.canonicalBaseUrl?.trim() || site.frontendUrl?.trim() || "";
+  if (fromSettings) {
+    return fromSettings.replace(/\/$/, "");
+  }
+  if (typeof window !== "undefined" && window.location?.origin) {
+    return window.location.origin.replace(/\/$/, "");
+  }
+  return "";
+}
+
+export function buildCanonicalUrl(base: string, path: string) {
+  const cleanBase = base.replace(/\/$/, "");
+  if (!cleanBase) return "";
+
+  const raw = path?.trim() || "/";
+  if (raw === "/") {
+    return `${cleanBase}/`;
+  }
+
+  const [pathnamePart, queryPart] = raw.split("?");
+  const pathname = pathnamePart.startsWith("/") ? pathnamePart : `/${pathnamePart}`;
+  const normalizedPath = pathname.replace(/\/+$/, "") || "/";
+  const query = queryPart ? `?${queryPart}` : "";
+  return `${cleanBase}${normalizedPath === "/" ? "/" : normalizedPath}${query}`;
+}
+
+/**
+ * Build a stable canonical path from the current route.
+ * Keeps meaningful catalogue filters; drops VRN/pagination/noise params.
+ */
+export function canonicalPathFromLocation(pathname: string, search: string) {
+  const path = pathname || "/";
+  const params = new URLSearchParams(search);
+
+  if (path === "/tyresearch/results" || path === "/vrnsearch/results" || path === "/tyres") {
+    const category = params.get("TyreCategory");
+    if (category) {
+      return `${path}?TyreCategory=${encodeURIComponent(category)}`;
+    }
+
+    const brand = params.get("brand");
+    if (brand) {
+      return `${path}?brand=${encodeURIComponent(brand)}`;
+    }
+
+    const width = params.get("Width");
+    const profile = params.get("Profile");
+    const rim = params.get("Rim");
+    if (width && profile && rim) {
+      const next = new URLSearchParams({
+        Width: width,
+        Profile: profile,
+        Rim: rim,
+      });
+      const speed = params.get("Speed");
+      if (speed) next.set("Speed", speed.toUpperCase());
+      return `${path}?${next.toString()}`;
+    }
+
+    return path;
+  }
+
+  return path;
+}
+
+function applyPageMeta(meta: PageMeta, site: ReturnType<typeof useSite>, options?: { updateCanonical?: boolean }) {
   const title = meta.title ?? site.metaTitle ?? site.businessName;
   const description = meta.description ?? site.metaDescription ?? "";
   const keywords = meta.keywords ?? site.metaKeywords ?? "";
   const robots = meta.robots ?? site.robots;
   const ogImage = meta.ogImage ?? site.ogImageUrl;
-  const canonicalBase = site.canonicalBaseUrl?.replace(/\/$/, "") ?? "";
-  const canonical = meta.canonicalPath && canonicalBase ? `${canonicalBase}${meta.canonicalPath}` : canonicalBase;
+  const updateCanonical = options?.updateCanonical !== false;
 
   document.title = title;
   upsertMeta("description", description);
   upsertMeta("keywords", keywords);
   upsertMeta("robots", robots);
 
-  if (canonical) {
-    upsertLink("canonical", canonical);
+  if (updateCanonical && meta.canonicalPath) {
+    const canonical = buildCanonicalUrl(getCanonicalBase(site), meta.canonicalPath);
+    if (canonical) {
+      upsertLink("canonical", canonical);
+    }
   }
 
   if (ogImage) {
@@ -62,17 +132,29 @@ function applyPageMeta(meta: PageMeta, site: ReturnType<typeof useSite>) {
   }
 }
 
-/** Applies per-page SEO and restores global site meta on unmount. */
+/** Applies per-page SEO. Canonical is set when `canonicalPath` is provided. */
 export function usePageMeta(meta: PageMeta | null | undefined) {
   const site = useSite();
 
   useEffect(() => {
     if (!meta) return;
 
-    applyPageMeta(meta, site);
+    applyPageMeta(meta, site, { updateCanonical: Boolean(meta.canonicalPath) });
 
     return () => {
-      applyPageMeta({}, site);
+      // Restore global SEO text; leave canonical to SiteCanonical.
+      applyPageMeta({}, site, { updateCanonical: false });
     };
   }, [meta, site]);
+}
+
+/** Set the document canonical from a path (or full location-derived path). */
+export function applyCanonicalPath(
+  site: { canonicalBaseUrl?: string | null; frontendUrl?: string | null },
+  path: string,
+) {
+  const href = buildCanonicalUrl(getCanonicalBase(site), path);
+  if (href) {
+    upsertLink("canonical", href);
+  }
 }

@@ -18,9 +18,7 @@ export function SiteHead() {
     upsertMeta("theme-color", themeHex);
     applySiteThemeColor(site.themeColor);
 
-    if (site.canonicalBaseUrl) {
-      upsertLink("canonical", site.canonicalBaseUrl);
-    }
+    // Canonical URLs are owned by SiteCanonical / usePageMeta (per-route).
 
     if (site.faviconUrl) {
       upsertLink("icon", site.faviconUrl);

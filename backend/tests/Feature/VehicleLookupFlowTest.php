@@ -191,4 +191,67 @@ class VehicleLookupFlowTest extends TestCase
             ->assertNotFound()
             ->assertJsonPath('code', 'registration_not_found');
     }
+
+    public function test_repeat_lookup_uses_local_database_and_skips_provider_apis(): void
+    {
+        config([
+            'services.vehicle_data_global.enabled' => true,
+            'services.vehicle_data_global.api_key' => 'test-key',
+            'services.uk_vehicle_data.enabled' => true,
+            'services.uk_vehicle_data.api_key' => 'test-key',
+            'services.dvla.enabled' => true,
+            'services.dvla.api_key' => 'test-key',
+        ]);
+
+        $profile = \App\Models\VehicleProfile::query()->create([
+            'registration' => 'CACHE01',
+            'dvla_make_text' => 'Ford',
+            'dvla_model_text' => 'Focus',
+            'source' => 'vehicle_data_global',
+            'source_reference' => 'CACHE01',
+            'last_verified_at' => now(),
+        ]);
+
+        $set = \App\Models\FitmentSet::query()->create([
+            'vehicle_profile_id' => $profile->id,
+            'provider' => 'vehicle_data_global',
+            'provider_reference' => 'CACHE01',
+            'fitment_type' => 'oe',
+            'is_primary' => true,
+            'is_staggered' => false,
+        ]);
+
+        \App\Models\FitmentPosition::query()->create([
+            'fitment_set_id' => $set->id,
+            'position' => 'all_round',
+            'width' => 205,
+            'profile' => 55,
+            'rim' => 16,
+            'load_index' => 91,
+            'speed_rating' => 'V',
+            'recommended_quantity' => 4,
+        ]);
+
+        $this->mock(\App\Services\VehicleDataGlobalService::class, function ($mock): void {
+            $mock->shouldReceive('enabled')->andReturn(true);
+            $mock->shouldReceive('lookup')->never();
+        });
+
+        $this->mock(\App\Services\UkVehicleDataService::class, function ($mock): void {
+            $mock->shouldReceive('enabled')->andReturn(true);
+            $mock->shouldReceive('lookup')->never();
+        });
+
+        $this->mock(DvlaVehicleEnquiryService::class, function ($mock): void {
+            $mock->shouldReceive('enabled')->andReturn(true);
+            $mock->shouldReceive('lookup')->never();
+        });
+
+        $result = app(\App\Services\VehicleLookupService::class)->lookup('CACHE01');
+
+        $this->assertSame('ok', $result['status']);
+        $this->assertSame('fitment_cache', $result['payload']['matchMeta']['source']);
+        $this->assertTrue($result['payload']['matchMeta']['usedCache']);
+        $this->assertSame('CACHE01', $result['payload']['registration']);
+    }
 }

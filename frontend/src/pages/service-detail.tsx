@@ -1,24 +1,38 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { ChevronRight, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TyreSearchWidget } from "@/components/domain/tyre-search-widget";
 import { useApiBootstrapQuery, useApiServiceQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
 import { getCheckoutVisibleServices } from "@/lib/service-pricing";
+import { useSite } from "@/lib/site";
 
 export default function ServiceDetailPage() {
   const params = useParams();
+  const location = useLocation();
+  const site = useSite();
   const slug = params.slug ?? "";
   const serviceQuery = useApiServiceQuery(slug);
   const bootstrapQuery = useApiBootstrapQuery();
   const service = serviceQuery.data?.service;
 
+  usePageMeta(
+    service
+      ? {
+          title: `${service.name} | ${site.businessName}`,
+          description: service.shortDescription || `${service.name} from ${site.businessName} in Egham.`,
+          canonicalPath: location.pathname,
+        }
+      : { canonicalPath: location.pathname },
+  );
+
   if (serviceQuery.isLoading || bootstrapQuery.isLoading) {
     return (
       <div className="container py-20 text-center">
         <h1 className="font-display text-2xl font-bold">Loading service</h1>
-        <p className="mt-2 text-muted-foreground">Fetching live service details from the Phase 1 backend.</p>
+        <p className="mt-2 text-muted-foreground">Fetching service details.</p>
       </div>
     );
   }
@@ -78,7 +92,7 @@ export default function ServiceDetailPage() {
               <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <div className="text-sm">
                 <p className="font-semibold">Need this service on its own?</p>
-                <p className="text-muted-foreground">Call us on <a className="text-primary hover:underline" href="tel:01784436000">01784 436000</a> and we will book you in.</p>
+                <p className="text-muted-foreground">Call us on <a className="text-primary hover:underline" href={`tel:${site.phoneTel}`}>{site.phone}</a> and we will book you in.</p>
               </div>
             </CardContent>
           </Card>

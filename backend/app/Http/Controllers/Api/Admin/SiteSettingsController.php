@@ -52,6 +52,8 @@ class SiteSettingsController extends Controller
             'footerLogoHeight' => ['required', 'integer', 'min:24', 'max:160'],
             'footerLogoMaxWidth' => ['required', 'integer', 'min:80', 'max:480'],
             'showPrototypeNotice' => ['nullable'],
+            'headCode' => ['nullable', 'string', 'max:100000'],
+            'bodyCode' => ['nullable', 'string', 'max:100000'],
             'removeLogo' => ['sometimes', 'boolean'],
             'removeFavicon' => ['sometimes', 'boolean'],
             'removeOgImage' => ['sometimes', 'boolean'],
@@ -89,6 +91,12 @@ class SiteSettingsController extends Controller
         $theme = $validated['themeColor'] ?? '';
         $settings->theme_color = preg_match('/^#[0-9A-Fa-f]{6}$/', $theme) ? $theme : ($settings->theme_color ?? '#a00303');
         $settings->show_prototype_notice = $request->boolean('showPrototypeNotice');
+        $settings->head_code = isset($validated['headCode']) && trim((string) $validated['headCode']) !== ''
+            ? (string) $validated['headCode']
+            : null;
+        $settings->body_code = isset($validated['bodyCode']) && trim((string) $validated['bodyCode']) !== ''
+            ? (string) $validated['bodyCode']
+            : null;
         $settings->header_logo_height = (int) $validated['headerLogoHeight'];
         $settings->header_logo_max_width = (int) $validated['headerLogoMaxWidth'];
         $settings->header_logo_height_mobile = (int) $validated['headerLogoHeightMobile'];

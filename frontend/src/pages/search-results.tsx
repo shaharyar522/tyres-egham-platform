@@ -13,6 +13,8 @@ import { ApiError } from "@/lib/api/client";
 import { useApiBootstrapQuery, useApiBrandsIndexQuery, useApiTyreSearchQuery, useApiVehicleLookupQuery } from "@/lib/api/queries";
 import type { Brand, TyreSku, VehicleLookupFitmentPosition, VehicleLookupFitmentSet } from "@/types";
 import { brandTierLabel } from "@/lib/brand-tiers";
+import { canonicalPathFromLocation, usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const gradeOrder = ["A", "B", "C", "D", "E"] as const;
@@ -33,7 +35,7 @@ const SORT_OPTIONS: Array<{ value: SortOption; label: string }> = [
   { value: "price_asc", label: "Price - Low to High" },
   { value: "price_desc", label: "Price - High to Low" },
   { value: "budget_brands", label: "Budget Brands" },
-  { value: "mid_range_brands", label: "Budget Brands" },
+  { value: "mid_range_brands", label: "Mid-Range Brands" },
   { value: "premium_brands", label: "Premium Brands" },
   { value: "fuel_efficiency", label: "Fuel Efficiency" },
   { value: "wet_grip", label: "Wet Grip" },
@@ -54,6 +56,9 @@ interface ActiveFilters {
   };
   priceMax: number;
   offersOnly: boolean;
+  sameDayOnly: boolean;
+  within24hOnly: boolean;
+  premiumOnly: boolean;
 }
 
 const defaultFilters: ActiveFilters = {
@@ -62,10 +67,14 @@ const defaultFilters: ActiveFilters = {
   specialist: { extraLoad: false, fourByFour: false, van: false, runFlat: false, winter: false, allSeason: false, ev: false },
   priceMax: 0,
   offersOnly: false,
+  sameDayOnly: false,
+  within24hOnly: false,
+  premiumOnly: false,
 };
 
 export default function SearchResultsPage() {
   const location = useLocation();
+  const site = useSite();
   const [params, setSearchParams] = useSearchParams();
   const isCatalogueHub = location.pathname === "/tyres";
   const vrn = (params.get("vrn") ?? "").replace(/\s+/g, "").toUpperCase();
@@ -76,12 +85,38 @@ export default function SearchResultsPage() {
   const categorySlug = params.get("TyreCategory") ?? "";
   const brandSlug = params.get("brand") ?? "";
   const isVrnSearch = Boolean(vrn);
+
   const [page, setPage] = useState(() => Math.max(1, Number(params.get("page") ?? 1)));
   const [sort, setSort] = useState<SortOption>("default");
   const [resultsView, setResultsView] = useState<ResultsViewMode>("list");
   const [filters, setFilters] = useState<ActiveFilters>(defaultFilters);
 
   const bootstrapQuery = useApiBootstrapQuery();
+  const categoryForMeta = categorySlug
+    ? (bootstrapQuery.data?.categories ?? []).find((c) => c.slug === categorySlug) ?? null
+    : null;
+  const brandForMeta = brandSlug
+    ? (bootstrapQuery.data?.brands ?? []).find((b) => b.slug === brandSlug) ?? null
+    : null;
+  const searchCanonicalPath = canonicalPathFromLocation(location.pathname, location.search);
+
+  usePageMeta({
+    title: categoryForMeta
+      ? `${categoryForMeta.name} | ${site.businessName}`
+      : brandForMeta
+        ? `${brandForMeta.name} tyres | ${site.businessName}`
+        : width && profile && rim
+          ? `${width}/${profile}R${rim} tyres | ${site.businessName}`
+          : isCatalogueHub
+            ? `All tyres | ${site.businessName}`
+            : `Tyre search results | ${site.businessName}`,
+    description: categoryForMeta?.description
+      || (width && profile && rim
+        ? `Compare ${width}/${profile}R${rim} tyres with fitting at ${site.businessName}.`
+        : `Search and compare tyres with fitting at ${site.businessName} in Egham.`),
+    canonicalPath: searchCanonicalPath,
+  });
+
   const brandsQuery = useApiBrandsIndexQuery();
   const vehicleLookupQuery = useApiVehicleLookupQuery(vrn);
   const lookupVehicle = vehicleLookupQuery.data?.vehicle;
@@ -175,6 +210,9 @@ export default function SearchResultsPage() {
     if (sp.ev) list = list.filter((s) => s.isEvRated);
     if (filters.priceMax > 0) list = list.filter((s) => s.pricePerTyre <= filters.priceMax);
     if (filters.offersOnly) list = list.filter((s) => s.hasActiveOffer);
+    if (filters.sameDayOnly) list = list.filter((s) => Boolean(s.isSameDayDelivery));
+    if (filters.within24hOnly) list = list.filter((s) => Boolean(s.isAvailableWithin24h));
+    if (filters.premiumOnly) list = list.filter((s) => Boolean(s.isPremium));
     return list;
   }, [baseResults, effectiveWidth, effectiveProfile, effectiveRim, appliedSpeedFilter, filters, brands]);
 
@@ -183,8 +221,13 @@ export default function SearchResultsPage() {
   const tierBuckets = useMemo(() => {
     const tiers: Record<"premium" | "mid_range" | "budget", TyreSku[]> = { premium: [], mid_range: [], budget: [] };
     for (const sku of sorted) {
-      const brand = brands.find((b) => Number(b.id) === Number(sku.brandId));
-      if (brand) tiers[brand.tier].push(sku);
+      if (sku.isPremium) {
+        tiers.premium.push(sku);
+      } else {
+        const brand = brands.find((b) => Number(b.id) === Number(sku.brandId));
+        if (brand) tiers[brand.tier].push(sku);
+        else tiers.budget.push(sku);
+      }
     }
     return tiers;
   }, [sorted, brands]);
@@ -440,7 +483,7 @@ export default function SearchResultsPage() {
             <div className="rounded-xl border bg-card p-12 text-center shadow-card">
               <p className="font-display text-lg font-bold">{isVrnSearch ? "Looking up vehicle registration" : "Loading live catalogue"}</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                {isVrnSearch ? "Resolving your vehicle fitment before loading live tyre results." : "Fetching live results from the Phase 1 backend."}
+                {isVrnSearch ? "Resolving your vehicle fitment before loading live tyre results." : "Fetching live tyre results."}
               </p>
             </div>
           ) : isVrnSearch && vehicleLookupQuery.isError ? (
@@ -455,15 +498,16 @@ export default function SearchResultsPage() {
           ) : searchQuery.isError || bootstrapQuery.isError ? (
             <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-12 text-center">
               <p className="font-display text-lg font-bold">Live catalogue is unavailable</p>
-              <p className="mt-1 text-sm text-muted-foreground">The Phase 1 backend could not be reached. Check the Laravel API and try again.</p>
+              <p className="mt-1 text-sm text-muted-foreground">The catalogue API could not be reached. Please try again in a moment.</p>
             </div>
           ) : totalCount === 0 ? (
             <div className="rounded-xl border border-dashed bg-muted/20 p-12 text-center">
               <p className="font-display text-lg font-bold">No matching tyres in stock</p>
               <p className="mt-1 text-sm text-muted-foreground">
                 {isVrnSearch
-                  ? "We found your vehicle fitment, but there are no matching tyres in stock right now. Try adjusting filters or call us on 01784 436000."
-                  : "Try adjusting your filters or call us on 01784 436000 - we can usually source any size within 24 hours."}
+                  ? `We found your vehicle fitment, but there are no matching tyres in stock right now. Try adjusting filters or call us on ${site.phone}.`
+                  : `Try adjusting your filters or call us on ${site.phone} - we can usually source any size within 24 hours.`}
+
               </p>
               <Button onClick={resetAll} variant="outline" className="mt-4">Reset filters</Button>
             </div>
@@ -488,7 +532,7 @@ export default function SearchResultsPage() {
               )}
               {tierBuckets.mid_range.length > 0 && (
                 <ResultsTier
-                  label="Budget"
+                  label="Mid-Range"
                   subtitle="A great balance of price, performance, and brand pedigree."
                   skus={tierBuckets.mid_range}
                   viewMode={resultsView}
@@ -601,6 +645,24 @@ function FiltersPanel({
         </Button>
       </div>
 
+      <FilterGroup label="Delivery & Category">
+        <CheckboxRow
+          checked={filters.sameDayOnly}
+          onChange={(v) => adjust({ sameDayOnly: v })}
+          label="Same-Day Delivery"
+        />
+        <CheckboxRow
+          checked={filters.within24hOnly}
+          onChange={(v) => adjust({ within24hOnly: v })}
+          label="Express Fitting (Within 24h)"
+        />
+        <CheckboxRow
+          checked={filters.premiumOnly}
+          onChange={(v) => adjust({ premiumOnly: v })}
+          label="Premium Tyres Only"
+        />
+      </FilterGroup>
+
       <FilterGroup label="Specialist">
         {[
           { key: "extraLoad", label: "Extra Load (XL)" },
@@ -641,14 +703,16 @@ function FiltersPanel({
               <p className="mb-1 mt-2 text-[10px] font-bold uppercase text-muted-foreground">
                 {brandTierLabel(tier)}
               </p>
-              {brands.filter((brand) => brand.tier === tier).map((b) => (
-                <CheckboxRow
-                  key={b.id}
-                  checked={filters.brandIds.includes(b.id)}
-                  onChange={() => toggleBrand(b.id)}
-                  label={b.name}
-                />
-              ))}
+              <div className="space-y-1">
+                {brands.filter((brand) => brand.tier === tier).map((b) => (
+                  <CheckboxRow
+                    key={b.id}
+                    checked={filters.brandIds.includes(b.id)}
+                    onChange={() => toggleBrand(b.id)}
+                    label={b.name}
+                  />
+                ))}
+              </div>
             </div>
           ))}
         </div>

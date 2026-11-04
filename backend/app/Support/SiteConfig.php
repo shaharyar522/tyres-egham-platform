@@ -54,6 +54,8 @@ class SiteConfig
             'robots' => $s->robots ?? 'index,follow',
             'canonicalBaseUrl' => $s->canonical_base_url ?? '',
             'showPrototypeNotice' => (bool) $s->show_prototype_notice,
+            'headCode' => $s->head_code ?? '',
+            'bodyCode' => $s->body_code ?? '',
         ];
     }
 

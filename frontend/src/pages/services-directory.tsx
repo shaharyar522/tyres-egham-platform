@@ -3,10 +3,20 @@ import { ChevronRight, Clock, Wrench } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useApiServicesIndexQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 
 export default function ServicesDirectoryPage() {
+  const site = useSite();
   const servicesQuery = useApiServicesIndexQuery();
   const services = servicesQuery.data?.services ?? [];
+
+  usePageMeta({
+    title: `Services | ${site.businessName}`,
+    description: `Workshop and mobile tyre services from ${site.businessName} in Egham — fitting, safety checks and more.`,
+    canonicalPath: "/services",
+  });
+
 
   if (servicesQuery.isLoading) {
     return (

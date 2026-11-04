@@ -3,18 +3,35 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TyreSearchWidget } from "@/components/domain/tyre-search-widget";
 import { useApiBootstrapQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 
 export default function AreasServedPage() {
   const { slug } = useParams();
+  const site = useSite();
   const bootstrapQuery = useApiBootstrapQuery();
   const areas = bootstrapQuery.data?.areas ?? [];
   const selected = slug ? areas.find((area) => area.slug === slug) ?? null : null;
+
+  usePageMeta(
+    selected
+      ? {
+          title: `Tyres in ${selected.name} | ${site.businessName}`,
+          description: `Tyre fitting for ${selected.name} (${selected.postcodePrefix}) with ${site.businessName}.`,
+          canonicalPath: `/areas-served/${selected.slug}`,
+        }
+      : {
+          title: `Areas we serve | ${site.businessName}`,
+          description: `Local tyre fitting coverage from ${site.businessName} across Egham and surrounding areas.`,
+          canonicalPath: "/areas-served",
+        },
+  );
 
   if (bootstrapQuery.isLoading) {
     return (
       <div className="container py-16 text-center">
         <h1 className="font-display text-3xl font-extrabold">Loading areas</h1>
-        <p className="mt-2 text-muted-foreground">Fetching live coverage areas from the Phase 1 backend.</p>
+        <p className="mt-2 text-muted-foreground">Fetching coverage areas.</p>
       </div>
     );
   }
@@ -23,7 +40,7 @@ export default function AreasServedPage() {
     return (
       <div className="container py-16 text-center">
         <h1 className="font-display text-3xl font-extrabold">Area not found</h1>
-        <p className="mt-2 text-muted-foreground">We could not find that area page in the prototype dataset.</p>
+        <p className="mt-2 text-muted-foreground">We could not find that area page.</p>
         <Button asChild className="mt-4" variant="cta"><Link to="/areas-served">Back to all areas</Link></Button>
       </div>
     );

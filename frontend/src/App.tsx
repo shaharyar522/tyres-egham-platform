@@ -2,10 +2,13 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SiteLayout } from "@/components/layout/site-layout";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { BasketProvider } from "@/store/basket";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useApiBootstrapQuery, useApiHealthQuery } from "@/lib/api/queries";
 import { SiteHead } from "@/components/site-head";
+import { SiteCustomCode } from "@/components/site-custom-code";
+import { SiteCanonical } from "@/components/site-canonical";
 
 const HomePage = lazy(() => import("@/pages/home"));
 const SearchResultsPage = lazy(() => import("@/pages/search-results"));
@@ -84,6 +87,9 @@ export default function App() {
       <BackendWarmup />
       <SiteHead />
       <BrowserRouter>
+        <SiteCanonical />
+        <SiteCustomCode />
+        <ScrollToTop />
         <BasketProvider>
           <TooltipProvider>
             <Suspense fallback={<PageLoader />}>

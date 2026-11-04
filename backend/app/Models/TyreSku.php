@@ -39,8 +39,16 @@ class TyreSku extends Model
             'is_van' => 'boolean',
             'is_4x4' => 'boolean',
             'is_available_within_24h' => 'boolean',
+            'is_premium' => 'boolean',
+            'is_same_day_delivery' => 'boolean',
+            'is_hidden' => 'boolean',
             'has_active_offer' => 'boolean',
         ];
+    }
+
+    public function scopeVisible($query)
+    {
+        return $query->where('is_hidden', false);
     }
 
     public function brand(): BelongsTo

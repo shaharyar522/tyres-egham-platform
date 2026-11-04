@@ -30,6 +30,8 @@ class SendTestBookingMailCommand extends Command
         }
 
         $this->line('Mail driver: <info>'.OutboundMail::driverLabel().'</info>');
+        $this->line('SMTP host: <info>'.(string) config('mail.mailers.smtp.host').':'.(string) config('mail.mailers.smtp.port').'</info>');
+        $this->line('From: <info>'.(string) config('mail.from.address').'</info>');
         $this->line('Booking: <info>'.$booking->reference.'</info>');
         $this->line('Sending to: <info>'.$email.'</info>');
 
@@ -44,7 +46,8 @@ class SendTestBookingMailCommand extends Command
             return self::SUCCESS;
         }
 
-        $this->error('Send failed. See storage/logs/laravel.log for details.');
+        $this->error('Send failed. See storage/logs/laravel.log for details (search for "Outbound mail failed").');
+        $this->line('On Namecheap/cPanel shared hosting, try MAIL_HOST=localhost with MAIL_VERIFY_PEER=false, then: php artisan config:clear');
 
         return self::FAILURE;
     }

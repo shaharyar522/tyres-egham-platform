@@ -19,9 +19,13 @@ class TyreSkuController extends Controller
     {
         $search = $request->string('search')->toString();
         $within24h = $request->query('within24h');
+        $premium = $request->query('premium');
+        $sameDayDelivery = $request->query('sameDayDelivery') ?? $request->query('same_day_delivery');
+        $hidden = $request->query('hidden');
 
         $query = TyreSku::query()
             ->with(['brand', 'category'])
+            ->orderByDesc('is_hidden')
             ->orderByDesc('is_available_within_24h')
             ->orderBy('brand_id')
             ->orderBy('width')
@@ -41,6 +45,24 @@ class TyreSkuController extends Controller
             $query->where('is_available_within_24h', true);
         } elseif ($within24h === '0' || $within24h === 'false') {
             $query->where('is_available_within_24h', false);
+        }
+
+        if ($premium === '1' || $premium === 'true') {
+            $query->where('is_premium', true);
+        } elseif ($premium === '0' || $premium === 'false') {
+            $query->where('is_premium', false);
+        }
+
+        if ($sameDayDelivery === '1' || $sameDayDelivery === 'true') {
+            $query->where('is_same_day_delivery', true);
+        } elseif ($sameDayDelivery === '0' || $sameDayDelivery === 'false') {
+            $query->where('is_same_day_delivery', false);
+        }
+
+        if ($hidden === '1' || $hidden === 'true') {
+            $query->where('is_hidden', true);
+        } elseif ($hidden === '0' || $hidden === 'false') {
+            $query->where('is_hidden', false);
         }
 
         $paginator = $query->paginate(AdminPagination::perPage($request, 25));
@@ -137,6 +159,60 @@ class TyreSkuController extends Controller
         ]);
     }
 
+    public function bulkHidden(Request $request): JsonResponse
+    {
+        $validated = $request->validate([
+            'ids' => ['required', 'array', 'min:1'],
+            'ids.*' => ['integer'],
+            'hidden' => ['required', 'boolean'],
+        ]);
+
+        $updated = TyreSku::query()
+            ->whereIn('id', $validated['ids'])
+            ->update(['is_hidden' => $validated['hidden']]);
+
+        return response()->json([
+            'updated' => $updated,
+            'hidden' => $validated['hidden'],
+        ]);
+    }
+
+    public function bulkPremium(Request $request): JsonResponse
+    {
+        $validated = $request->validate([
+            'ids' => ['required', 'array', 'min:1'],
+            'ids.*' => ['integer'],
+            'premium' => ['required', 'boolean'],
+        ]);
+
+        $updated = TyreSku::query()
+            ->whereIn('id', $validated['ids'])
+            ->update(['is_premium' => $validated['premium']]);
+
+        return response()->json([
+            'updated' => $updated,
+            'premium' => $validated['premium'],
+        ]);
+    }
+
+    public function bulkSameDayDelivery(Request $request): JsonResponse
+    {
+        $validated = $request->validate([
+            'ids' => ['required', 'array', 'min:1'],
+            'ids.*' => ['integer'],
+            'sameDayDelivery' => ['required', 'boolean'],
+        ]);
+
+        $updated = TyreSku::query()
+            ->whereIn('id', $validated['ids'])
+            ->update(['is_same_day_delivery' => $validated['sameDayDelivery']]);
+
+        return response()->json([
+            'updated' => $updated,
+            'sameDayDelivery' => $validated['sameDayDelivery'],
+        ]);
+    }
+
     private function validatedTyrePayload(Request $request, ?TyreSku $existing = null): array
     {
         $isUpdate = $existing !== null;
@@ -164,6 +240,9 @@ class TyreSkuController extends Controller
             'isVan' => ['sometimes', 'boolean'],
             'is4x4' => ['sometimes', 'boolean'],
             'isAvailableWithin24h' => ['sometimes', 'boolean'],
+            'isPremium' => ['sometimes', 'boolean'],
+            'isSameDayDelivery' => ['sometimes', 'boolean'],
+            'isHidden' => ['sometimes', 'boolean'],
             'hasActiveOffer' => ['sometimes', 'boolean'],
             'voucherCode' => ['nullable', 'string', 'max:32'],
             'starRating' => ['sometimes', 'numeric', 'min:0', 'max:5'],
@@ -226,6 +305,9 @@ class TyreSkuController extends Controller
             'is_van' => $validated['isVan'] ?? null,
             'is_4x4' => $validated['is4x4'] ?? null,
             'is_available_within_24h' => $validated['isAvailableWithin24h'] ?? null,
+            'is_premium' => $validated['isPremium'] ?? null,
+            'is_same_day_delivery' => $validated['isSameDayDelivery'] ?? null,
+            'is_hidden' => $validated['isHidden'] ?? null,
             'has_active_offer' => $validated['hasActiveOffer'] ?? null,
             'voucher_code' => array_key_exists('voucherCode', $validated)
                 ? ($validated['voucherCode'] ?: null)
@@ -264,6 +346,9 @@ class TyreSkuController extends Controller
             $payload['is_van'] = $payload['is_van'] ?? false;
             $payload['is_4x4'] = $payload['is_4x4'] ?? false;
             $payload['is_available_within_24h'] = $payload['is_available_within_24h'] ?? false;
+            $payload['is_premium'] = $payload['is_premium'] ?? false;
+            $payload['is_same_day_delivery'] = $payload['is_same_day_delivery'] ?? false;
+            $payload['is_hidden'] = $payload['is_hidden'] ?? false;
             $payload['has_active_offer'] = $payload['has_active_offer'] ?? false;
             $payload['voucher_code'] = $payload['voucher_code'] ?? null;
             $payload['star_rating'] = $payload['star_rating'] ?? 0;

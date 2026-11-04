@@ -17,7 +17,15 @@ export default defineConfig({
     open: false,
     proxy: {
       "/api": {
-        target: "http://127.0.0.1:8000",
+        target: "http://127.0.0.1:8077",
+        changeOrigin: true,
+      },
+      "/sitemap.xml": {
+        target: "http://127.0.0.1:8077",
+        changeOrigin: true,
+      },
+      "/robots.txt": {
+        target: "http://127.0.0.1:8077",
         changeOrigin: true,
       },
     },

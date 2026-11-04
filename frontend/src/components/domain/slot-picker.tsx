@@ -1,5 +1,6 @@
 ﻿import { useEffect } from "react";
 import { useAppointmentSlotsQuery } from "@/lib/api/queries";
+import { useSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type SlotValue = { date: string; time: string } | null;
@@ -12,6 +13,7 @@ type SlotPickerProps = {
 };
 
 export function SlotPicker({ value, onChange, excludeReference, className }: SlotPickerProps) {
+  const site = useSite();
   const slotsQuery = useAppointmentSlotsQuery(excludeReference);
   const days = slotsQuery.data?.days ?? [];
   const capacity = slotsQuery.data?.meta.capacityPerSlot ?? 2;
@@ -40,8 +42,8 @@ export function SlotPicker({ value, onChange, excludeReference, className }: Slo
     return (
       <p className="text-sm text-amber-800">
         No fitting slots are available in the next few days. Please call{" "}
-        <a href="tel:01784436000" className="font-semibold underline">
-          01784 436000
+        <a href={`tel:${site.phoneTel}`} className="font-semibold underline">
+          {site.phone}
         </a>{" "}
         to arrange a time.
       </p>

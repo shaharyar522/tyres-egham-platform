@@ -53,6 +53,18 @@ return [
         'sandbox' => env('UK_VEHICLE_DATA_SANDBOX', false),
     ],
 
+    /*
+     * Vehicle Data Global R2 (TyreDetails package) — preferred for VRN tyre sizes.
+     * Code Builder: https://uk.api.vehicledataglobal.com/r2/lookup
+     */
+    'vehicle_data_global' => [
+        'enabled' => env('VDG_ENABLED', false),
+        'api_key' => env('VDG_API_KEY'),
+        'base_url' => env('VDG_BASE_URL', 'https://uk.api.vehicledataglobal.com/r2/lookup'),
+        'package' => env('VDG_PACKAGE', 'TyreDetails'),
+        'timeout' => (int) env('VDG_TIMEOUT_SECONDS', 15),
+    ],
+
     'fitment' => [
         'provider' => env('FITMENT_PROVIDER', 'database'),
         'cache_ttl_hours' => env('FITMENT_CACHE_TTL_HOURS', 24),

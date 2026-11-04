@@ -19,8 +19,8 @@ const FALLBACK: SiteSettings = {
   faviconUrl: null,
   ogImageUrl: null,
   themeColor: "#a00303",
-  phone: "01784 436000",
-  phoneTel: "01784436000",
+  phone: "+44 7487755777",
+  phoneTel: "447487755777",
   email: "hello@eghamtyres.example",
   addressLine1: "12 Station Road",
   addressLine2: "Egham, Surrey",
@@ -44,7 +44,9 @@ const FALLBACK: SiteSettings = {
   metaKeywords: "tyres, tyre fitting, Egham, Surrey",
   robots: "index,follow",
   canonicalBaseUrl: null,
-  showPrototypeNotice: true,
+  showPrototypeNotice: false,
+  headCode: null,
+  bodyCode: null,
 };
 
 export function useSite(): SiteSettings {

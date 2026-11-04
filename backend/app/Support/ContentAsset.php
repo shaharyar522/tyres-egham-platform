@@ -31,10 +31,6 @@ class ContentAsset
 
     public static function url(?string $path): ?string
     {
-        if (! $path) {
-            return null;
-        }
-
-        return Storage::disk(self::DISK)->url($path);
+        return PublicMediaUrl::for($path);
     }
 }

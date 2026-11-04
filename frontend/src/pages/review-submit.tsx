@@ -9,8 +9,19 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitReview } from "@/lib/api/queries";
 import { ApiError } from "@/lib/api/client";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 
 export default function ReviewSubmitPage() {
+  const site = useSite();
+
+  usePageMeta({
+    title: `Write a review | ${site.businessName}`,
+    description: `Share your experience with ${site.businessName}.`,
+    canonicalPath: "/reviews/submit",
+    robots: "noindex,follow",
+  });
+
   const [customerName, setCustomerName] = useState("");
   const [customerEmail, setCustomerEmail] = useState("");
   const [rating, setRating] = useState(5);

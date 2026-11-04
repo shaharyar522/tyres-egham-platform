@@ -24,6 +24,7 @@ import {
 import { AboutBrandBannerSection } from "@/components/about/about-brand-banner-section";
 import { AboutIntroCardsSection } from "@/components/about/about-intro-cards-section";
 import { useApiBootstrapQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
 import { stripHtml } from "@/lib/sanitize-html";
 import { TYRES_EGHAM_IMAGES } from "@/lib/thetyresegham-assets";
 import { useSite } from "@/lib/site";
@@ -81,6 +82,13 @@ function StatCard({ value, label }: { value: string; label: string }) {
 export default function AboutPage() {
   const site = useSite();
   const bootstrapQuery = useApiBootstrapQuery();
+
+  usePageMeta({
+    title: `About us | ${site.businessName}`,
+    description: `Learn about ${site.businessName} — independent tyre fitting in Egham with workshop and mobile support.`,
+    canonicalPath: "/about",
+  });
+
   const brandCount = bootstrapQuery.data?.stats.brands ?? 0;
   const reviewCount = site.googleReviewCount;
   const reviewRating = site.googleReviewRating;

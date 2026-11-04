@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Check, CreditCard, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,6 +24,7 @@ export default function CheckoutPage() {
   const totals = useBasketTotals();
   const paymentConfigQuery = usePaymentConfigQuery();
   const paymentConfig = paymentConfigQuery.data;
+  const checkoutCompleteRef = useRef(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -46,8 +47,14 @@ export default function CheckoutPage() {
     }
   }, [paymentConfig?.defaultPaymentMethod]);
 
+  // Empty basket redirect — skip when we just completed checkout (basket is cleared before unmount)
+  useEffect(() => {
+    if (items.length === 0 && !checkoutCompleteRef.current && !stripeSession) {
+      navigate("/basket", { replace: true });
+    }
+  }, [items.length, navigate, stripeSession]);
+
   if (items.length === 0) {
-    navigate("/basket");
     return null;
   }
 
@@ -88,6 +95,7 @@ export default function CheckoutPage() {
     booking: BookingRecord | null,
     emailSent: boolean,
   ) => {
+    checkoutCompleteRef.current = true;
     sessionStorage.setItem(
       "eg-tyres-confirm",
       JSON.stringify({
@@ -102,8 +110,10 @@ export default function CheckoutPage() {
         emailSent,
       }),
     );
+    navigate(`/booking/confirmation?ref=${encodeURIComponent(reference)}&token=${encodeURIComponent(accessToken)}`, {
+      replace: true,
+    });
     clearBasket();
-    navigate(`/booking/confirmation?ref=${reference}&token=${accessToken}`);
   };
 
   const submit = async (e: React.FormEvent) => {

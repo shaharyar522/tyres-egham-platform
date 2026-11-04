@@ -35,7 +35,7 @@ class BootstrapController extends Controller
                 'skus' => TyreSku::count(),
             ],
             'brands' => Brand::query()
-                ->whereHas('tyreSkus', fn ($skuQuery) => $skuQuery->where('stock', '>', 0))
+                ->whereHas('tyreSkus', fn ($skuQuery) => $skuQuery->visible()->where('stock', '>', 0))
                 ->orderBy('name')
                 ->get()
                 ->map(fn (Brand $brand) => FrontendApi::brand($brand))

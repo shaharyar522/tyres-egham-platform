@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ImageIcon, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,10 +8,12 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { useApiBootstrapQuery } from "@/lib/api/queries";
-import { useAdminSaveTyreMutation, useAdminTyreQuery, useAdminUploadTyreImageMutation, type AdminTyreSku } from "@/lib/admin/queries";
+import { useAdminDeleteTyreMutation, useAdminSaveTyreMutation, useAdminTyreQuery, useAdminUploadTyreImageMutation, type AdminTyreSku } from "@/lib/admin/queries";
 import { AdminFormSkeleton } from "@/components/admin/admin-skeletons";
 import { ApiError } from "@/lib/api/client";
+import { resolvePublicAssetUrl } from "@/lib/public-asset-url";
 import { useConfirmDialog } from "@/hooks/use-confirm-dialog";
+import { QuantityTiersEditor } from "@/components/admin/quantity-tiers-editor";
 import type { EuLabelGrade, TyreSku } from "@/types";
 
 type TyreForm = {
@@ -50,6 +52,9 @@ type TyreForm = {
   isVan: boolean;
   is4x4: boolean;
   isAvailableWithin24h: boolean;
+  isPremium: boolean;
+  isSameDayDelivery: boolean;
+  isHidden: boolean;
   hasActiveOffer: boolean;
 };
 
@@ -89,6 +94,9 @@ const emptyForm: TyreForm = {
   isVan: false,
   is4x4: false,
   isAvailableWithin24h: false,
+  isPremium: false,
+  isSameDayDelivery: false,
+  isHidden: false,
   hasActiveOffer: false,
 };
 
@@ -134,6 +142,9 @@ function skuToForm(sku: AdminTyreSku, categories: { id: number; slug: string }[]
     isVan: sku.isVan,
     is4x4: sku.is4x4,
     isAvailableWithin24h: Boolean(sku.isAvailableWithin24h),
+    isPremium: Boolean(sku.isPremium),
+    isSameDayDelivery: Boolean(sku.isSameDayDelivery),
+    isHidden: Boolean(sku.isHidden),
     hasActiveOffer: sku.hasActiveOffer,
   };
 }
@@ -195,6 +206,9 @@ function formToPayload(form: TyreForm, isNew: boolean): Record<string, unknown> 
     isVan: form.isVan,
     is4x4: form.is4x4,
     isAvailableWithin24h: form.isAvailableWithin24h,
+    isPremium: form.isPremium,
+    isSameDayDelivery: form.isSameDayDelivery,
+    isHidden: form.isHidden,
     hasActiveOffer: form.hasActiveOffer,
     voucherCode: form.voucherCode.trim() || null,
   };
@@ -226,6 +240,9 @@ const FLAG_FIELDS: { key: keyof TyreForm; label: string }[] = [
   { key: "is4x4", label: "4x4" },
   { key: "hasActiveOffer", label: "Active offer badge" },
   { key: "isAvailableWithin24h", label: "Within 24 hours" },
+  { key: "isPremium", label: "Premium tyre" },
+  { key: "isSameDayDelivery", label: "Same-Day Delivery" },
+  { key: "isHidden", label: "Hidden from storefront" },
 ];
 
 function TyreImageField({
@@ -254,7 +271,7 @@ function TyreImageField({
       <p className="text-xs text-muted-foreground">{hint}</p>
       {displayUrl && (
         <div className="flex items-center gap-3 rounded-lg border bg-muted/30 p-3">
-          <img src={displayUrl} alt="" className="h-20 w-20 rounded-md object-cover" />
+          <img src={displayUrl} alt="" className="h-20 w-20 rounded-md object-contain bg-white" />
           <Button type="button" variant="outline" size="sm" disabled={disabled} onClick={() => void onRemove()}>
             <Trash2 className="mr-2 h-4 w-4" /> Remove
           </Button>
@@ -287,6 +304,7 @@ export default function AdminCatalogTyreEditPage() {
   const bootstrapQuery = useApiBootstrapQuery();
   const saveMutation = useAdminSaveTyreMutation();
   const uploadImageMutation = useAdminUploadTyreImageMutation();
+  const deleteMutation = useAdminDeleteTyreMutation();
   const { confirm, ConfirmDialog } = useConfirmDialog();
   const sku = tyreQuery.data?.sku;
 
@@ -313,7 +331,8 @@ export default function AdminCatalogTyreEditPage() {
     };
   }, [imagePreview]);
 
-  const currentImageUrl = sku && !isNew && !removeImage ? (sku.imageUrl ?? null) : null;
+  const currentImageUrl =
+    sku && !isNew && !removeImage ? (resolvePublicAssetUrl(sku.imageUrl) ?? sku.imageUrl ?? null) : null;
   const imageChanged = Boolean(imageFile) || removeImage;
 
   const update = <K extends keyof TyreForm>(key: K, value: TyreForm[K]) => {
@@ -347,6 +366,25 @@ export default function AdminCatalogTyreEditPage() {
       navigate("/admin/tyres");
     } catch (err) {
       setError(err instanceof ApiError ? err.message : err instanceof Error ? err.message : "Save failed.");
+    }
+  };
+
+  const removeTyre = async () => {
+    if (isNew) return;
+    const ok = await confirm({
+      title: "Delete this tyre?",
+      description: sku
+        ? `"${sku.brandName} ${sku.modelName} ${sku.sizeLabel}" will be permanently removed from the catalogue. This cannot be undone.`
+        : "This tyre will be permanently removed from the catalogue. This cannot be undone.",
+      confirmLabel: "Delete",
+      variant: "destructive",
+    });
+    if (!ok) return;
+    try {
+      await deleteMutation.mutateAsync(id);
+      navigate("/admin/tyres");
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : "Delete failed.");
     }
   };
 
@@ -508,8 +546,11 @@ export default function AdminCatalogTyreEditPage() {
               </div>
             </div>
             <div className="sm:col-span-2">
-              <Label htmlFor="tiers">Quantity tiers (JSON)</Label>
-              <Textarea id="tiers" className="mt-1 font-mono text-xs" rows={5} value={form.quantityTiersJson} onChange={(e) => update("quantityTiersJson", e.target.value)} placeholder='[{"qty":1,"pricePerTyre":189},...]' />
+              <QuantityTiersEditor
+                value={form.quantityTiersJson}
+                onChange={(json) => update("quantityTiersJson", json)}
+                basePrice={Number(form.pricePerTyre) || 0}
+              />
             </div>
           </CardContent>
         </Card>
@@ -632,9 +673,16 @@ export default function AdminCatalogTyreEditPage() {
 
         {error && <p className="text-sm text-destructive">{error}</p>}
 
-        <Button type="submit" disabled={isSaving}>
-          {isSaving ? "Saving…" : isNew ? "Create tyre SKU" : "Save changes"}
-        </Button>
+        <div className="flex flex-wrap gap-3">
+          <Button type="submit" disabled={isSaving}>
+            {isSaving ? "Saving…" : isNew ? "Create tyre SKU" : "Save changes"}
+          </Button>
+          {!isNew && (
+            <Button type="button" variant="destructive" onClick={removeTyre} disabled={deleteMutation.isPending}>
+              <Trash2 className="mr-2 h-4 w-4" /> {deleteMutation.isPending ? "Deleting…" : "Delete"}
+            </Button>
+          )}
+        </div>
       </form>
       <ConfirmDialog />
     </div>

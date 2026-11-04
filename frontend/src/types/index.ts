@@ -162,6 +162,9 @@ export interface TyreSku {
   hasActiveOffer: boolean;
   voucherCode?: string;
   isAvailableWithin24h?: boolean;
+  isPremium?: boolean;
+  isSameDayDelivery?: boolean;
+  isHidden?: boolean;
 }
 
 export interface ServicePricingOption {

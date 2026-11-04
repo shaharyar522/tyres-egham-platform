@@ -15,6 +15,7 @@ import { WorkshopMobileServiceSection } from "@/components/home/workshop-mobile-
 import { TrustedPartnerSection } from "@/components/home/trusted-partner-section";
 import { CustomerTestimonialsSection } from "@/components/home/customer-testimonials-section";
 import { useApiBootstrapQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
 import { useSite } from "@/lib/site";
 import { TYRES_EGHAM_IMAGES } from "@/lib/thetyresegham-assets";
 import { cn } from "@/lib/utils";
@@ -31,6 +32,14 @@ const PREMIUM_BRAND_NAMES = ["Michelin", "Goodyear", "Bridgestone", "Continental
 export default function HomePage() {
   const site = useSite();
   const bootstrapQuery = useApiBootstrapQuery();
+
+  usePageMeta({
+    title: site.metaTitle ?? `${site.businessName} | Tyres fitted in Egham, Surrey`,
+    description: site.metaDescription ?? undefined,
+    keywords: site.metaKeywords ?? undefined,
+    canonicalPath: "/",
+  });
+
   const brands = bootstrapQuery.data?.brands ?? [];
   const brandCount = bootstrapQuery.data?.stats.brands ?? brands.length;
   const brandsForSlider = [...brands].sort((a, b) => {

@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BrandLogoMark } from "@/components/domain/brand-logo";
 import { useApiBrandsIndexQuery } from "@/lib/api/queries";
 import { brandTierLabel } from "@/lib/brand-tiers";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 import type { Brand, BrandTier } from "@/types";
 
 function groupByTier(brands: Brand[]): Record<BrandTier, Brand[]> {
@@ -17,8 +19,16 @@ function groupByTier(brands: Brand[]): Record<BrandTier, Brand[]> {
 const tierOrder: BrandTier[] = ["premium", "mid_range", "budget"];
 
 export default function BrandsDirectoryPage() {
+  const site = useSite();
   const brandsQuery = useApiBrandsIndexQuery();
   const brands = brandsQuery.data?.brands ?? [];
+
+  usePageMeta({
+    title: `Tyre brands | ${site.businessName}`,
+    description: `Browse premium, mid-range and budget tyre brands fitted by ${site.businessName} in Egham.`,
+    canonicalPath: "/brands",
+  });
+
 
   if (brandsQuery.isLoading) {
     return (

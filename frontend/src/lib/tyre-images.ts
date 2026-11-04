@@ -1,27 +1,27 @@
 import type { TyreCategorySlug, TyreSku } from "@/types";
 import { resolvePublicAssetUrl } from "@/lib/public-asset-url";
 
+/** Default image when a tyre SKU has no uploaded photo. */
+export const TYRE_IMAGE_PLACEHOLDER = "/images/tyres/photo-not-available.png";
+
 const categoryToImage: Record<TyreCategorySlug, string> = {
-  car: "/images/tyres/tyre-car.svg",
-  "4x4": "/images/tyres/tyre-suv.svg",
-  van: "/images/tyres/tyre-van.svg",
-  "run-flat": "/images/tyres/tyre-car.svg",
-  ev: "/images/tyres/tyre-car.svg",
-  "all-season": "/images/tyres/tyre-car.svg",
-  winter: "/images/tyres/tyre-winter.svg",
-  "high-performance": "/images/tyres/tyre-car.svg",
+  car: TYRE_IMAGE_PLACEHOLDER,
+  "4x4": TYRE_IMAGE_PLACEHOLDER,
+  van: TYRE_IMAGE_PLACEHOLDER,
+  "run-flat": TYRE_IMAGE_PLACEHOLDER,
+  ev: TYRE_IMAGE_PLACEHOLDER,
+  "all-season": TYRE_IMAGE_PLACEHOLDER,
+  winter: TYRE_IMAGE_PLACEHOLDER,
+  "high-performance": TYRE_IMAGE_PLACEHOLDER,
 };
 
 export function getTyreImageByCategory(category: TyreCategorySlug): string {
-  return categoryToImage[category] ?? "/images/tyres/tyre-car.svg";
+  return categoryToImage[category] ?? TYRE_IMAGE_PLACEHOLDER;
 }
 
-/** Category / type placeholder when a stored product photo is missing. */
-export function getTyrePlaceholderForSku(sku: TyreSku): string {
-  if (sku.isVan) return "/images/tyres/tyre-van.svg";
-  if (sku.is4x4) return "/images/tyres/tyre-suv.svg";
-  if (sku.isWinter) return "/images/tyres/tyre-winter.svg";
-  return getTyreImageByCategory(sku.category);
+/** Placeholder when a stored product photo is missing or fails to load. */
+export function getTyrePlaceholderForSku(_sku: TyreSku): string {
+  return TYRE_IMAGE_PLACEHOLDER;
 }
 
 export function getTyreImageForSku(sku: TyreSku): string {

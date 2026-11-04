@@ -41,7 +41,7 @@ class CheckoutTotals
             $skuId = (int) $item['skuId'];
             $qty = (int) $item['qty'];
             $sku = $skus->get($skuId);
-            if (! $sku) {
+            if (! $sku || $sku->is_hidden) {
                 throw ValidationException::withMessages([
                     'items' => "Tyre SKU #{$skuId} is no longer available.",
                 ]);

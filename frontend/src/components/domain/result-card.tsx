@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, Truck, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BrandLogoMark } from "@/components/domain/brand-logo";
@@ -31,7 +31,7 @@ function useSkuResultMeta(sku: TyreSku) {
   const detailPath = `/tyresearch/details/${sku.id}/${sku.slug}`;
   const sizeLabel = `${sku.width}/${sku.profile}R${sku.rim} ${sku.loadIndex}${sku.speedRating}`;
   const within24h = Boolean(sku.isAvailableWithin24h);
-  const hasBadges = sku.badges.length > 0 || sku.oeApprovals.length > 0;
+  const hasBadges = sku.badges.length > 0 || sku.oeApprovals.length > 0 || Boolean(sku.isPremium) || Boolean(sku.isSameDayDelivery);
   const tiers = sku.quantityTiers.slice(0, 4);
   const bestTierQty = tiers.reduce(
     (best, tier) => (tier.pricePerTyre < (best?.pricePerTyre ?? Infinity) ? tier : best),
@@ -133,6 +133,22 @@ function ProductBadges({ sku, hasBadges }: { sku: TyreSku; hasBadges: boolean })
 
   return (
     <div className="flex flex-wrap items-center gap-1.5">
+      {sku.isPremium && (
+        <Badge
+          className="border-amber-300/80 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white shadow-sm text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 px-2.5 py-0.5"
+        >
+          <Sparkles className="h-3 w-3 fill-amber-200 text-amber-200" />
+          Premium
+        </Badge>
+      )}
+      {sku.isSameDayDelivery && (
+        <Badge
+          className="border-sky-300/80 bg-gradient-to-r from-sky-600 via-sky-600 to-blue-600 text-white shadow-sm text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 px-2.5 py-0.5"
+        >
+          <Truck className="h-3 w-3" />
+          Same-Day Delivery
+        </Badge>
+      )}
       {sku.badges.map((b) => (
         <Badge key={b} variant={badgeLabels[b]?.variant ?? "default"} className="text-[10px] font-semibold">
           {badgeLabels[b]?.label ?? b}
@@ -151,6 +167,46 @@ function ChooseTyreButton({ detailPath, className }: { detailPath: string; class
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
       </Link>
     </Button>
+  );
+}
+
+/** Portrait frame matched to product photos (~3:4) so the full tyre fills the box without cropping. */
+function TyreThumb({
+  sku,
+  brandName,
+  detailPath,
+  within24h,
+  size = "card",
+}: {
+  sku: TyreSku;
+  brandName: string;
+  detailPath: string;
+  within24h: boolean;
+  size?: "card" | "list";
+}) {
+  return (
+    <Link
+      to={detailPath}
+      className={cn(
+        "relative shrink-0 overflow-hidden rounded-xl border bg-[#eef1f5] transition-colors",
+        "aspect-[3/4] group-hover:border-primary/25",
+        size === "card" ? "w-[4.75rem] sm:w-[5.5rem]" : "w-24 sm:w-28",
+        within24h ? "border-emerald-200" : "border-border/60",
+      )}
+      tabIndex={-1}
+      aria-hidden
+    >
+      <img
+        src={getTyreImageForSku(sku)}
+        alt={`${brandName} ${sku.modelName}`}
+        className="absolute inset-0 h-full w-full object-contain object-center p-0.5"
+        loading="lazy"
+        onError={(e) => {
+          e.currentTarget.onerror = null;
+          e.currentTarget.src = getTyrePlaceholderForSku(sku);
+        }}
+      />
+    </Link>
   );
 }
 
@@ -180,26 +236,7 @@ function ResultCardGrid({ sku, className }: { sku: TyreSku; className?: string }
 
       <div className="flex flex-1 flex-col gap-4 p-4 sm:p-5">
         <div className="flex gap-4">
-          <Link
-            to={detailPath}
-            className={cn(
-              "relative shrink-0 overflow-hidden rounded-xl border bg-[#f8f8f8] transition-colors group-hover:border-primary/20",
-              within24h ? "border-emerald-200" : "border-border/60",
-            )}
-            tabIndex={-1}
-            aria-hidden
-          >
-            <img
-              src={getTyreImageForSku(sku)}
-              alt={`${brandName} ${sku.modelName}`}
-              className="h-[4.5rem] w-[4.5rem] object-cover sm:h-20 sm:w-20"
-              loading="lazy"
-              onError={(e) => {
-                e.currentTarget.onerror = null;
-                e.currentTarget.src = getTyrePlaceholderForSku(sku);
-              }}
-            />
-          </Link>
+          <TyreThumb sku={sku} brandName={brandName} detailPath={detailPath} within24h={within24h} size="card" />
 
           <div className="min-w-0 flex-1">
             <div className="mb-1.5 flex items-center gap-2">
@@ -276,27 +313,7 @@ function ResultListRow({ sku, className }: { sku: TyreSku; className?: string })
 
       <div className="flex flex-col gap-4 p-4 lg:flex-row lg:items-stretch lg:gap-5 lg:p-5">
         <div className="flex min-w-0 flex-1 gap-4">
-          <Link
-            to={detailPath}
-            className={cn(
-              "relative h-24 w-24 shrink-0 overflow-hidden rounded-xl border bg-[#f8f8f8] transition-colors sm:h-28 sm:w-28",
-              "group-hover:border-primary/20",
-              within24h ? "border-emerald-200" : "border-border/60",
-            )}
-            tabIndex={-1}
-            aria-hidden
-          >
-            <img
-              src={getTyreImageForSku(sku)}
-              alt={`${brandName} ${sku.modelName}`}
-              className="h-full w-full object-cover"
-              loading="lazy"
-              onError={(e) => {
-                e.currentTarget.onerror = null;
-                e.currentTarget.src = getTyrePlaceholderForSku(sku);
-              }}
-            />
-          </Link>
+          <TyreThumb sku={sku} brandName={brandName} detailPath={detailPath} within24h={within24h} size="list" />
 
           <div className="min-w-0 flex-1 space-y-3">
             <div>

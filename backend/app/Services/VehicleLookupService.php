@@ -19,6 +19,7 @@ class VehicleLookupService
 {
     public function __construct(
         private readonly DvlaVehicleEnquiryService $dvla,
+        private readonly VehicleDataGlobalService $vehicleDataGlobal,
         private readonly UkVehicleDataService $ukVehicleData,
         private readonly FitmentResolverInterface $fitmentResolver,
         private readonly HttpFitmentBridgeService $fitmentBridge,
@@ -37,27 +38,42 @@ class VehicleLookupService
             ];
         }
 
+        // Cost-saving path: serve from our DB when this registration was looked up before.
+        $cached = $this->lookupFromLocalDatabase($normalized);
+        if ($cached !== null) {
+            return $cached;
+        }
+
         $profile = $this->loadProfile($normalized);
 
-        if ($profile && $this->fitmentResolver->resolve($profile)->isNotEmpty()) {
-            return $this->buildSuccessPayload($profile, 'fitment_cache', true);
+        // Prefer Vehicle Data Global TyreDetails for live OE tyre sizes
+        $vdgLookup = null;
+        if ($this->vehicleDataGlobal->enabled()) {
+            $vdgLookup = $this->vehicleDataGlobal->lookup($normalized);
+            if ($vdgLookup['status'] === 'ok') {
+                return $this->handleTyreProviderSuccess($normalized, $vdgLookup, 'vehicle_data_global', $profile);
+            }
+
+            $this->storeProviderLookupPayload($profile, $normalized, 'vehicle_data_global', $vdgLookup);
         }
 
         $ukvdLookup = null;
         if ($this->ukVehicleData->enabled()) {
             $ukvdLookup = $this->ukVehicleData->lookup($normalized);
             if ($ukvdLookup['status'] === 'ok') {
-                return $this->handleUkVehicleDataSuccess($normalized, $ukvdLookup);
+                return $this->handleTyreProviderSuccess($normalized, $ukvdLookup, 'uk_vehicle_data', $profile);
             }
 
             $this->storeProviderLookupPayload($profile, $normalized, 'uk_vehicle_data', $ukvdLookup);
         }
 
+        $tyreLookup = $vdgLookup ?? $ukvdLookup;
+
         $dvlaLookup = ['status' => 'disabled'];
         if ($this->dvla->enabled()) {
             $dvlaLookup = $this->dvla->lookup($normalized);
             if ($dvlaLookup['status'] === 'ok') {
-                return $this->handleDvlaSuccess($normalized, $dvlaLookup, $ukvdLookup);
+                return $this->handleDvlaSuccess($normalized, $dvlaLookup, $tyreLookup);
             }
 
             $this->storeProviderLookupPayload($profile, $normalized, 'dvla', $dvlaLookup);
@@ -70,7 +86,7 @@ class VehicleLookupService
             return $this->buildSuccessPayload($profile, 'legacy_migration', true, 'vehicle_lookups');
         }
 
-        if (($ukvdLookup['status'] ?? null) === 'not_found' || ($dvlaLookup['status'] ?? null) === 'not_found') {
+        if (($tyreLookup['status'] ?? null) === 'not_found' || ($dvlaLookup['status'] ?? null) === 'not_found') {
             return [
                 'status' => 'not_found',
                 'message' => 'We could not match this registration to a known vehicle fitment yet.',
@@ -78,18 +94,18 @@ class VehicleLookupService
             ];
         }
 
-        if (($ukvdLookup['errorCode'] ?? null) === 'ukvd_unauthorized') {
+        if (in_array($tyreLookup['errorCode'] ?? null, ['ukvd_unauthorized', 'vdg_unauthorized'], true)) {
             return [
                 'status' => 'provider_unavailable',
-                'message' => $ukvdLookup['message'] ?? 'The vehicle lookup service is temporarily unavailable.',
+                'message' => $tyreLookup['message'] ?? 'The vehicle lookup service is temporarily unavailable.',
                 'code' => 'provider_unavailable',
             ];
         }
 
-        if (in_array($ukvdLookup['status'] ?? null, ['error'], true) || in_array($dvlaLookup['status'] ?? null, ['error'], true)) {
+        if (in_array($tyreLookup['status'] ?? null, ['error'], true) || in_array($dvlaLookup['status'] ?? null, ['error'], true)) {
             return [
                 'status' => 'provider_unavailable',
-                'message' => $dvlaLookup['message'] ?? $ukvdLookup['message'] ?? 'The vehicle lookup service is temporarily unavailable.',
+                'message' => $dvlaLookup['message'] ?? $tyreLookup['message'] ?? 'The vehicle lookup service is temporarily unavailable.',
                 'code' => 'provider_unavailable',
             ];
         }
@@ -99,6 +115,48 @@ class VehicleLookupService
             'message' => 'We could not match this registration to a known vehicle fitment yet.',
             'code' => 'registration_not_found',
         ];
+    }
+
+    /**
+     * Return a successful lookup from vehicle_profiles + fitment_sets when available.
+     * Skips paid provider APIs (VDG / UKVD / DVLA) for repeat registrations.
+     *
+     * @return array{status: string, payload: array}|null
+     */
+    private function lookupFromLocalDatabase(string $normalized): ?array
+    {
+        $profile = $this->loadProfile($normalized);
+        if (! $profile) {
+            return null;
+        }
+
+        $usableFitments = $this->usableStoredFitments($profile);
+        if ($usableFitments->isEmpty()) {
+            return null;
+        }
+
+        // Keep relation in sync with filtered usable sets for the response builder.
+        $profile->setRelation('fitmentSets', $usableFitments);
+
+        return $this->buildSuccessPayload($profile, 'fitment_cache', true);
+    }
+
+    /**
+     * Fitment sets that have at least one real tyre size (width/profile/rim).
+     *
+     * @return \Illuminate\Support\Collection<int, FitmentSet>
+     */
+    private function usableStoredFitments(VehicleProfile $profile)
+    {
+        return $this->fitmentResolver->resolve($profile)
+            ->filter(function (FitmentSet $set) {
+                return $set->positions->contains(function (FitmentPosition $position) {
+                    return (int) $position->width > 0
+                        && (int) $position->profile > 0
+                        && (int) $position->rim > 0;
+                });
+            })
+            ->values();
     }
 
     private function handleDvlaSuccess(string $normalized, array $dvlaLookup, ?array $ukvdLookup = null): array
@@ -140,10 +198,18 @@ class VehicleLookupService
             return $this->buildSuccessPayload($profile, 'dvla_plus_configured_fallback', false, 'fitment_fallback');
         }
 
+        if ($this->vehicleDataGlobal->enabled()) {
+            $vdgRetry = $this->vehicleDataGlobal->lookup($normalized);
+            if ($vdgRetry['status'] === 'ok' && ! empty($vdgRetry['normalized']['fitments'])) {
+                return $this->handleTyreProviderSuccess($normalized, $vdgRetry, 'vehicle_data_global', $profile);
+            }
+            $ukvdLookup = $vdgRetry;
+        }
+
         if ($this->ukVehicleData->enabled()) {
             $ukvdLookup = $this->ukVehicleData->lookup($normalized);
             if ($ukvdLookup['status'] === 'ok' && ! empty($ukvdLookup['normalized']['fitments'])) {
-                return $this->handleUkVehicleDataSuccess($normalized, $ukvdLookup, $profile);
+                return $this->handleTyreProviderSuccess($normalized, $ukvdLookup, 'uk_vehicle_data', $profile);
             }
         }
 
@@ -172,44 +238,52 @@ class VehicleLookupService
     private function fitmentNotFoundMessage(?array $ukvdLookup): string
     {
         return match ($ukvdLookup['errorCode'] ?? null) {
+            'vdg_unauthorized' => 'We found this vehicle via DVLA, but tyre sizes require Vehicle Data Global (TyreDetails). Your API key was rejected.',
             'ukvd_unauthorized' => 'We found this vehicle via DVLA, but tyre sizes require UK Vehicle Data (TyreDataLite). Your API key was rejected — whitelist your server IP in the UKVD control panel under Account Security.',
             'ukvd_sandbox_restriction' => 'We found this vehicle via DVLA, but your UKVD Sandbox key only supports registrations containing the letter A. Upgrade to a production key to look up this registration.',
             default => $this->fitmentBridge->enabled()
                 ? 'We found this vehicle via DVLA, but the external fitment service did not return usable tyre sizes.'
-                : 'We found this vehicle via DVLA, but no tyre fitment was returned. Configure UK Vehicle Data (TyreDataLite) for live tyre sizes.',
+                : 'We found this vehicle via DVLA, but no tyre fitment was returned. Configure Vehicle Data Global (TyreDetails) for live tyre sizes.',
         };
     }
 
     private function fitmentNotFoundHint(?array $ukvdLookup): string
     {
         return match ($ukvdLookup['errorCode'] ?? null) {
+            'vdg_unauthorized' => 'Check VDG_API_KEY in your environment and that the TyreDetails package is enabled on your account.',
             'ukvd_unauthorized' => 'Add your outgoing server IP to UKVD Account Security, then retry this registration.',
             'ukvd_sandbox_restriction' => 'Sandbox keys cannot look up BC66 YDW and similar plates. Use a production UKVD key or test with a plate containing A.',
             default => $this->fitmentBridge->enabled()
                 ? 'Configure or fix the external fitment HTTP bridge response format.'
-                : 'Enable UK_VEHICLE_DATA_* with a production key and TyreDataLite package for registration-based tyre search.',
+                : 'Enable VDG_ENABLED with a TyreDetails package key for registration-based tyre search.',
         };
     }
 
-    private function handleUkVehicleDataSuccess(string $normalized, array $ukvdLookup, ?VehicleProfile $existingProfile = null): array
-    {
-        $vehicle = $ukvdLookup['normalized'] ?? [];
-        $profile = $this->syncProfileFromUkVehicleData($normalized, $vehicle, $existingProfile);
-        $this->syncFitmentsFromUkVehicleData($profile, $vehicle['fitments'] ?? []);
-        $this->storeProviderLookupPayload($profile, $normalized, 'uk_vehicle_data', $ukvdLookup);
+    private function handleTyreProviderSuccess(
+        string $normalized,
+        array $lookup,
+        string $provider,
+        ?VehicleProfile $existingProfile = null,
+    ): array {
+        $vehicle = $lookup['normalized'] ?? [];
+        $profile = $this->syncProfileFromTyreProvider($normalized, $vehicle, $provider, $existingProfile);
+        $this->syncFitmentsFromTyreProvider($profile, $vehicle['fitments'] ?? [], $provider);
+        $this->storeProviderLookupPayload($profile, $normalized, $provider, $lookup);
         $profile = $profile->fresh(['make', 'model', 'fitmentSets.positions']);
+
+        $providerLabel = $provider === 'vehicle_data_global' ? 'Vehicle Data Global' : 'UK Vehicle Data';
 
         if ($this->fitmentResolver->resolve($profile)->isEmpty()) {
             return [
                 'status' => 'fitment_not_found',
-                'message' => 'We found this vehicle, but UK Vehicle Data did not return usable tyre sizes.',
+                'message' => "We found this vehicle, but {$providerLabel} did not return usable tyre sizes.",
                 'code' => 'fitment_not_found',
                 'payload' => [
                     'registration' => $normalized,
                     'vehicle' => FrontendApi::vehicleProfile($profile),
                     'matchMeta' => [
-                        'source' => 'uk_vehicle_data_identity_only',
-                        'provider' => 'uk_vehicle_data',
+                        'source' => $provider.'_identity_only',
+                        'provider' => $provider,
                         'usedCache' => false,
                         'selectedFitmentId' => null,
                         'availableFitmentCount' => 0,
@@ -222,7 +296,13 @@ class VehicleLookupService
             ];
         }
 
-        return $this->buildSuccessPayload($profile, 'uk_vehicle_data', false, 'uk_vehicle_data');
+        return $this->buildSuccessPayload($profile, $provider, false, $provider);
+    }
+
+    /** @deprecated Use handleTyreProviderSuccess */
+    private function handleUkVehicleDataSuccess(string $normalized, array $ukvdLookup, ?VehicleProfile $existingProfile = null): array
+    {
+        return $this->handleTyreProviderSuccess($normalized, $ukvdLookup, 'uk_vehicle_data', $existingProfile);
     }
 
     public function normalizeRegistration(string $registration): string
@@ -341,8 +421,12 @@ class VehicleLookupService
         return $profile->fresh(['make', 'model', 'fitmentSets.positions']);
     }
 
-    private function syncProfileFromUkVehicleData(string $registration, array $vehicle, ?VehicleProfile $existingProfile = null): VehicleProfile
-    {
+    private function syncProfileFromTyreProvider(
+        string $registration,
+        array $vehicle,
+        string $provider,
+        ?VehicleProfile $existingProfile = null,
+    ): VehicleProfile {
         $makeId = $this->matchMakeId($vehicle['make'] ?? null);
         $modelId = $this->matchModelId($makeId, $vehicle['model'] ?? null);
 
@@ -357,7 +441,7 @@ class VehicleLookupService
                     'year_of_manufacture' => $vehicle['yearOfManufacture'] ?? $existingProfile?->year_of_manufacture,
                     'fuel_type' => $vehicle['fuelType'] ?? $existingProfile?->fuel_type,
                     'body_type' => $vehicle['bodyType'] ?? $existingProfile?->body_type,
-                    'source' => 'uk_vehicle_data',
+                    'source' => $provider,
                     'source_reference' => $registration,
                     'last_verified_at' => Carbon::now(),
                 ],
@@ -365,32 +449,36 @@ class VehicleLookupService
         )->load(['make', 'model', 'fitmentSets.positions']);
     }
 
+    private function syncProfileFromUkVehicleData(string $registration, array $vehicle, ?VehicleProfile $existingProfile = null): VehicleProfile
+    {
+        return $this->syncProfileFromTyreProvider($registration, $vehicle, 'uk_vehicle_data', $existingProfile);
+    }
+
     /**
      * @param  array<int, array<string, mixed>>  $fitments
      */
-    private function syncFitmentsFromUkVehicleData(VehicleProfile $profile, array $fitments): void
+    private function syncFitmentsFromTyreProvider(VehicleProfile $profile, array $fitments, string $provider): void
     {
         if ($fitments === []) {
             return;
         }
 
-        DB::transaction(function () use ($profile, $fitments): void {
+        DB::transaction(function () use ($profile, $fitments, $provider): void {
             FitmentSet::query()
                 ->where('vehicle_profile_id', $profile->id)
-                ->where('provider', 'uk_vehicle_data')
+                ->whereIn('provider', ['uk_vehicle_data', 'vehicle_data_global'])
                 ->delete();
 
             foreach ($fitments as $fitment) {
                 $set = FitmentSet::query()->create([
                     'vehicle_profile_id' => $profile->id,
-                    'provider' => 'uk_vehicle_data',
-                    'provider_reference' => (string) ($fitment['provider_reference'] ?? 'ukvd'),
+                    'provider' => $provider,
+                    'provider_reference' => (string) ($fitment['provider_reference'] ?? $provider),
                     'fitment_type' => (string) ($fitment['fitment_type'] ?? 'oe'),
                     'label' => $fitment['label'] ?? null,
                     'tyre_category_slug' => null,
                     'is_primary' => (bool) ($fitment['is_primary'] ?? false),
                     'is_staggered' => (bool) ($fitment['is_staggered'] ?? false),
-                    'confidence' => 1,
                     'provider_queried_at' => Carbon::now(),
                 ]);
 
@@ -409,7 +497,7 @@ class VehicleLookupService
                         'speed_rating' => $position['speed_rating'] ?? null,
                         'tyre_category_slug' => null,
                         'is_extra_load' => false,
-                        'is_run_flat' => false,
+                        'is_run_flat' => (bool) ($position['is_run_flat'] ?? false),
                         'is_winter' => false,
                         'is_all_season' => false,
                         'is_ev_rated' => false,
@@ -423,7 +511,7 @@ class VehicleLookupService
 
             $sets = FitmentSet::query()
                 ->where('vehicle_profile_id', $profile->id)
-                ->where('provider', 'uk_vehicle_data')
+                ->where('provider', $provider)
                 ->get();
 
             if ($sets->isNotEmpty() && $sets->every(fn (FitmentSet $set) => ! $set->is_primary)) {
@@ -432,15 +520,25 @@ class VehicleLookupService
         });
     }
 
+    /**
+     * @param  array<int, array<string, mixed>>  $fitments
+     */
+    private function syncFitmentsFromUkVehicleData(VehicleProfile $profile, array $fitments): void
+    {
+        $this->syncFitmentsFromTyreProvider($profile, $fitments, 'uk_vehicle_data');
+    }
+
     private function storeProviderLookupPayload(?VehicleProfile $profile, string $registration, string $provider, array $lookup): void
     {
         if (($lookup['status'] ?? null) === 'disabled') {
             return;
         }
 
-        $cacheHours = $provider === 'uk_vehicle_data'
-            ? (int) config('services.uk_vehicle_data.cache_ttl_hours', 24)
-            : (int) config('services.dvla.cache_ttl_hours', 24);
+        $cacheHours = match ($provider) {
+            'uk_vehicle_data' => (int) config('services.uk_vehicle_data.cache_ttl_hours', 24),
+            'vehicle_data_global' => 24,
+            default => (int) config('services.dvla.cache_ttl_hours', 24),
+        };
 
         LookupPayload::query()->create([
             'vehicle_profile_id' => $profile?->id,
@@ -495,6 +593,7 @@ class VehicleLookupService
                         'dvla_plus_fitment_cache' => 'Matched using live DVLA identity and stored fitment data.',
                         'dvla_plus_configured_fallback' => 'DVLA identity matched; using FITMENT_FALLBACK_* default tyre size (demo only — configure a real fitment source for production).',
                         'uk_vehicle_data' => 'Matched using UK Vehicle Data tyre fitment records.',
+                        'vehicle_data_global' => 'Matched using Vehicle Data Global tyre fitment records.',
                         'fitment_cache' => 'Matched using stored vehicle and fitment data.',
                         default => 'Matched using the layered registration lookup.',
                     },

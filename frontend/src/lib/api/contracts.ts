@@ -63,6 +63,10 @@ export interface SiteSettings {
   robots: string;
   canonicalBaseUrl: string | null;
   showPrototypeNotice: boolean;
+  /** Raw HTML/JS for document head (GTM, analytics, meta tags). */
+  headCode: string | null;
+  /** Raw HTML/JS for end of body (noscript, chat widgets, pixels). */
+  bodyCode: string | null;
 }
 
 export interface ApiBootstrapResponse {

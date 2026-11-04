@@ -1,13 +1,16 @@
-import { Check } from "lucide-react";
+import { Check, Phone } from "lucide-react";
 import { HomePhoneCta } from "@/components/home/home-layout";
 import { TYRES_EGHAM_IMAGES } from "@/lib/thetyresegham-assets";
 import { cn } from "@/lib/utils";
 
 const HERO_POINTS = [
-  "Vehicle or Motorcycle Premium & budget tyres available",
-  "Same-day tyre fitting & repair",
-  "Mobile tyre support available",
-  "Professional & trusted technicians",
+  { text: "Vehicle or Motorcycle Premium & budget tyres available" },
+  { text: "Same-day tyre fitting & repair" },
+  {
+    text: "Mobile tyre support available",
+    callToAction: true,
+  },
+  { text: "Professional & trusted technicians" },
 ] as const;
 
 export function HomeHeroSection({ phone, phoneTel }: { phone: string; phoneTel: string }) {
@@ -37,14 +40,35 @@ export function HomeHeroSection({ phone, phoneTel }: { phone: string; phoneTel: 
 
           <ul className="mt-7 space-y-3.5" aria-label="Why choose us">
             {HERO_POINTS.map((point) => (
-              <li key={point} className="flex items-start gap-3">
+              <li key={point.text} className="flex items-start gap-3">
                 <span
-                  className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10"
+                  className={cn(
+                    "mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full",
+                    "callToAction" in point && point.callToAction
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-primary/10",
+                  )}
                   aria-hidden="true"
                 >
-                  <Check className="h-4 w-4 text-primary" strokeWidth={2.75} />
+                  {"callToAction" in point && point.callToAction ? (
+                    <Phone className="h-3.5 w-3.5" strokeWidth={2.75} />
+                  ) : (
+                    <Check className="h-4 w-4 text-primary" strokeWidth={2.75} />
+                  )}
                 </span>
-                <span className="text-base leading-snug text-[#333333] sm:text-[1.05rem]">{point}</span>
+                {"callToAction" in point && point.callToAction ? (
+                  <a
+                    href={`tel:${phoneTel}`}
+                    className="group inline-flex flex-wrap items-center gap-x-2 text-base font-semibold leading-snug text-primary transition-colors hover:text-primary/90 sm:text-[1.05rem]"
+                  >
+                    {point.text}
+                    <span className="text-sm font-bold normal-case tracking-normal opacity-90 group-hover:opacity-100">
+                      — Call {phone}
+                    </span>
+                  </a>
+                ) : (
+                  <span className="text-base leading-snug text-[#333333] sm:text-[1.05rem]">{point.text}</span>
+                )}
               </li>
             ))}
           </ul>

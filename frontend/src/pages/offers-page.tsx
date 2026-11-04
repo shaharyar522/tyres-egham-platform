@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BrandLogoMark } from "@/components/domain/brand-logo";
 import { useApiBootstrapQuery, useApiBrandsIndexQuery } from "@/lib/api/queries";
+import { usePageMeta } from "@/lib/page-meta";
+import { useSite } from "@/lib/site";
 
 function formatValidRange(from: string, to: string): string {
   try {
@@ -16,10 +18,18 @@ function formatValidRange(from: string, to: string): string {
 }
 
 export default function OffersPage() {
+  const site = useSite();
   const bootstrapQuery = useApiBootstrapQuery();
   const brandsQuery = useApiBrandsIndexQuery();
   const vouchers = bootstrapQuery.data?.vouchers ?? [];
   const offerBrands = (brandsQuery.data?.brands ?? []).filter((b) => b.hasActiveOffer);
+
+  usePageMeta({
+    title: `Offers & vouchers | ${site.businessName}`,
+    description: `Current tyre offers and brand vouchers from ${site.businessName}.`,
+    canonicalPath: "/offers",
+  });
+
 
   const loading = bootstrapQuery.isLoading || brandsQuery.isLoading;
   const error = bootstrapQuery.isError || brandsQuery.isError;

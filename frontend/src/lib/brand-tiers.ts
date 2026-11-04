@@ -5,7 +5,7 @@ export function brandTierLabel(tier: BrandTier): string {
     case "premium":
       return "Premium";
     case "mid_range":
-      return "Budget";
+      return "Mid-Range";
     case "budget":
       return "Budget";
     default:

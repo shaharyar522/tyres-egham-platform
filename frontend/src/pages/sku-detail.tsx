@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { ChevronRight, Minus, Plus, ShieldCheck, Star, FileText, PlayCircle, ShoppingCart, Zap } from "lucide-react";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { ChevronRight, Minus, Plus, ShieldCheck, Sparkles, Star, FileText, PlayCircle, ShoppingCart, Truck, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -17,19 +17,34 @@ import { VoucherBanner } from "@/components/domain/voucher-banner";
 import { ResultCard } from "@/components/domain/result-card";
 import { useApiBootstrapQuery, useApiTyreDetailQuery, useApiTyreSearchQuery } from "@/lib/api/queries";
 import { findVoucherForBrand } from "@/lib/vouchers";
+import { usePageMeta } from "@/lib/page-meta";
 import { useBasket } from "@/store/basket";
+import { useSite } from "@/lib/site";
 import { cn, formatGBP } from "@/lib/utils";
 import { getTyreImageForSku, getTyrePlaceholderForSku } from "@/lib/tyre-images";
 
 export default function SkuDetailPage() {
   const params = useParams();
+  const location = useLocation();
   const navigate = useNavigate();
+  const site = useSite();
   const idOrSlug = params.id ?? params.slug ?? "";
   const detailQuery = useApiTyreDetailQuery(idOrSlug);
   const bootstrapQuery = useApiBootstrapQuery();
   const sku = detailQuery.data?.sku;
   const brand = sku ? (bootstrapQuery.data?.brands ?? []).find((candidate) => Number(candidate.id) === Number(sku.brandId)) ?? null : null;
   const { addItem } = useBasket();
+
+  usePageMeta(
+    sku && brand
+      ? {
+          title: `${brand.name} ${sku.modelName} ${sku.width}/${sku.profile}R${sku.rim} | ${site.businessName}`,
+          description: `Buy ${brand.name} ${sku.modelName} ${sku.width}/${sku.profile}R${sku.rim} with fitting at ${site.businessName}.`,
+          canonicalPath: location.pathname,
+          ogImage: getTyreImageForSku(sku) || undefined,
+        }
+      : { canonicalPath: location.pathname },
+  );
 
   const [qty, setQty] = useState(4);
   const [confirmed, setConfirmed] = useState(false);
@@ -50,7 +65,7 @@ export default function SkuDetailPage() {
     return (
       <div className="container py-20 text-center">
         <h1 className="font-display text-2xl font-bold">Loading tyre</h1>
-        <p className="mt-2 text-muted-foreground">Fetching live SKU data from the Phase 1 backend.</p>
+        <p className="mt-2 text-muted-foreground">Fetching tyre details.</p>
       </div>
     );
   }
@@ -105,7 +120,17 @@ export default function SkuDetailPage() {
         <section>
           <Card className="overflow-hidden">
             <div className="relative flex aspect-square items-center justify-center bg-gradient-to-br from-slate-100 via-white to-slate-200 p-8">
-              <div className="absolute left-3 top-3 flex flex-col gap-1">
+              <div className="absolute left-3 top-3 flex flex-col gap-1 z-10">
+                {sku.isPremium && (
+                  <Badge className="border-amber-300/80 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 font-bold text-white shadow-sm text-xs flex items-center gap-1">
+                    <Sparkles className="h-3.5 w-3.5 fill-amber-200 text-amber-200" /> Premium
+                  </Badge>
+                )}
+                {sku.isSameDayDelivery && (
+                  <Badge className="border-sky-300/80 bg-gradient-to-r from-sky-600 to-blue-600 font-bold text-white shadow-sm text-xs flex items-center gap-1">
+                    <Truck className="h-3.5 w-3.5" /> Same-Day Delivery
+                  </Badge>
+                )}
                 {sku.badges.map((b) => (
                   <Badge key={b} variant="secondary" className="capitalize">
                     {b.replace("_", " ")}
@@ -174,8 +199,20 @@ export default function SkuDetailPage() {
                 <Zap className="h-5 w-5 fill-white" />
               </span>
               <div className="flex-1">
-                <p className="font-semibold text-emerald-900">Express fitting - within 24 hours</p>
-                <p className="text-xs text-emerald-800/80">In local stock and reserved for next-day fitting at our Egham workshop.</p>
+                <p className="font-semibold text-emerald-900">Express fitting · within 24 hours</p>
+                <p className="text-xs text-emerald-800/80">In local stock and reserved for fast fitting at our Egham workshop.</p>
+              </div>
+            </div>
+          )}
+
+          {sku.isSameDayDelivery && (
+            <div className="mt-3 flex items-center gap-3 rounded-lg border-2 border-sky-300 bg-sky-50 p-3 text-sm">
+              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sky-600 text-white">
+                <Truck className="h-5 w-5 text-white" />
+              </span>
+              <div className="flex-1">
+                <p className="font-semibold text-sky-950">Same-Day Delivery Available</p>
+                <p className="text-xs text-sky-900/80">Dispatched today for immediate delivery and priority fitting service.</p>
               </div>
             </div>
           )}
@@ -347,7 +384,7 @@ export default function SkuDetailPage() {
               </div>
               <Separator />
               <p className="text-sm text-muted-foreground">
-                Customer reviews shown here are sample placeholders for the prototype. In production, these will be loaded from real verified reviewers and Google reviews via the moderation pipeline.
+                Reviews are shown from verified customers after moderation.
               </p>
             </CardContent>
           </Card>
